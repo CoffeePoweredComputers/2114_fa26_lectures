@@ -1,0 +1,13 @@
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# Python (migrate_card_to_tile.py and friends)
+__pycache__/
+*.pyc
+
+# Partial downloads left behind by fetch.sh
+*.part
