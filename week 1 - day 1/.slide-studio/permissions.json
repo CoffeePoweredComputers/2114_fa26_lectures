@@ -1,0 +1,20 @@
+{
+  "version": 1,
+  "domains": [
+    "*search*",
+    "ascend3.cs.vt.edu",
+    "commons.wikimedia.org",
+    "openclipart.org",
+    "raw.githubusercontent.com",
+    "unpkg.com",
+    "www.svgrepo.com"
+  ],
+  "dirs": [
+    "/home/anavarre/Documents/2114_fa26_lectures",
+    "/home/anavarre/Documents/2114_fa26_lectures/css",
+    "/home/anavarre/Documents/2114_fa26_lectures/slides",
+    "/home/anavarre/Research/itvest_talk/slides",
+    "/home/anavarre/Research/pres_translanguaging_everywhere/slides",
+    "/tmp"
+  ]
+}

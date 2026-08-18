@@ -1,0 +1,56 @@
+          <mask id="tr-m-A" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:0ms; --t:1109ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q709.5,99.8 1098.1,274.0"/>
+          </mask>
+          <mask id="tr-m-B" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:1109ms; --t:1205ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M1098.1,274.0 Q698.9,14.0 236.7,154.8"/>
+          </mask>
+          <mask id="tr-m-C" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:2314ms; --t:74ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M236.7,154.8 Q259.9,174.8 288.3,163.3"/>
+          </mask>
+          <mask id="tr-m-D" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:2388ms; --t:269ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q196.6,214.7 94.2,190.8"/>
+          </mask>
+          <mask id="tr-m-E" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:2926ms; --t:1943ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q881.3,631.0 1636.4,615.2"/>
+          </mask>
+          <mask id="tr-m-F" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:6811ms; --t:546ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q489.0,113.6 693.6,143.8"/>
+          </mask>
+          <mask id="tr-m-G" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:7358ms; --t:131ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M693.6,143.8 Q670.2,97.4 690.7,49.7"/>
+          </mask>
+          <mask id="tr-m-H" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:7488ms; --t:8ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M690.7,49.7 Q693.5,49.4 696.3,49.1"/>
+          </mask>
+          <mask id="tr-m-I" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:7496ms; --t:586ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M696.3,49.1 Q465.4,14.0 288.3,163.3"/>
+          </mask>
+          <mask id="tr-m-J" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:8082ms; --t:28ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q282.5,152.7 290.6,143.7"/>
+          </mask>
+          <mask id="tr-m-K" maskUnits="userSpaceOnUse" x="0" y="0" width="1664" height="695">
+            <path class="tr-rl" style="--d:8139ms; --t:681ms" fill="none" stroke="white" stroke-width="10"
+                  stroke-linecap="round" d="M288.3,163.3 Q520.5,48.5 779.5,50.7"/>
+          </mask>
+===
+          <path class="tr-leg" mask="url(#tr-m-A)" d="M288.3,163.3 Q709.5,99.8 1098.1,274.0"/>
+          <path class="tr-leg" mask="url(#tr-m-B)" d="M1098.1,274.0 Q698.9,14.0 236.7,154.8"/>
+          <path class="tr-leg" mask="url(#tr-m-C)" d="M236.7,154.8 Q259.9,174.8 288.3,163.3"/>
+          <path class="tr-leg" mask="url(#tr-m-D)" d="M288.3,163.3 Q196.6,214.7 94.2,190.8"/>
+          <path class="tr-leg" mask="url(#tr-m-E)" d="M288.3,163.3 Q881.3,631.0 1636.4,615.2"/>
+          <path class="tr-leg" mask="url(#tr-m-F)" d="M288.3,163.3 Q489.0,113.6 693.6,143.8"/>
+          <path class="tr-leg" mask="url(#tr-m-G)" d="M693.6,143.8 Q670.2,97.4 690.7,49.7"/>
+          <path class="tr-leg" mask="url(#tr-m-H)" d="M690.7,49.7 Q693.5,49.4 696.3,49.1"/>
+          <path class="tr-leg" mask="url(#tr-m-I)" d="M696.3,49.1 Q465.4,14.0 288.3,163.3"/>
+          <path class="tr-leg" mask="url(#tr-m-J)" d="M288.3,163.3 Q282.5,152.7 290.6,143.7"/>
+          <path class="tr-leg" mask="url(#tr-m-K)" d="M288.3,163.3 Q520.5,48.5 779.5,50.7"/>

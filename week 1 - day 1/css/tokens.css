@@ -9,6 +9,8 @@
   /* surfaces */
   --bg-0: #f2f1ed;              /* slide background — hokie stone mortar */
   --bg-1: #e9e3e4;              /* raised panels / tiles */
+  --paper: #ffffff;             /* photo plate / polaroid frame — true white,
+                                   deliberately whiter than any surface tone */
 
   /* accents */
   --accent-1: #861f41;          /* primary — VT Chicago maroon */
@@ -18,6 +20,10 @@
   /* Hokie Stone body colour. A genuine cool gray the scale lacks — mixing
      --fg-0 into the ground gives warm browns, not quarried stone. */
   --stone: #7d8791;
+
+  /* Night-sky black (closing slide). The ink token is maroon-cast, so dusk
+     landing on it reads red; the sky needs a true blue-black to end on. */
+  --night: #0d1016;
 
   /* fonts — system stacks only (decks must render offline, no web fonts) */
   --font-body: Verdana, Geneva, sans-serif;
@@ -45,6 +51,7 @@
   --t-body: 48px;
   --t-small: 36px;
   --t-micro: 28px;              /* chrome only: editor filename bar, gutter line numbers */
+  --t-tag: 21px;                /* smallest legible: map-label subtexts, polaroid captions */
 
   /* corner radii — cut-stone, barely softened */
   --r-1: 4px;
