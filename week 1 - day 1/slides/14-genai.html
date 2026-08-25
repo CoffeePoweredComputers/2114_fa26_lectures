@@ -44,6 +44,11 @@
        the Encouraged bullets. One window per step, stacked in the same cell;
        each is opaque, so revealing step N covers step N-1. This slide only. */
 
+    /* The pair is content-height on a body that flexes down to the note —
+       centred, so the spare height splits above and below instead of pooling
+       into one dead band over the note. */
+    #slide-14 .slide__body { align-content: center; }
+
     #slide-14 .chat {
       display: flex;
       flex-direction: column;

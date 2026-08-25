@@ -1,0 +1,44 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: Warm-up 1 · the answer, one line at a time
+    - heading "What the machine actually does" [level=2] [ref=e6]
+  - generic [ref=e7]:
+    - generic [ref=e8]:
+      - paragraph [ref=e9]: Given code — then your answer
+      - list [ref=e10]:
+        - listitem [ref=e11]: Employee e1 = new Employee();
+        - listitem [ref=e12]: Employee e2 = new Employee();
+        - listitem [ref=e13]: e1.setID(123);
+        - listitem [ref=e14]: e2.setID(456);
+        - listitem [ref=e15]: e1 = e2;
+        - listitem [ref=e16]: e1 = new Employee();
+        - listitem [ref=e17]: e1.setID(555);
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - paragraph [ref=e20]: e1
+        - paragraph [ref=e21]: e2
+        - generic [ref=e22]:
+          - paragraph [ref=e23]: Employee
+          - generic [ref=e24]:
+            - paragraph [ref=e25]: id = 0
+            - paragraph [ref=e26]: id = 123
+          - generic [ref=e27]: unreachable
+        - generic [ref=e28]:
+          - paragraph [ref=e29]: Employee
+          - generic [ref=e30]:
+            - paragraph [ref=e31]: id = 0
+            - paragraph [ref=e32]: id = 456
+        - generic [ref=e33]:
+          - paragraph [ref=e34]: Employee
+          - generic [ref=e35]:
+            - paragraph [ref=e36]: id = 0
+            - paragraph [ref=e37]: id = 555
+      - generic [ref=e38]:
+        - paragraph [ref=e39]: new Employee() puts an object on the heap; e1 holds a reference to it.
+        - paragraph [ref=e40]: A second object, a second reference.
+        - paragraph [ref=e41]: setID travels through e1’s reference and writes into the object.
+        - paragraph [ref=e42]: Same again, through e2.
+        - paragraph [ref=e43]: The assignment copies the reference, not the object — and the 123 object just became unreachable.
+        - paragraph [ref=e44]: "A fresh object breaks the sharing: e1 points somewhere new."
+        - paragraph [ref=e45]: 555 lands in the new object. e2 never felt a thing.
+  - generic [ref=e46]: 10 / 16

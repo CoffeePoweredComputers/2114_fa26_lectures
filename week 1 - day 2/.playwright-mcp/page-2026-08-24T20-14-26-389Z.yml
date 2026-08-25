@@ -1,0 +1,28 @@
+- generic [ref=e3]:
+  - generic [ref=e4]:
+    - paragraph [ref=e5]: Fall 2025 reflections
+    - heading "Start early, concretely" [level=2] [ref=e6]
+  - generic [ref=e7]:
+    - paragraph [ref=e8]:
+      - text: Mon
+      - generic [ref=e9]: lecture
+    - paragraph [ref=e10]: Tue
+    - paragraph [ref=e11]:
+      - text: Wed
+      - generic [ref=e12]: lecture
+    - paragraph [ref=e13]: Thu
+    - paragraph [ref=e14]: Fri
+    - paragraph [ref=e15]: Sat
+    - paragraph [ref=e16]: Sun
+    - article [ref=e17]:
+      - heading "Homework + challenge" [level=3] [ref=e18]
+    - paragraph [ref=e19]: start Wed → due Fri
+    - article [ref=e20]:
+      - heading "Next week’s modules" [level=3] [ref=e21]
+    - paragraph [ref=e22]: start Thu → due Sun
+    - article [ref=e23]:
+      - heading "Project deliverables" [level=3] [ref=e24]
+    - paragraph [ref=e25]: start the day it is released → due before your lab section
+    - article [ref=e26]:
+      - paragraph [ref=e27]: Late on a team is not a private problem. Your teammates cannot build on work that does not exist yet — one late start costs the whole team its week.
+  - generic [ref=e28]: 6 / 19

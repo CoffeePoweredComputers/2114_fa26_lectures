@@ -3,8 +3,8 @@
        steps 1-2 take it apart one half at a time, and the second one is the
        point: "things" was never a word about objects. -->
   <div class="slide__body mf" data-sid="25-move-fast:2">
-    <p class="mf__motto" data-sid="25-move-fast:3"><b class="frag" data-step="1">Move fast</b> and <b class="frag" data-step="2">break things</b>.</p>
-    <p class="note mf__src" data-sid="25-move-fast:4">— Facebook’s internal motto, 2009–2014</p>
+    <p class="motto" data-sid="25-move-fast:3"><b class="frag" data-step="1">Move fast</b> and <b class="frag" data-step="2">break things</b>.</p>
+    <p class="note motto__src" data-sid="25-move-fast:4">— Facebook’s internal motto, 2009–2014</p>
 
     <ul class="mf__asks" data-sid="25-move-fast:5">
       <li class="frag" data-step="1" data-anim="fade-up" data-sid="25-move-fast:6">Move fast — <b>To where?</b></li>
@@ -22,21 +22,11 @@
 
     #slide-25 .mf { display: flex; flex-direction: column; justify-content: center; }
 
-    #slide-25 .mf__motto {
-      margin: 0;
-      font-family: var(--font-display);
-      font-size: var(--t-h1);
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      color: var(--fg-0);
-    }
     /* Each half starts light and non-bold, then hardens to maroon bold when its
        question appears below — same accent as the bold in the asks. The frag
        states must stay visible here: it is a weight/colour change, not a reveal. */
-    #slide-25 .mf__motto b { color: var(--accent-1); }
-    #slide-25 .mf__motto b.frag { transition: font-weight .35s ease, color .35s ease, opacity .35s ease; }
-    #slide-25 .mf__motto b.frag.is-pending { opacity: .6; font-weight: 400; color: var(--fg-1); }
-    #slide-25 .mf__src { margin: var(--s-3) 0 0; font-family: var(--font-mono); }
+    #slide-25 .motto b.frag { transition: font-weight .35s ease, color .35s ease, opacity .35s ease; }
+    #slide-25 .motto b.frag.is-pending { opacity: .6; font-weight: 400; color: var(--fg-1); }
 
     /* The three questions: a plain column, no bullets — each one is a beat, not
        an item in a list of equals. */
