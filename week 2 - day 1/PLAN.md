@@ -6,11 +6,13 @@
 > description fixed to match the drawing (the centre text stays removed); model =
 > `gpt2-medium`, prompt pair “I like to play” / “At the casino, I like to play”;
 > 14-equals-hints' pill lane moved off the gate text (found during the work).
-> Deck is now 28 slides. Project 1's dates were answered afterwards (released this
-> week; scoping doc due next week — drawn at next **Friday**, weekday assumed) and
-> `02`/`17` updated. **Still open:** which PrairieLearn modules are due (3.x vs
-> 2.1–2.4 — nothing on screen names them), and a Slide Studio pass by the
-> instructor; nothing here was rendered in a browser.
+> Deck is now 28 slides. Afterwards, checked against the day 2 deck: modules are
+> due Sunday every week and every project deliverable is due before your lab
+> section, so `02`/`17` now draw Homework → Fri, Modules 3.x → Sun, CE 01 → this
+> week's lab-day window, Project 1 (released this week) → next week's lab-day
+> window. Day 2 still says both "2.1-2.4" (03-keep-up) and "2.1-2.5" (14-work-time)
+> for week 1 — the instructor's to reconcile. Remaining: a Slide Studio pass;
+> nothing here was rendered in a browser.
 
 
 Written 2026-08-29 after reading all 30 slides, `js/deck.js`, `js/code-walk.js`,
