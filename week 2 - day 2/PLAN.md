@@ -94,8 +94,12 @@ Kicker `PROJECT 1 · WEEKS 3–5`. The real Fall 2026 project (Canvas overview
 teams of 3 formed in this week's lab (posted on Canvas), the loop **scope → spec → build**, one
 deliverable per week due at your lab session, EMRN per deliverable, grading
 sessions as oral exams, GitHub, robust exception handling, JUnit tests.
-Scene: the trail with three waypoints (Week 3 · scope, Week 4 · spec,
-Week 5 · build) and a Labor Day tick before the first; three orange busts —
+Left: Week 1's project table (W1D1 11-three-projects) with only the P1
+column kept — tag, title, four terse rows that undim one per step (Teams ·
+3, formed in lab this week; Week 3 · Scope; Week 4 · Spec; Week 5 · Final)
+and the lesson line *Define before you build* — so it reads as a recall,
+not a new explanation. Right: the trail with three waypoints (Week 3 ·
+scope, Week 4 · spec, Week 5 · final) and a Labor Day tick before the first; three orange busts —
 the team — grow at the trail head (step 1) and make a real move to each
 waypoint (steps 2–4) where a document grows: a one-page scope sheet (five
 questions), a blueprint with class boxes and arrows (the spec), a laptop
