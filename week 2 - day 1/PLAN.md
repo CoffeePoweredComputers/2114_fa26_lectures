@@ -13,6 +13,12 @@
 > window. Day 2 still says both "2.1-2.4" (03-keep-up) and "2.1-2.5" (14-work-time)
 > for week 1 — the instructor's to reconcile. Remaining: a Slide Studio pass;
 > nothing here was rendered in a browser.
+>
+> **2026-08-29, later:** chapter 3 (equals() + Web-CAT) stripped on request —
+> `13c-chapter-3`, `14-equals-hints`, `15-eclipse-to-webcat` deleted; `01b-today`
+> is three columns; dividers read N of 3 (`15b-chapter-4.html` keeps its filename
+> for the data-sids but reads PART 3 OF 3); the equals() callback in `16i` and the
+> Web-CAT callback in `16f`/`02`/`17` notes rewritten. Deck is now 22 slides.
 
 
 Written 2026-08-29 after reading all 30 slides, `js/deck.js`, `js/code-walk.js`,

@@ -85,9 +85,11 @@ def vec(cx, emb, step, i, extra=""):
         cells += (f'<rect class="{cls}" x="{cx - CELL_W / 2:.0f}" y="{VEC_Y + r * (CELL_H + CELL_G)}" '
                   f'width="{CELL_W}" height="{CELL_H}" rx="2" opacity="{op}"/>')
     return f'<g class="nt__vec frag{extra}" data-step="{step}" style="--i: {i}" {sid()}>{cells}</g>'
-def resid(cx, step, i, cls="nt__res"):
+def resid(cx, step, i, y0=None, y1=None, cls="nt__res"):
+    y0 = VEC_Y + VEC_H if y0 is None else y0
+    y1 = BLK_Y1 if y1 is None else y1
     return (f'<line class="{cls} frag" data-step="{step}" style="--i: {i}" pathLength="100" '
-            f'x1="{cx:.0f}" y1="{VEC_Y + VEC_H}" x2="{cx:.0f}" y2="{BLK_Y1}" {sid()}/>')
+            f'x1="{cx:.0f}" y1="{y0}" x2="{cx:.0f}" y2="{y1}" {sid()}/>')
 def arc(sx, tx, wa, wb, step, i, to):
     dist = sx - tx
     h = min(52, 16 + 0.05 * dist)
@@ -109,7 +111,7 @@ add(f'<g class="nt__whole frag" data-step="1" {sid()}>'
     f'<rect x="{AX0}" y="{CHIP_Y}" width="{AX1 - AX0}" height="{CHIP_H}" rx="10"/>'
     f'<text class="nt__tok" x="{(AX0 + AX1) / 2:.0f}" y="{CHIP_Y + 43}">{esc(A["text"])}</text></g>')
 add(f'<g class="nt__slot" {sid()}><rect x="{NX}" y="{CHIP_Y}" width="{NEXTW}" height="{CHIP_H}" rx="10"/>'
-    f'<text class="nt__id nt__slotcap frag" data-step="7" x="{NCX:.0f}" y="{CHIP_Y + 43}">next?</text></g>')
+    f'<text class="nt__id nt__slotcap frag" data-step="8" x="{NCX:.0f}" y="{CHIP_Y + 43}">next?</text></g>')
 
 # step 1: tokenize
 add('<!-- step 1: the sentence becomes four tokens, each with its id -->')
@@ -119,108 +121,120 @@ for i, c in enumerate([c for c in chips if c["grp"] == "A"]): add(chip(c, 1, i))
 add('<!-- step 2: each token becomes a column of numbers (first 8 of ' + str(DIM) + ' drawn, real values) -->')
 for i, c in enumerate([c for c in chips if c["grp"] == "A"]): add(vec(c["cx"], c["emb"], 2, i, " nt__vA" if c["alt"] else ""))
 
-# step 4: the stack behind (drawn first so it sits behind the front block)
-add('<!-- step 4: the other layers, behind -->')
+# step 5: the stack behind (drawn first so it sits behind the front block)
+add('<!-- step 5: the other layers, behind -->')
 for k in (3, 2, 1):
-    add(f'<rect class="nt__layer frag" data-step="4" style="--i: {k}" x="{BLK_X0 + 12 * k}" y="{BLK_Y0 + 12 * k}" '
+    add(f'<rect class="nt__layer frag" data-step="5" style="--i: {k}" x="{BLK_X0 + 12 * k}" y="{BLK_Y0 + 12 * k}" '
         f'width="{BLK_X1 - BLK_X0}" height="{BLK_Y1 - BLK_Y0}" rx="12" opacity="{1 - 0.22 * k:.2f}" {sid()}/>')
-add(f'<text class="nt__id nt__count frag" data-step="4" x="{BLK_X1 + 36}" y="{BLK_Y1 + 68}" {sid()}>&times;{LAYERS} layers</text>')
+add(f'<text class="nt__id nt__count frag" data-step="5" x="{BLK_X1 + 36}" y="{BLK_Y1 + 68}" {sid()}>&hellip; and many more layers</text>')
 
-# step 3: one transformer block, the residual streams into it, and one head's attention
+# step 3: one transformer block, the residual streams into its top half, and one head's attention
 add('<!-- step 3: one block; each column runs down into it; one attention head, drawn -->')
 add(f'<g class="nt__block frag" data-step="3" {sid()}>'
     f'<rect class="nt__layer nt__layer--front" style="--i: 0" x="{BLK_X0}" y="{BLK_Y0}" width="{BLK_X1 - BLK_X0}" height="{BLK_Y1 - BLK_Y0}" rx="12"/>'
+    f'<path class="nt__ff" d="M{BLK_X0 + 2} {BAND} H{BLK_X1 - 2} V{BLK_Y1 - 12} Q{BLK_X1 - 2} {BLK_Y1 - 2} {BLK_X1 - 12} {BLK_Y1 - 2} '
+    f'H{BLK_X0 + 12} Q{BLK_X0 + 2} {BLK_Y1 - 2} {BLK_X0 + 2} {BLK_Y1 - 12} Z"/>'
     f'<line class="nt__band" x1="{BLK_X0}" y1="{BAND}" x2="{BLK_X1}" y2="{BAND}"/>'
-    f'<text class="nt__lab" x="{BLK_X0 + 20}" y="{BAND - 10}">attention</text>'
-    f'<text class="nt__lab" x="{BLK_X0 + 20}" y="{BLK_Y1 - 10}">feed-forward</text></g>')
-for i, c in enumerate([c for c in chips if c["grp"] == "A"]): add(resid(c["cx"], 3, i))
+    f'<text class="nt__lab" x="{BLK_X0 + 20}" y="{BAND - 7}">attention &middot; which words matter?</text>'
+    f'<text class="nt__lab" x="{BLK_X0 + 20}" y="{BLK_Y1 - 8}">feed-forward &middot; apply what it learned</text></g>')
+for i, c in enumerate([c for c in chips if c["grp"] == "A"]): add(resid(c["cx"], 3, i, y1=BAND))
 for i, c in enumerate([c for c in chips if c["grp"] == "A"][:-1]):
     add(arc(src, c["cx"], width(wA[i]), width(wB[4 + i]), 3, i, c["tok"]))
 
-# step 5: the last column's output goes to the vocabulary
-add('<!-- step 5: the last position leaves the stack and is scored against every token -->')
-add(f'<path class="nt__exit frag" data-step="5" pathLength="100" '
+# step 4: feed-forward — the streams carry on through the lower half, which lights up once
+add('<!-- step 4: feed-forward: the lower half of the block does its work on every column -->')
+add(f'<g class="nt__ffgo frag" data-step="4" {sid()}></g>')   # state sentinel for :has()
+for i, c in enumerate([c for c in chips if c["grp"] == "A"]): add(resid(c["cx"], 4, i, y0=BAND))
+
+# step 6: the last column's output goes to the vocabulary
+add('<!-- step 6: the last position leaves the stack and is scored against every token -->')
+add(f'<path class="nt__exit frag" data-step="6" pathLength="100" '
     f'd="M{src:.0f} {BLK_Y1} V{BLK_Y1 + 50} C{src:.0f} {BLK_Y1 + 120} {PANEL_X0 - 120} 500 {PANEL_X0 - 8} 500" {sid()}/>')
-add(f'<path class="nt__exithead frag" data-step="5" d="M{PANEL_X0} 500 L{PANEL_X0 - 22} 490 L{PANEL_X0 - 22} 510 Z" {sid()}/>')
+add(f'<path class="nt__exithead frag" data-step="6" d="M{PANEL_X0} 500 L{PANEL_X0 - 22} 490 L{PANEL_X0 - 22} 510 Z" {sid()}/>')
 add(f'<rect class="nt__panel" x="{PANEL_X0}" y="{BY}" width="{PANEL_X1 - PANEL_X0}" height="412" rx="12" {sid()}/>')
-add(f'<text class="nt__id nt__phead frag" data-step="5" x="{BAR_X0}" y="{BY + 26}" {sid()}>the next token, ranked</text>')
+add(f'<text class="nt__id nt__phead frag" data-step="6" x="{BAR_X0}" y="{BY + 26}" {sid()}>the next token, ranked</text>')
 for k in range(5):
     y = ROW0 + ROWH * k
     a, b = topA[k], topB[k]
     add(f'<g class="nt__row" style="--i: {k}; --a: {a[1] / PMAX:.4f}; --b: {b[1] / PMAX:.4f}" {sid()}>'
-        f'<rect class="nt__bar nt__bar--{k} frag" data-step="5" x="{BAR_X0}" y="{y + 10}" width="{BAR_W}" height="12" rx="6"/>'
-        f'<text class="nt__tok nt__lbl nt__lblA frag" data-step="5" x="{BAR_X0}" y="{y}">{esc(disp(a[0]))}</text>'
-        f'<text class="nt__id nt__prob nt__lblA frag" data-step="5" x="{PANEL_X1 - 14}" y="{y}">{a[1]:.3f}</text>'
-        f'<text class="nt__tok nt__lbl nt__lblB nt__lblB--{k} frag" data-step="6" x="{BAR_X0}" y="{y}">{esc(disp(b[0]))}</text>'
-        f'<text class="nt__id nt__prob nt__lblB frag" data-step="6" x="{PANEL_X1 - 14}" y="{y}">{b[1]:.3f}</text></g>')
-add(f'<text class="nt__id nt__more frag" data-step="5" x="{BAR_X0}" y="{ROW0 + ROWH * 5 + 14}">&hellip; and {VOCAB - 5:,} more, all scored, all summing to 1</text>'.replace('frag" data-step="5"', f'frag" data-step="5" {sid()}', 1))
+        f'<rect class="nt__bar nt__bar--{k} frag" data-step="6" x="{BAR_X0}" y="{y + 10}" width="{BAR_W}" height="12" rx="6"/>'
+        f'<text class="nt__tok nt__lbl nt__lblA frag" data-step="6" x="{BAR_X0}" y="{y}">{esc(disp(a[0]))}</text>'
+        f'<text class="nt__id nt__prob nt__lblA frag" data-step="6" x="{PANEL_X1 - 14}" y="{y}">{a[1]:.3f}</text>'
+        f'<text class="nt__tok nt__lbl nt__lblB nt__lblB--{k} frag" data-step="7" x="{BAR_X0}" y="{y}">{esc(disp(b[0]))}</text>'
+        f'<text class="nt__id nt__prob nt__lblB frag" data-step="7" x="{PANEL_X1 - 14}" y="{y}">{b[1]:.3f}</text></g>')
+add(f'<text class="nt__id nt__more frag" data-step="6" {sid()} x="{BAR_X0}" y="{ROW0 + ROWH * 5 + 14}">&hellip; and tens of thousands more, all adding up to 1</text>')
 
-# step 6: four more words in front — same weights
-add('<!-- step 6: context arrives in FRONT (causal: the model can only look back) -->')
-add(f'<g class="nt__ctx frag" data-step="6" {sid()}></g>')   # state sentinel for :has()
+# step 7: four more words in front — same weights
+add('<!-- step 7: context arrives in FRONT (causal: the model can only look back) -->')
+add(f'<g class="nt__ctx frag" data-step="7" {sid()}></g>')   # state sentinel for :has()
 for i, c in enumerate([c for c in chips if c["grp"] == "B"]):
-    add(chip(c, 6, i)); add(vec(c["cx"], c["emb"], 6, i)); add(resid(c["cx"], 6, i))
+    add(chip(c, 7, i)); add(vec(c["cx"], c["emb"], 7, i)); add(resid(c["cx"], 7, i))
 add('<!-- "I" is a different token once something precedes it: its column changes too -->')
-for c in [c for c in chips if c["grp"] == "A" and c["alt"]]: add(vec(c["cx"], c["alt"]["emb"], 6, 4, " nt__vB"))
+for c in [c for c in chips if c["grp"] == "A" and c["alt"]]: add(vec(c["cx"], c["alt"]["emb"], 7, 4, " nt__vB"))
 for i, c in enumerate([c for c in chips if c["grp"] == "B"]):
-    add(arc(src, c["cx"], 0, width(wB[i]), 6, 3 - i, c["tok"]))
+    add(arc(src, c["cx"], 0, width(wB[i]), 7, 3 - i, c["tok"]))
 
-# step 7: pick one — it travels to the empty slot
-add('<!-- step 7: the pick: the top token becomes the next chip -->')
+# step 8: pick one — it travels to the empty slot
+add('<!-- step 8: the pick: the top token becomes the next chip -->')
 y0 = ROW0 + 10 + 6
 bx1 = BAR_X0 + barw(topB[0][1])
-add(f'<g class="nt__pick frag" data-step="7" {sid()}>'
+add(f'<g class="nt__pick frag" data-step="8" {sid()}>'
     f'<path class="nt__link" pathLength="100" d="M{bx1} {y0} C{bx1 - 160} {y0} {NX + NEXTW + 170} {CHIP_Y + 34} {NX + NEXTW + 8} {CHIP_Y + 34}"/>'
     f'<path class="nt__linkhead" d="M{NX + NEXTW} {CHIP_Y + 34} L{NX + NEXTW + 22} {CHIP_Y + 24} L{NX + NEXTW + 22} {CHIP_Y + 44} Z"/></g>')
 pk = dict(tok=topB[0][0], x=NX, w=NEXTW, cx=NCX, id=POKER["ids"][0], emb=POKER["emb8"], grp="P")
-add(chip(pk, 7, 0, " nt__chip--pick"))
+add(chip(pk, 8, 0, " nt__chip--pick"))
 
-# step 8: go again — the new token gets its column; the window
-add('<!-- step 8: append it and go again; the window is all it can see -->')
-add(f'<g class="nt__loop frag" data-step="8" {sid()}></g>')
-add(vec(NCX, POKER["emb8"], 8, 0)); add(resid(NCX, 8, 0))
-add(f'<path class="nt__win frag" data-step="8" pathLength="100" d="M{X0} {CHIP_Y + 84} v8 H{NX + NEXTW} v-8" {sid()}/>')
-add(f'<text class="nt__id nt__wincap frag" data-step="8" x="{(X0 + NX + NEXTW) / 2:.0f}" y="{CHIP_Y + 114}">the context window &mdash; everything it can see</text>')
+# step 9: go again — the new token gets its column; the window
+add('<!-- step 9: append it and go again; the window is all it can see -->')
+add(f'<g class="nt__loop frag" data-step="9" {sid()}></g>')
+add(vec(NCX, POKER["emb8"], 9, 0)); add(resid(NCX, 9, 0))
+add(f'<path class="nt__win frag" data-step="9" pathLength="100" d="M{X0} {CHIP_Y + 84} v8 H{NX + NEXTW} v-8" {sid()}/>')
+add(f'<text class="nt__id nt__wincap frag" data-step="9" x="{(X0 + NX + NEXTW) / 2:.0f}" y="{CHIP_Y + 114}">the context window &mdash; everything it can see</text>')
 
 SVG = "\n      ".join(S)
 
 # ------------------------------------------------------------------ captions / prose
 caps = [
-    (1, "Text becomes tokens &mdash; word pieces, each with a number. The dot is a space: it belongs to the token."),
-    (2, f"Each token becomes a list of numbers &mdash; {DIM:,} of them in this model. Eight are drawn."),
-    (3, f"Each position looks back at what came before it &mdash; never ahead. One of the model&rsquo;s {NHEADS} attention heads is drawn."),
-    (4, f"{LAYERS} layers of that. Their numbers were set by reading a slice of the internet: what usually follows what."),
-    (5, f"A score for every token in the vocabulary &mdash; {VOCAB:,} of them. Softmax turns the scores into probabilities."),
-    (6, "Same weights, four words in front &mdash; and I is now &middot;I, a different token. The head finds casino; the ranking changes."),
-    (7, "Pick one. Usually a likely one &mdash; not always the top."),
-    (8, "Append it. Go again: the next token, then the next. It only ever sees what is in this window."),
+    (1, "The text is chopped into tokens &mdash; words or word pieces &mdash; and each gets an ID number. The dot is a space; it is part of the token."),
+    (2, "Each token is swapped for a long list of numbers. A few of them are drawn."),
+    (3, "Attention: the last token looks back at the ones before it &mdash; never ahead &mdash; and weighs which ones matter. One of the model&rsquo;s many attention heads is drawn."),
+    (4, "Feed-forward: each column is then rewritten using what the model learned in training. Attention picks what to look at; this is where the stored knowledge is applied."),
+    (5, "Many layers of that, one after another. The numbers inside were set in training by reading a slice of the internet: what usually follows what."),
+    (6, "Out comes a score for every token it knows &mdash; tens of thousands of them &mdash; turned into probabilities that add up to 1."),
+    (7, "Same model, four words added in front &mdash; and I becomes &middot;I, a different token. Attention now lands on casino; the ranking changes."),
+    (8, "Pick one. Usually a likely one &mdash; not always the top."),
+    (9, "Append it. Go again: the next token, then the next. It only ever sees what is in this window."),
 ]
 CAPS = "\n        ".join(f'<p class="nt__cap frag" data-step="{s}" {sid()}>{t}</p>' for s, t in caps)
 
 desc = (
     "An animated diagram of a language model choosing one token. Along the top, the prompt, I like to play, sits in a chip with an empty slot after it. "
     "Step one splits the chip into four token chips, each with its number. Step two hangs a column of eight coloured cells under each token, a slice of its list of numbers. "
-    "Step three draws one transformer block under the columns, runs each column down into it, and draws one attention head as arcs from the last token, play, back to the earlier ones, thicker where it looks harder: on this prompt it looks almost only at the first word. "
-    "Step four stacks the other layers behind the block and sends a pulse up through them. Step five runs a line out of the last position into a panel on the right where five bars race out: "
+    "Step three draws one transformer block under the columns, runs each column down into its top half, attention, and draws one attention head as arcs from the last token, play, back to the earlier ones, thicker where it looks harder: on this prompt it looks almost only at the first word. "
+    "Step four carries the columns on through the lower half, feed-forward, which lights up once. "
+    "Step five stacks the other layers behind the block and sends a pulse up through them. Step six runs a line out of the last position into a panel on the right where five bars race out: "
     + ", ".join(f"{disp(t).lstrip(chr(183))} at {p:.3f}" for t, p in topA)
-    + f", with a line noting the other {VOCAB - 5:,} tokens are scored too. "
-    "Step six adds four chips in front of the prompt, At the casino comma; the I chip becomes space-I, number 314, a different token with a different column; and the same head swings from I to casino while the bars re-rank: "
+    + ", with a line noting that tens of thousands of other tokens are scored too. "
+    "Step seven adds four chips in front of the prompt, At the casino comma; the I chip becomes space-I, number 314, a different token with a different column; and the same head swings from I to casino while the bars re-rank: "
     + ", ".join(f"{disp(t).lstrip(chr(183))} at {p:.3f}" for t, p in topB)
-    + ". Step seven picks poker: its bar turns maroon and a line carries the word into the empty slot. Step eight hangs a column under the new token and draws a bracket under the whole row, the context window. "
-    "Last, the drawing blurs and one line stands over it: it does not think, and it does not problem-solve."
+    + ". Step eight picks poker: its bar turns maroon and a line carries the word into the empty slot. Step nine hangs a column under the new token and draws a bracket under the whole row, the context window. "
+    "Last, the drawing blurs and one line stands over it: they don't independently think, and they don't independently problem-solve. You're the driver, the evaluator, the problem solver."
 )
 
 notes = (
-    "This is the mechanism slide and the demonstration in one; take it slowly, it is eight steps. Step 1: tokens, not words &mdash; the space is part of the token, which is why "
-    "&ldquo; with&rdquo; and &ldquo;with&rdquo; are different tokens. Step 2: numbers, not meaning &mdash; 1,024 per token in this model; the colours are the real first eight. "
+    "This is the mechanism slide and the demonstration in one; take it slowly, it is nine steps. "
+    f"The exact figures are kept off the captions on purpose (this model: {DIM:,} numbers per token, {NHEADS} heads, {LAYERS} layers, {VOCAB:,} tokens) &mdash; say them only if asked. "
+    "Step 1: tokens, not words &mdash; the space is part of the token, which is why "
+    "&ldquo; with&rdquo; and &ldquo;with&rdquo; are different tokens. Step 2: numbers, not meaning &mdash; 1,024 per token in this model; the colours are the real first eight; words used in similar places end up with similar lists. "
     "Step 3: attention looks BACK only; say that twice, because the previous version of this slide used a fill-in-the-blank model that reads both ways and that is not what an LLM is. "
-    "The head drawn is layer 18, head 7 of 384; on a bare prompt it parks on the first word, which is a known quirk. Step 4: the numbers inside the layers came from training &mdash; "
-    "this is 16c&rsquo;s second bullet: its predictions come from what it was trained on. Step 5: the top five of 50,257; the five shown sum to about 0.3, the rest of the mass is spread thin. "
-    "Notice &ldquo;with&rdquo; at the top: it is not answering a question about you, it is continuing a sentence. Step 6 is the old slide&rsquo;s point, made honestly: context goes in FRONT, the same head "
+    "The head drawn is layer 18, head 7 of 384; on a bare prompt it parks on the first word, which is a known quirk. Step 4: feed-forward, the half nobody explains &mdash; the plain version: attention chose what to look at, "
+    "feed-forward now rewrites each column using what was memorised in training; if the model &ldquo;knows&rdquo; that casinos have poker tables, this is where that lives. Step 5: the numbers inside the layers came from training &mdash; "
+    "this is 16c&rsquo;s second bullet: its predictions come from what it was trained on. Step 6: the top five of 50,257; the five shown sum to about 0.3, the rest of the mass is spread thin. "
+    "Notice &ldquo;with&rdquo; at the top: it is not answering a question about you, it is continuing a sentence. Step 7 is the old slide&rsquo;s point, made honestly: context goes in FRONT, the same head "
     "swings to &ldquo;casino&rdquo;, and poker and cards appear from nowhere &mdash; nothing about the model changed, only the words in front of it. Small honest detail: &ldquo;I&rdquo; at the start of a text and "
-    "&ldquo; I&rdquo; after a comma are different tokens (40 and 314), which is why that chip changes too. Step 7: it usually samples, so the same prompt can give a "
-    "different answer tomorrow. Step 8: 16c&rsquo;s first and third bullets &mdash; it does this once per token, and it only sees the window: not your project, not last week&rsquo;s chat, not the constraint "
-    "you gave it forty messages ago unless that text is still in front of it. Step 9 is the sentence they should leave with. Model: openai-community/gpt2-medium, 2019, 355 million parameters &mdash; "
+    "&ldquo; I&rdquo; after a comma are different tokens (40 and 314), which is why that chip changes too. Step 8: it usually samples, so the same prompt can give a "
+    "different answer tomorrow. Step 9: 16c&rsquo;s first and third bullets &mdash; it does this once per token, and it only sees the window: not your project, not last week&rsquo;s chat, not the constraint "
+    "you gave it forty messages ago unless that text is still in front of it. Step 10 is the sentence they should leave with. Model: openai-community/gpt2-medium, 2019, 355 million parameters &mdash; "
     "ChatGPT&rsquo;s grandparent, small enough to run on a laptop; the models they use are this loop, a thousand times bigger, then tuned to be helpful. Every number on the slide is the model&rsquo;s own."
 )
 
@@ -254,9 +268,9 @@ page = f'''<section class="slide" id="slide-16d" data-sid="16d-next-word:0">
   </div>
   <div class="slide__number" {sid()}></div>
 
-  <!-- step 9: the machine goes soft and the sentence is left -->
-  <div class="nt__veil frag" data-step="9" {sid()}>
-    <p class="nt__veil-card motto motto--tight" {sid()}>It does <b>not</b> think, and it does <b>not</b> problem-solve.<br><span class="nt__veil-sub">It ranks what usually comes next.</span></p>
+  <!-- step 10: the machine goes soft and the sentence is left -->
+  <div class="nt__veil frag" data-step="10" {sid()}>
+    <p class="nt__veil-card motto motto--tight" {sid()}>They don&rsquo;t <b>independently</b> think, and they don&rsquo;t <b>independently</b> problem-solve.<br><span class="nt__veil-sub">You&rsquo;re the driver. You&rsquo;re the evaluator. You&rsquo;re the problem solver.</span></p>
   </div>
 
   <aside class="notes" {sid()}>{notes}</aside>
@@ -279,10 +293,10 @@ page = f'''<section class="slide" id="slide-16d" data-sid="16d-next-word:0">
        re-ranking morphs it in place) and their labels crossfade; the layer
        pulse is one keyframe on fill rising deepest-first. Nothing drifts.
 
-       State beyond step order — the re-rank, the attention swing, the pick, the
-       dimming of the old run — is a :has() machine off four sentinel frags
-       (.nt__ctx, .nt__pick, .nt__loop, .nt__veil), so scrubbing backwards
-       undoes every one of them. */
+       State beyond step order — the feed-forward flash, the re-rank, the
+       attention swing, the pick, the dimming of the old run — is a :has()
+       machine off five sentinel frags (.nt__ffgo, .nt__ctx, .nt__pick,
+       .nt__loop, .nt__veil), so scrubbing backwards undoes every one of them. */
     #slide-16d .nt {{ position: relative; }}
     #slide-16d .nt__svg {{ position: absolute; left: 0; top: 0; width: {BW}px; height: {BH}px; overflow: visible; }}
 
@@ -333,6 +347,9 @@ page = f'''<section class="slide" id="slide-16d" data-sid="16d-next-word:0">
     #slide-16d .frag.nt__count.is-current, #slide-16d .frag.nt__count.is-past {{ transition-delay: .3s; }}
     /* the pulse: computation rising through the layers, deepest first; replays on re-entry */
     #slide-16d:has(rect.nt__layer.frag.is-current) .nt__layer {{ animation: nt-pulse .6s var(--ease-smooth) both; animation-delay: calc(.35s + (3 - var(--i)) * .14s); }}
+    /* step 4: the feed-forward half lights up once as the streams pass through it */
+    #slide-16d .nt__ff {{ fill: none; }}
+    #slide-16d:has(.nt__ffgo.is-current) .nt__ff {{ animation: nt-pulse .7s var(--ease-smooth) both; animation-delay: .3s; }}
     @keyframes nt-pulse {{
       0% {{ fill: var(--bg-1); }}
       45% {{ fill: color-mix(in srgb, var(--accent-3) 45%, var(--bg-1)); }}
@@ -423,7 +440,7 @@ page = f'''<section class="slide" id="slide-16d" data-sid="16d-next-word:0">
       #slide-16d .nt__lblA, #slide-16d .nt__lblB, #slide-16d .nt__link, #slide-16d .nt__linkhead, #slide-16d .nt__win,
       #slide-16d .nt__wincap, #slide-16d .nt__cap, #slide-16d .nt__veil, #slide-16d .nt__slot rect,
       #slide-16d .slide__head, #slide-16d .slide__body {{ transition-duration: 0s !important; transition-delay: 0s !important; }}
-      #slide-16d .nt__layer {{ animation: none !important; }}
+      #slide-16d .nt__layer, #slide-16d .nt__ff {{ animation: none !important; }}
     }}
   </style>
 </section>
