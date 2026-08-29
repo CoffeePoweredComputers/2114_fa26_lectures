@@ -1,0 +1,42 @@
+{
+  "intent": "edit",
+  "slide": "01-title",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "ellipse",
+      "bbox": [
+        827,
+        310,
+        295,
+        142
+      ],
+      "overSid": "01-title:4"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        943,
+        185,
+        41,
+        115
+      ],
+      "overSid": null,
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        920,
+        181,
+        38,
+        20
+      ],
+      "overSid": null,
+      "hint": "crossed-out or emphasised region"
+    }
+  ]
+}

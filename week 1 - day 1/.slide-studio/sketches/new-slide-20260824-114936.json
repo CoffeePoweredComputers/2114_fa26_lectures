@@ -1,0 +1,147 @@
+{
+  "intent": "edit",
+  "slide": "new-slide",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "ellipse",
+      "bbox": [
+        731,
+        669,
+        568,
+        279
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        826,
+        787,
+        25,
+        44
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        843,
+        772,
+        51,
+        58
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        930,
+        765,
+        34,
+        64
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        971,
+        775,
+        50,
+        36
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1044,
+        812,
+        12,
+        15
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        1046,
+        774,
+        3,
+        9
+      ],
+      "from": [
+        1048,
+        774
+      ],
+      "to": [
+        1050,
+        783
+      ],
+      "toSid": "new-slide:5"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1066,
+        774,
+        53,
+        37
+      ],
+      "overSid": "new-slide:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        402,
+        508,
+        430,
+        209
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        364,
+        400,
+        73,
+        87
+      ],
+      "overSid": "new-slide:8"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        382,
+        416,
+        25,
+        39
+      ],
+      "overSid": "new-slide:8",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        290,
+        371,
+        201,
+        180
+      ],
+      "overSid": "new-slide:8",
+      "hint": "crossed-out or emphasised region"
+    }
+  ]
+}

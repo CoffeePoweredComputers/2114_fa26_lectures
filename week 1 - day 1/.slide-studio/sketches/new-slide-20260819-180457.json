@@ -1,0 +1,243 @@
+{
+  "intent": "edit",
+  "slide": "new-slide",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "ellipse",
+      "bbox": [
+        679,
+        640,
+        538,
+        325
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        783,
+        808,
+        25,
+        71
+      ],
+      "from": [
+        783,
+        808
+      ],
+      "to": [
+        808,
+        880
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        764,
+        758,
+        129,
+        144
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        914,
+        810,
+        23,
+        42
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        950,
+        798,
+        53,
+        40
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        1002,
+        792,
+        11,
+        16
+      ],
+      "from": [
+        1002,
+        792
+      ],
+      "to": [
+        1013,
+        808
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1019,
+        775,
+        78,
+        39
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        357,
+        497,
+        386,
+        217
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        267,
+        342,
+        164,
+        164
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        335,
+        403,
+        23,
+        50
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        356,
+        450,
+        16,
+        7
+      ],
+      "from": [
+        356,
+        457
+      ],
+      "to": [
+        372,
+        450
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        184,
+        278,
+        282,
+        288
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        906,
+        429,
+        30,
+        221
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        834,
+        309,
+        161,
+        147
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        877,
+        360,
+        67,
+        62
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        775,
+        242,
+        268,
+        247
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1120,
+        525,
+        352,
+        137
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        1447,
+        412,
+        151,
+        130
+      ],
+      "overSid": "new-slide:3"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1504,
+        453,
+        33,
+        59
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        1370,
+        300,
+        318,
+        330
+      ],
+      "overSid": "new-slide:3"
+    }
+  ]
+}

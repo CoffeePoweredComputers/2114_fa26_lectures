@@ -1,0 +1,83 @@
+{
+  "intent": "edit",
+  "slide": "04-last-year",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "scribble",
+      "bbox": [
+        506,
+        787,
+        675,
+        185
+      ],
+      "overSid": "04-last-year:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        715,
+        591,
+        616,
+        221
+      ],
+      "overSid": "04-last-year:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        886,
+        354,
+        49,
+        234
+      ],
+      "from": [
+        935,
+        354
+      ],
+      "to": [
+        886,
+        588
+      ],
+      "toSid": "04-last-year:7"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        913,
+        356,
+        474,
+        297
+      ],
+      "overSid": "04-last-year:7",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "arrow",
+      "from": [
+        582,
+        272
+      ],
+      "to": [
+        876,
+        414
+      ],
+      "fromSid": "04-last-year:4",
+      "toSid": null
+    },
+    {
+      "kind": "label",
+      "at": [
+        500,
+        175
+      ],
+      "text": "make a leaning tower",
+      "nearSid": "04-last-year:3"
+    }
+  ]
+}

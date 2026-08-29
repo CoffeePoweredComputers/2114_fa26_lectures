@@ -1,0 +1,84 @@
+{
+  "intent": "edit",
+  "slide": "new-slide",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "scribble",
+      "bbox": [
+        474,
+        173,
+        891,
+        802
+      ],
+      "overSid": "new-slide:3",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        524,
+        775,
+        665,
+        9
+      ],
+      "from": [
+        524,
+        782
+      ],
+      "to": [
+        1189,
+        775
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        710,
+        590,
+        467,
+        0
+      ],
+      "from": [
+        710,
+        590
+      ],
+      "to": [
+        1177,
+        590
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        822,
+        461,
+        350,
+        0
+      ],
+      "from": [
+        822,
+        461
+      ],
+      "to": [
+        1172,
+        461
+      ],
+      "toSid": "new-slide:3"
+    },
+    {
+      "kind": "label",
+      "at": [
+        1221,
+        338
+      ],
+      "text": "make this pyramid grow and build one layer on top with labels for the different layers of succeeding in programming",
+      "nearSid": "new-slide:3"
+    }
+  ]
+}

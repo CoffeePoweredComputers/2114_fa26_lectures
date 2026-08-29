@@ -1,0 +1,28 @@
+{
+  "intent": "edit",
+  "slide": "12-grading-emrn",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "line",
+      "bbox": [
+        134,
+        828,
+        1601,
+        118
+      ],
+      "from": [
+        151,
+        941
+      ],
+      "to": [
+        876,
+        912
+      ],
+      "toSid": "12-grading-emrn:17"
+    }
+  ]
+}
