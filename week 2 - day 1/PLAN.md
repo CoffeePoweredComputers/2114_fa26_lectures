@@ -6,8 +6,10 @@
 > description fixed to match the drawing (the centre text stays removed); model =
 > `gpt2-medium`, prompt pair “I like to play” / “At the casino, I like to play”;
 > 14-equals-hints' pill lane moved off the gate text (found during the work).
-> Deck is now 28 slides. **Still open:** the two date questions (§7 item 6) —
-> `02` and `17` are unchanged and neutral — and a Slide Studio pass by the
+> Deck is now 28 slides. Project 1's dates were answered afterwards (released this
+> week; scoping doc due next week — drawn at next **Friday**, weekday assumed) and
+> `02`/`17` updated. **Still open:** which PrairieLearn modules are due (3.x vs
+> 2.1–2.4 — nothing on screen names them), and a Slide Studio pass by the
 > instructor; nothing here was rendered in a browser.
 
 
