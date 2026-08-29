@@ -1,8 +1,9 @@
-<section class="slide slide--warmup" id="slide-09b" data-roll="off" data-sid="09b-walk-555:1">
+<section class="slide slide--warmup" id="slide-09b" data-sid="09b-walk-555:1">
   <header class="slide__head" data-sid="09b-walk-555:2">
     <p class="slide__kicker" data-sid="09b-walk-555:3">Warm-up 1 &middot; the answer</p>
     <h2 data-sid="09b-walk-555:4">What the machine actually does</h2>
   </header>
+  <p class="sr-only slide__desc" data-sid="09b-walk-555:57" data-hash="f10bef3a4f" data-desc="auto">A walkthrough. On the left, the seven lines with a program-counter bar that moves down them; on the right, a heap that fills in as it goes. Boxes grow as objects are created, arrows run from the names to them, a replaced value is struck through with the new one beside it, and when e1 = e2 runs both arrows land on the same box while the abandoned one dims and is labelled unreachable.</p>
   <div class="slide__body grid grid--code" data-sid="09b-walk-555:5">
     <div class="editor" data-sid="09b-walk-555:6">
       <p class="editor__bar" data-sid="09b-walk-555:7">given &mdash; then yours</p>
@@ -23,24 +24,24 @@
         <p class="heap-name frag" data-step="2" data-wire="2:beta" style="grid-row: 2;" data-sid="09b-walk-555:20">e2</p>
         <div class="heap-obj frag" data-step="1" data-obj="acme" style="grid-row: 1;" data-sid="09b-walk-555:21">
           <p class="heap-obj__type" data-sid="09b-walk-555:22">Employee</p>
-          <div class="heap-obj__field" data-sid="09b-walk-555:23">
-            <p class="heap-val heap-val--old frag" data-step="3" data-sid="09b-walk-555:24">id = 0</p>
-            <p class="heap-val frag" data-step="3" data-sid="09b-walk-555:25">id = 123</p>
+          <div class="heap-obj__field heap-obj__field--strike" data-sid="09b-walk-555:23">
+            <p class="heap-val heap-val--old frag" data-step="3" data-sid="09b-walk-555:24">id = <span class="heap-val__num">0</span></p>
+            <p class="heap-val frag" data-step="3" data-sid="09b-walk-555:25"><span class="sr-only">now </span>123</p>
           </div>
           <div class="heap-obj__gone frag" data-step="5" data-sid="09b-walk-555:26">unreachable</div>
         </div>
         <div class="heap-obj frag" data-step="2" data-obj="beta" style="grid-row: 2;" data-sid="09b-walk-555:27">
           <p class="heap-obj__type" data-sid="09b-walk-555:28">Employee</p>
-          <div class="heap-obj__field" data-sid="09b-walk-555:29">
-            <p class="heap-val heap-val--old frag" data-step="4" data-sid="09b-walk-555:30">id = 0</p>
-            <p class="heap-val frag" data-step="4" data-sid="09b-walk-555:31">id = 456</p>
+          <div class="heap-obj__field heap-obj__field--strike" data-sid="09b-walk-555:29">
+            <p class="heap-val heap-val--old frag" data-step="4" data-sid="09b-walk-555:30">id = <span class="heap-val__num">0</span></p>
+            <p class="heap-val frag" data-step="4" data-sid="09b-walk-555:31"><span class="sr-only">now </span>456</p>
           </div>
         </div>
         <div class="heap-obj frag" data-step="6" data-obj="gamma" style="grid-row: 3;" data-sid="09b-walk-555:32">
           <p class="heap-obj__type" data-sid="09b-walk-555:33">Employee</p>
-          <div class="heap-obj__field" data-sid="09b-walk-555:34">
-            <p class="heap-val heap-val--old frag" data-step="7" data-sid="09b-walk-555:35">id = 0</p>
-            <p class="heap-val frag" data-step="7" data-sid="09b-walk-555:36">id = 555</p>
+          <div class="heap-obj__field heap-obj__field--strike" data-sid="09b-walk-555:34">
+            <p class="heap-val heap-val--old frag" data-step="7" data-sid="09b-walk-555:35">id = <span class="heap-val__num">0</span></p>
+            <p class="heap-val frag" data-step="7" data-sid="09b-walk-555:36"><span class="sr-only">now </span>555</p>
           </div>
         </div>
         <svg class="heap-wires" aria-hidden="true" data-sid="09b-walk-555:37"></svg>

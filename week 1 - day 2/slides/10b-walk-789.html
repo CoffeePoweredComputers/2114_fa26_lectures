@@ -1,8 +1,9 @@
-<section class="slide slide--warmup" id="slide-10b" data-roll="off" data-sid="10b-walk-789:1">
+<section class="slide slide--warmup" id="slide-10b" data-sid="10b-walk-789:1">
   <header class="slide__head" data-sid="10b-walk-789:2">
     <p class="slide__kicker" data-sid="10b-walk-789:3">Warm-up 2 &middot; the answer</p>
     <h2 data-sid="10b-walk-789:4">One call moves both</h2>
   </header>
+  <p class="sr-only slide__desc" data-sid="10b-walk-789:41" data-hash="528c03bb9d" data-desc="auto">The answer. The five given lines are dimmed, already run. On the heap a dimmed box reading id = 123 is labelled unreachable, and below it one box reading id = 456 that both names point at. Line 6 strikes the 456 through and lands 789 beside it. The alternative line only moves the counter down and the box breathes once — nothing else changes.</p>
   <div class="slide__body grid grid--code" data-sid="10b-walk-789:5">
     <div class="editor" data-sid="10b-walk-789:6">
       <p class="editor__bar" data-sid="10b-walk-789:7">given &mdash; then yours</p>
@@ -30,9 +31,9 @@
         </div>
         <div class="heap-obj" data-obj="beta" style="grid-row: 2;" data-sid="10b-walk-789:25">
           <p class="heap-obj__type" data-sid="10b-walk-789:26">Employee</p>
-          <div class="heap-obj__field" data-sid="10b-walk-789:27">
-            <p class="heap-val heap-val--old frag" data-step="1" data-sid="10b-walk-789:28">id = 456</p>
-            <p class="heap-val frag" data-step="1" data-sid="10b-walk-789:29">id = 789</p>
+          <div class="heap-obj__field heap-obj__field--strike" data-sid="10b-walk-789:27">
+            <p class="heap-val heap-val--old frag" data-step="1" data-sid="10b-walk-789:28">id = <span class="heap-val__num">456</span></p>
+            <p class="heap-val frag" data-step="1" data-sid="10b-walk-789:29"><span class="sr-only">now </span>789</p>
           </div>
         </div>
         <svg class="heap-wires" aria-hidden="true" data-sid="10b-walk-789:30"></svg>
@@ -44,7 +45,7 @@
     </div>
   </div>
   <div class="slide__number" data-sid="10b-walk-789:34"></div>
-  <aside class="notes" data-sid="10b-walk-789:35">The pair is the point: the same aliasing, once a trap and once a shortcut. Captions before trimming — 1: “After the given code, both names share one object — so one call, through either name, writes into it.” 2: “Both ids now read 789. e2.setID(789) would have done exactly the same — the trap from warm-up 1 is the shortcut here.” Per step — 1: line 6 lights up and 456 becomes 789 through e1; both arrows were already on that box. 2: the “or” line — the bar moves down one line, the box breathes once more, and nothing on the right moves; that stillness is the point.</aside>
+  <aside class="notes" data-sid="10b-walk-789:35">The pair is the point: the same aliasing, once a trap and once a shortcut. Captions before trimming — 1: “After the given code, both names share one object — so one call, through either name, writes into it.” 2: “Both ids now read 789. e2.setID(789) would have done exactly the same — the trap from warm-up 1 is the shortcut here.” Per step — 1: line 6 lights up, 456 is struck through and 789 lands beside it, through e1; both arrows were already on that box. 2: the “or” line — the bar moves down one line, the box breathes once more, and nothing on the right moves; that stillness is the point.</aside>
 
   <style>
     /* Slide-local: the "or" line — used by this slide only, all values from

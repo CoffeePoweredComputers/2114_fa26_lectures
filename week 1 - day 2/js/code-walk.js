@@ -39,9 +39,10 @@
    for a .heap-val--old / .heap-val pair sharing a data-step, the engine finds
    the last number in each text and counts one into the other — forward on the
    step, backward when scrubbing off it. Values without a number fall back to
-   the CSS crossfade. Opt out with data-roll="off" on the <section> (or on a
-   field): the pair plain-crossfades instead — use it when a roll would read
-   as incrementing rather than replacing.
+   the CSS crossfade. A field with class heap-obj__field--strike is the
+   before/after variant (old number struck through, new value beside it — see
+   css/deck.css); the engine leaves those alone. Prefer it when a roll would
+   read as incrementing rather than replacing.
 
    Wire and value state is a pure function of the deck step, so scrubbing both
    directions stays correct. Single-step moves animate; jumps, slide entries,
@@ -273,7 +274,7 @@
       if (!heaps.length && !sec.querySelector('.editor__pc')) return;
       var board = { sec: sec, index: i + 1, wires: [], counts: [] };
       sec.querySelectorAll('.heap-obj__field').forEach(function (field) {
-        if (field.closest('[data-roll="off"]')) return;   // authored opt-out: CSS crossfade
+        if (field.classList.contains('heap-obj__field--strike')) return;   // before/after: CSS only
         var old = field.querySelector('.heap-val--old[data-step]');
         var neu = field.querySelector('.heap-val[data-step]:not(.heap-val--old)');
         if (!old || !neu) return;

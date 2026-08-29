@@ -62,12 +62,54 @@ body {
 /* ---- step engine: .frag[data-step] reveal states, classes set by js/deck.js ---- */
 .frag { transition: opacity .35s ease, transform .35s ease; }
 .frag.is-pending { opacity: 0; }
+/* Screen-reader-only text: context a visual (a strike, an arrow) carries
+   for sighted viewers. Both clip forms so every engine, old and new, hides it. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
 .frag.is-current,
 .frag.is-past { opacity: 1; }
 .frag--dim.is-pending { opacity: 0.3; }
 
 /* ---- speaker notes live inside the slide but never render ---- */
-aside.notes { display: none; }
+aside.notes { display: none; }   /* speaker notes: in the slide, never rendered */
+
+/* One per slide, right after the heading: what the slide shows and how it
+   builds, for someone who cannot see it (WCAG 1.1.1). Hidden by .sr-only, and
+   js/deck.js wires it onto the slide's role="img" figures via aria-describedby. */
+.slide__desc { /* .sr-only carries the hiding; this class is the hook */ }
+
+/* ---- motion (WCAG 2.2.2): js/deck.js puts .no-motion on <html> when the
+   viewer presses `m` or the focus-revealed button. Blunt on purpose — this is
+   what stops the title/closing mist loops. ---- */
+html.no-motion *,
+html.no-motion *::before,
+html.no-motion *::after {
+  animation: none !important;
+  transition: none !important;
+  scroll-behavior: auto !important;
+}
+.deck__motion {
+  position: fixed; left: 8px; top: 8px; z-index: 100;
+  width: 1px; height: 1px; overflow: hidden;
+  clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap;
+  border: 0; padding: 0; background: transparent; color: transparent;
+}
+.deck__motion:focus, .deck__motion:focus-visible {
+  width: auto; height: auto; clip: auto; clip-path: none; overflow: visible;
+  padding: 10px 16px; border: 2px solid currentColor; border-radius: var(--r-1, 6px);
+  background: var(--bg-0, #fff); color: var(--fg-0, #000);
+  font: inherit; font-size: 16px; cursor: pointer;
+}
 
 /* ---- UA-default coverage: browsers disagree on the default styling of these
    elements (monospace sizing especially), so the deck pins every one a slide
@@ -385,7 +427,7 @@ aside.notes { display: none; }
 .slide .scan__link {
   margin: 0;
   font-family: var(--font-mono);
-  font-size: var(--t-small);
+  font-size: var(--t-micro);   /* full course host must fit the 640px card on one line */
   font-weight: 700;
   letter-spacing: -0.01em;
   color: var(--accent-2);
@@ -510,6 +552,39 @@ aside.notes { display: none; }
 .codewalk .frag.heap-val--old.is-pending { opacity: 1; }
 .codewalk .frag.heap-val--old.is-current,
 .codewalk .frag.heap-val--old.is-past { opacity: 0; }
+/* Before/after variant: the two values sit side by side instead of stacking.
+   Markup: old "<p>id = <span class=heap-val__num>456</span></p>",
+           new "<p><span class=sr-only>now </span>789</p>"
+   (screen readers get "id = 456, now 789" — the strike itself is decoration).
+   On the step the old number takes a strike that draws on left→right (Create,
+   no drift), the old line dims, then the new value fades in beside it. The
+   engine skips these fields (nothing to roll). Scrubbing back reverses it.
+   The number is an inline-block so its absolutely positioned strike has a
+   real box to resolve against (an inline's fragment box differs per engine)
+   and, with line-height 1, a whole-pixel height; the strike is a border, not
+   a background, so it survives forced-colors mode. */
+.codewalk .heap-obj__field--strike { display: flex; align-items: baseline; gap: var(--s-2); }
+.codewalk .heap-obj__field--strike .heap-val { grid-area: auto; transition: opacity .3s ease, color .3s ease; }
+.codewalk .heap-obj__field--strike .frag.heap-val--old.is-current,
+.codewalk .heap-obj__field--strike .frag.heap-val--old.is-past { opacity: 1; color: var(--fg-1); }
+.codewalk .heap-val__num { position: relative; display: inline-block; line-height: 1; }
+.codewalk .heap-val__num::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 2px);
+  height: 0;
+  border-top: 3px solid currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .35s var(--ease-smooth);
+}
+.codewalk .frag.heap-val--old.is-current .heap-val__num::after,
+.codewalk .frag.heap-val--old.is-past .heap-val__num::after { transform: scaleX(1); }
+/* the new value waits for the strike; on the way back it leaves first */
+.codewalk .heap-obj__field--strike .frag.heap-val:not(.heap-val--old).is-current,
+.codewalk .heap-obj__field--strike .frag.heap-val:not(.heap-val--old).is-past { transition-delay: .25s; }
 /* The write lands: the card takes a single soft breath when a new (non --old)
    value becomes current. Replays symmetrically when scrubbing back onto it. */
 .codewalk .heap-obj:has(> .heap-obj__field > .heap-val.is-current:not(.heap-val--old)) {
@@ -574,7 +649,8 @@ aside.notes { display: none; }
 .codewalk .frag.walkcap.is-pending,
 .codewalk .frag.walkcap.is-past { opacity: 0; }
 @media (prefers-reduced-motion: reduce) {
-  .editor__pc, .codewalk .heap-val, .codewalk .walkcap, .codewalk .heap-obj,
+  .editor__pc, .codewalk .heap-val, .codewalk .heap-obj__field--strike .heap-val,
+  .codewalk .heap-val__num::after, .codewalk .walkcap, .codewalk .heap-obj,
   .codewalk .heap-obj__gone, .editor__code .walkline { transition: none; }
   /* !important: the :has() pulse rule above out-specifies anything sane here */
   .codewalk .heap-obj { animation: none !important; }
@@ -600,6 +676,19 @@ aside.notes { display: none; }
 
 /* Fully centred composition (cover). */
 .slide--center { align-items: center; text-align: center; }
+
+/* Section divider: one of 02-today's chapter tabs at full size — kicker,
+   the numeral in the tabs' orange, the tab's caption as the title. Used by
+   the three chapter dividers (03b, 08b, 13b). */
+.divider .slide__head { margin-bottom: 0; }
+.divider__n {
+  margin: 0 0 var(--s-3);
+  font-family: var(--font-display);
+  font-size: var(--t-h1);
+  line-height: 1;
+  color: var(--accent-3);
+}
+.divider h2 { max-width: 1320px; }
 
 /* Opt-out of the stone edge; the ridge widens to fill the freed strip.
    Doubled class keeps this above the later .slide::before rule in the cascade. */
