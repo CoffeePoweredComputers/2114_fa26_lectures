@@ -1,0 +1,25 @@
+<section class="slide" id="slide-16c" data-sid="16c-how-llms-work:1">
+  <header class="slide__head" data-sid="16c-how-llms-work:2">
+    <h2 data-sid="16c-how-llms-work:3">How does an LLM work?</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="16c-how-llms-work:4">One sentence, large: an LLM uses large-scale association to predict a sequence of tokens. Under it, three consequences &mdash; it does next-token prediction over and over, the predictions come from its training data, and its memory is limited &mdash; and then, large again, the conclusion: it does not think and it does not problem-solve.</p>
+  <div class="slide__body stack" data-sid="16c-how-llms-work:5">
+    <p class="motto motto--tight" data-sid="16c-how-llms-work:6">An LLM uses large-scale association to <b>predict a sequence of tokens.</b></p>
+    <ul data-sid="16c-how-llms-work:7">
+      <li class="frag" data-step="1" data-sid="16c-how-llms-work:8">So: it predicts the next token, then the next one, then the next one.</li>
+      <li class="frag" data-step="2" data-sid="16c-how-llms-work:9">Its predictions come from what it was trained on.</li>
+      <li class="frag" data-step="3" data-sid="16c-how-llms-work:10">Its memory is limited.</li>
+    </ul>
+    <p class="motto motto--tight frag" data-step="4" data-sid="16c-how-llms-work:11">It does <b>not</b> think, and it does <b>not</b> problem-solve.</p>
+  </div>
+  <div class="slide__number" data-sid="16c-how-llms-work:12"></div>
+  <aside class="notes" data-sid="16c-how-llms-work:13">This is the mechanism slide, and the next one is the demonstration &mdash; do not over-explain here. &ldquo;Limited memory&rdquo; is worth one concrete sentence: it does not remember your project, your last conversation, or the constraint you gave it forty messages ago unless that text is still in front of it.</aside>
+
+  <style>
+    /* Slide-local: claim, evidence, conclusion — the three lines of evidence
+       sit between the two display-scale statements rather than crowding
+       either. All values from tokens. */
+    #slide-16c .slide__body { justify-content: space-between; }
+    #slide-16c ul { margin: 0; }
+  </style>
+</section>

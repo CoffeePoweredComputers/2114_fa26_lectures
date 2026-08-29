@@ -1,0 +1,97 @@
+<section class="slide" id="slide-16d" data-sid="16d-next-word:1">
+  <header class="slide__head" data-sid="16d-next-word:2">
+    <p class="slide__kicker" data-sid="16d-next-word:3">NEXT WORD PREDICTION</p>
+    <h2 data-sid="16d-next-word:4">Same model, one more clause</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="16d-next-word:5">Two ranked lists of predictions from the same model. For &ldquo;I like to play blank&rdquo; the top five are games at 0.155, football at 0.046, music at 0.035, poker at 0.030 and blackjack at 0.028. Adding &ldquo;in the afternoon&rdquo; changes the whole ranking: tennis at 0.154, outside at 0.136, football at 0.111, piano at 0.083 and music at 0.075. Nothing about the model changed &mdash; only the words in front of it.</p>
+  <div class="slide__body grid grid--2" data-sid="16d-next-word:6">
+    <figure class="probs" data-sid="16d-next-word:7">
+      <p class="probs__prompt" data-sid="16d-next-word:8">I like to play &lt;mask&gt;.</p>
+      <ul class="probs__list" data-sid="16d-next-word:9">
+        <li data-sid="16d-next-word:10">
+          <p class="probs__label" data-sid="16d-next-word:11">games<span class="probs__val">0.155</span></p>
+          <div class="probs__bar" style="width: 678px" data-sid="16d-next-word:12"></div>
+        </li>
+        <li data-sid="16d-next-word:13">
+          <p class="probs__label" data-sid="16d-next-word:14">football<span class="probs__val">0.046</span></p>
+          <div class="probs__bar" style="width: 201px" data-sid="16d-next-word:15"></div>
+        </li>
+        <li data-sid="16d-next-word:16">
+          <p class="probs__label" data-sid="16d-next-word:17">music<span class="probs__val">0.035</span></p>
+          <div class="probs__bar" style="width: 153px" data-sid="16d-next-word:18"></div>
+        </li>
+        <li data-sid="16d-next-word:19">
+          <p class="probs__label" data-sid="16d-next-word:20">poker<span class="probs__val">0.030</span></p>
+          <div class="probs__bar" style="width: 131px" data-sid="16d-next-word:21"></div>
+        </li>
+        <li data-sid="16d-next-word:22">
+          <p class="probs__label" data-sid="16d-next-word:23">blackjack<span class="probs__val">0.028</span></p>
+          <div class="probs__bar" style="width: 123px" data-sid="16d-next-word:24"></div>
+        </li>
+      </ul>
+      <figcaption class="note" data-sid="16d-next-word:25">Board games, mostly.</figcaption>
+    </figure>
+    <figure class="probs frag" data-step="1" data-sid="16d-next-word:26">
+      <p class="probs__prompt" data-sid="16d-next-word:27">I like to play &lt;mask&gt; in the afternoon.</p>
+      <ul class="probs__list" data-sid="16d-next-word:28">
+        <li data-sid="16d-next-word:29">
+          <p class="probs__label" data-sid="16d-next-word:30">tennis<span class="probs__val">0.154</span></p>
+          <div class="probs__bar" style="width: 674px" data-sid="16d-next-word:31"></div>
+        </li>
+        <li data-sid="16d-next-word:32">
+          <p class="probs__label" data-sid="16d-next-word:33">outside<span class="probs__val">0.136</span></p>
+          <div class="probs__bar" style="width: 595px" data-sid="16d-next-word:34"></div>
+        </li>
+        <li data-sid="16d-next-word:35">
+          <p class="probs__label" data-sid="16d-next-word:36">football<span class="probs__val">0.111</span></p>
+          <div class="probs__bar" style="width: 486px" data-sid="16d-next-word:37"></div>
+        </li>
+        <li data-sid="16d-next-word:38">
+          <p class="probs__label" data-sid="16d-next-word:39">piano<span class="probs__val">0.083</span></p>
+          <div class="probs__bar" style="width: 363px" data-sid="16d-next-word:40"></div>
+        </li>
+        <li data-sid="16d-next-word:41">
+          <p class="probs__label" data-sid="16d-next-word:42">music<span class="probs__val">0.075</span></p>
+          <div class="probs__bar" style="width: 328px" data-sid="16d-next-word:43"></div>
+        </li>
+      </ul>
+      <figcaption class="note" data-sid="16d-next-word:44">Four words later, four different answers.</figcaption>
+    </figure>
+  </div>
+  <p class="note" data-sid="16d-next-word:45">Predictions from <a href="https://huggingface.co/FacebookAI/xlm-roberta-large">FacebookAI/xlm-roberta-large</a>. Same weights both times.</p>
+  <div class="slide__number" data-sid="16d-next-word:46"></div>
+  <aside class="notes" data-sid="16d-next-word:47">Read the left column first and let them guess the right one before you reveal it. The point is not that the model is wrong &mdash; both lists are perfectly reasonable. The point is that nothing here is reasoning about what you enjoy; it is ranking what usually follows these words. That is also why a small change in how you ask gives you a different answer.</aside>
+
+  <style>
+    /* Slide-local: a ranked prediction panel, drawn as HTML rather than
+       screenshotted so it restyles with the deck. Bar widths are the only
+       geometry, so they stay inline on each bar; everything else is tokens.
+       Used by this slide only. */
+    #slide-16d .probs { margin: 0; }
+    #slide-16d .probs__prompt {
+      margin: 0 0 var(--s-3);
+      padding: var(--s-2) var(--s-3);
+      border: 3px solid var(--stone);
+      border-radius: var(--r-1);
+      background: var(--bg-1);
+      font-family: var(--font-mono);
+      font-size: var(--t-micro);
+      line-height: 1.4;
+    }
+    #slide-16d .probs__list { list-style: none; margin: 0; padding: 0; }
+    #slide-16d .probs__list li { margin: 0 0 var(--s-2); }
+    #slide-16d .probs__label {
+      display: flex;
+      justify-content: space-between;
+      gap: var(--s-3);
+      margin: 0 0 var(--s-1);
+      font-family: var(--font-mono);
+      font-size: var(--t-micro);
+      line-height: 1.2;
+    }
+    #slide-16d .probs__val { color: var(--fg-1); }
+    #slide-16d .probs__bar { height: 12px; border-radius: var(--r-1); background: var(--accent-2); }
+    #slide-16d figcaption { margin-top: var(--s-3); }
+    #slide-16d > .note { margin: var(--s-3) 0 0; }
+  </style>
+</section>

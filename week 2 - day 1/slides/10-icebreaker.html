@@ -1,0 +1,99 @@
+<section class="slide" id="slide-10" data-sid="10-icebreaker:1">
+  <header class="slide__head" data-sid="10-icebreaker:2">
+    <h2 data-sid="10-icebreaker:3">Icebreaker &mdash; groups of 3 or 4</h2>
+    <p class="slide__lede" data-sid="10-icebreaker:4">These are the people you will be voting with all semester.</p>
+  </header>
+  <p class="sr-only slide__desc" data-sid="10-icebreaker:5">Four prompts numbered down the left, arriving one at a time: your name, your major, the coding you have done, and what you want from this class. At right, four people around a table with a block of ice in the middle, each holding a little hammer raised. As each prompt arrives, one of them brings the hammer down and a crack draws from that side of the ice to its centre, so by the fourth prompt the ice is in four pieces.</p>
+
+  <!-- Four rounds of the group, drawn as four strikes. The prompts are the
+       deck's numbered arc so they read from the back of the room for the
+       three minutes the slide is up; the scene is the literal icebreaker, and
+       the reason it is stepped rather than looped is the note below — go round
+       the group on EACH prompt. One person, one prompt, one blow: the ice ends
+       in four pieces because there were four of them. -->
+  <div class="slide__body ib" data-sid="10-icebreaker:6">
+    <ol class="steps ib__prompts" data-sid="10-icebreaker:7">
+      <li class="frag" data-step="1" data-anim="fade" style="--anim-delay: .3s" data-sid="10-icebreaker:8">your name</li>
+      <li class="frag" data-step="2" data-anim="fade" style="--anim-delay: .3s" data-sid="10-icebreaker:9">your major</li>
+      <li class="frag" data-step="3" data-anim="fade" style="--anim-delay: .3s" data-sid="10-icebreaker:10">the coding you have done</li>
+      <li class="frag" data-step="4" data-anim="fade" style="--anim-delay: .3s" data-sid="10-icebreaker:11">what you want from this class</li>
+    </ol>
+
+    <svg class="ib__scene" viewBox="0 0 640 400" preserveAspectRatio="xMidYMid meet" role="img"
+         aria-label="Four people around a table, taking turns to bring a little hammer down on a block of ice in the middle"
+         data-sid="10-icebreaker:12">
+      <defs>
+        <g id="w2-ib-person"><circle cy="-34" r="26"/><path d="M-44 34v-12a44 44 0 0 1 88 0v12"/></g>
+        <!-- hammer: the hand at 0,0; handle runs down +y, head at the end -->
+        <g id="w2-ib-hammer"><path d="M0 0v52"/><rect x="-24" y="48" width="48" height="20" rx="4"/></g>
+      </defs>
+
+      <rect class="ib__table" x="160" y="120" width="320" height="180" rx="16"/>
+      <path class="ib__slab" d="M210 171 248 157H393L430 171 436 233 400 263H240L204 233Z"/>
+
+      <!-- one crack per strike, each drawing from where the hammer lands to the centre -->
+      <path class="ib__crack frag" data-step="1" pathLength="100" d="M372 159 352 178 358 194 320 210"/>
+      <path class="ib__crack frag" data-step="2" pathLength="100" d="M432 203 408 198 394 212 320 210"/>
+      <path class="ib__crack frag" data-step="3" pathLength="100" d="M268 261 286 244 280 226 320 210"/>
+      <path class="ib__crack frag" data-step="4" pathLength="100" d="M206 219 230 224 244 210 320 210"/>
+
+      <g class="ib__people">
+        <use href="#w2-ib-person" x="320" y="60"/>
+        <use href="#w2-ib-person" x="576" y="210"/>
+        <use href="#w2-ib-person" x="320" y="360"/>
+        <use href="#w2-ib-person" x="64" y="210"/>
+      </g>
+
+      <!-- each hammer is placed at its person's hand and turned to face the ice;
+           the inner group is the frag, so the swing rotates about the hand -->
+      <g transform="translate(374 87)"><g class="ib__hammer frag" data-step="1"><use href="#w2-ib-hammer"/></g></g>
+      <g transform="translate(512 201) rotate(90)"><g class="ib__hammer frag" data-step="2"><use href="#w2-ib-hammer"/></g></g>
+      <g transform="translate(266 335) rotate(180)"><g class="ib__hammer frag" data-step="3"><use href="#w2-ib-hammer"/></g></g>
+      <g transform="translate(128 221) rotate(270)"><g class="ib__hammer frag" data-step="4"><use href="#w2-ib-hammer"/></g></g>
+    </svg>
+  </div>
+  <div class="slide__number" data-sid="10-icebreaker:13"></div>
+  <aside class="notes" data-sid="10-icebreaker:14">Three minutes, no more. Walk the room. Step through the four prompts as you read them out &mdash; one blow of the hammer each &mdash; then leave the slide up. Go round the group on each prompt rather than letting one person answer all four. The fourth prompt is the useful one &mdash; it gives them something to say to each other that is not small talk, and it gives you the temperature of the room. These groups are the ones they will vote with for the rest of the semester, so it is worth the three minutes.</aside>
+
+  <style>
+    /* Slide-local: prompts left on the deck's numbered arc, the table scene
+       right. People are day 2's table glyph; the ice takes the blue so it is
+       the one cold thing on a warm ground. Motion is manim's only: each step
+       is one Rotate (the hammer comes down about the hand), one Create (the
+       crack draws on by dashoffset, timed to the impact) and one FadeIn (the
+       prompt). Nothing loops — the slide holds still while the room talks.
+       Used by this slide only, all values from tokens. */
+    #slide-10 .ib { display: grid; grid-template-columns: 1fr 560px; gap: var(--s-6); align-items: center; }
+    #slide-10 .ib__scene { display: block; width: 560px; height: 350px; justify-self: end; }
+
+    /* the room */
+    #slide-10 .ib__table { fill: color-mix(in srgb, var(--accent-1) 8%, var(--bg-0)); stroke: var(--accent-1); stroke-width: 6; }
+    #slide-10 .ib__slab { fill: color-mix(in srgb, var(--accent-2) 14%, var(--paper)); stroke: var(--accent-2); stroke-width: 6; stroke-linejoin: round; }
+    #slide-10 .ib__people circle, #slide-10 .ib__people path { fill: none; stroke: var(--fg-0); stroke-width: 7; stroke-linecap: round; }
+    #slide-10 .ib__hammer path { fill: none; stroke: var(--fg-0); stroke-width: 7; stroke-linecap: round; }
+    #slide-10 .ib__hammer rect { fill: var(--accent-1); }
+
+    /* the strike: raised until its step, then Rotate down about the hand
+       (the hand is the top-centre of the hammer's own box) */
+    #slide-10 .ib__hammer {
+      transform-box: fill-box; transform-origin: 50% 0;
+      transition: transform .3s var(--ease-smooth);
+    }
+    #slide-10 .frag.ib__hammer.is-pending { opacity: 1; transform: rotate(-60deg); }
+
+    /* the crack: Create, from the point of impact inward, once the hammer lands */
+    #slide-10 .ib__crack {
+      fill: none; stroke: var(--accent-2); stroke-width: 4; stroke-linecap: round; stroke-linejoin: round;
+      stroke-dasharray: 100;
+      transition: stroke-dashoffset .35s var(--ease-smooth);
+    }
+    #slide-10 .frag.ib__crack.is-pending { opacity: 1; stroke-dashoffset: 100; }
+    #slide-10 .frag.ib__crack.is-current, #slide-10 .frag.ib__crack.is-past { transition-delay: .25s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      #slide-10 .ib__hammer, #slide-10 .ib__crack, #slide-10 .ib__prompts .frag {
+        transition-duration: 0s !important; transition-delay: 0s !important;
+      }
+    }
+  </style>
+</section>
