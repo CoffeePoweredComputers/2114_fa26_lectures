@@ -656,6 +656,60 @@ html.no-motion *::after {
   .codewalk .heap-obj { animation: none !important; }
 }
 
+/* ---- verdict strip: the vote's four answers back on screen at the end of a
+   walkthrough — the wrong ones struck through one after another, the right
+   one left standing in the heading maroon. It is 09-tips' picture (tick one,
+   strike three) done for real, so a walkthrough ends on the vote it answers.
+   Markup:  <ol class="verdict frag" data-step="N">
+              <li class="verdict__opt verdict__opt--wrong" style="--i: 0">
+                <span class="verdict__txt">…</span></li>
+              <li class="verdict__opt verdict__opt--right"><span class="verdict__txt">…</span></li>
+   Letters come from a counter, so the order is the vote's order. The strike
+   is a border (survives forced colours) drawn on left→right on the smoother-
+   step — Create, no drift — staggered by --i once the strip is current; the
+   right answer takes its colour after the last strike lands. Used by both
+   walkthroughs. .slide prefixes out-specify the `.slide ol` type ramp. ----- */
+.slide .verdict {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-1) var(--s-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: opt;
+  font-family: var(--font-mono);
+  font-size: var(--t-micro);
+  line-height: 1.3;
+  color: var(--fg-1);
+}
+.slide .verdict li { margin: 0; }
+.verdict__opt { counter-increment: opt; white-space: nowrap; }
+.verdict__opt::before { content: counter(opt, upper-alpha) " "; color: var(--accent-1); }
+.verdict__txt { position: relative; display: inline-block; transition: color .3s ease; }
+.verdict__opt--wrong .verdict__txt::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 2px);
+  height: 0;
+  border-top: 3px solid currentColor;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .35s var(--ease-smooth);
+}
+.frag.verdict.is-current .verdict__opt--wrong .verdict__txt::after,
+.frag.verdict.is-past .verdict__opt--wrong .verdict__txt::after {
+  transform: scaleX(1);
+  transition-delay: calc(.35s + var(--i, 0) * .3s);
+}
+.verdict__opt--right .verdict__txt { font-weight: 700; }
+.frag.verdict.is-current .verdict__opt--right .verdict__txt,
+.frag.verdict.is-past .verdict__opt--right .verdict__txt { color: var(--accent-1); transition-delay: 1.3s; }
+@media (prefers-reduced-motion: reduce) {
+  .verdict__txt, .verdict__opt--wrong .verdict__txt::after { transition: none !important; }
+}
+
 /* ---- motto hero — one big display-scale sentence with accent-bold clauses.
    Scoped under .slide so it outranks the `.slide p` base type rules. */
 .slide .motto {

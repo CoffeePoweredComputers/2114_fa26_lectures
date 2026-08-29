@@ -43,6 +43,8 @@
    before/after variant (old number struck through, new value beside it — see
    css/deck.css); the engine leaves those alone. Prefer it when a roll would
    read as incrementing rather than replacing.
+   A stacked (non-strike) field can also opt out with data-roll="off" — the
+   CSS crossfade runs instead, e.g. a default being overwritten (0 → 2021).
 
    Wire and value state is a pure function of the deck step, so scrubbing both
    directions stays correct. Single-step moves animate; jumps, slide entries,
@@ -275,6 +277,7 @@
       var board = { sec: sec, index: i + 1, wires: [], counts: [] };
       sec.querySelectorAll('.heap-obj__field').forEach(function (field) {
         if (field.classList.contains('heap-obj__field--strike')) return;   // before/after: CSS only
+        if (field.getAttribute('data-roll') === 'off') return;             // authored opt-out: crossfade, never count
         var old = field.querySelector('.heap-val--old[data-step]');
         var neu = field.querySelector('.heap-val[data-step]:not(.heap-val--old)');
         if (!old || !neu) return;
