@@ -2,15 +2,16 @@
   <header class="slide__head" data-sid="16i-llm-strategy:2">
     <h2 data-sid="16i-llm-strategy:3">If you do use one, use it in this order</h2>
   </header>
-  <p class="sr-only slide__desc" data-sid="16i-llm-strategy:4">A cascade of four gates down the slide, with an orange pill labelled stuck falling through them one at a time. Gate one, try it yourself &mdash; trace, draw, debugger, Python Tutor &mdash; exits to unstuck. Gate two, the course material &mdash; the PrairieLearn modules, these slides &mdash; exits to unstuck. Gate three, ask us &mdash; office hours, lab, lecture, Piazza &mdash; exits to unstuck. Only after all three does the pill reach the fourth gate, drawn in orange: ask an LLM, with the line understand and verify what it hands you; its exit, also in orange, is not unstuck but then verify it. Last, a warning fades in under the gates: its answers may be wrong, and may solve the problem in a way this course has not taught you, which leaves you more to untangle, not less.</p>
+  <p class="sr-only slide__desc" data-sid="16i-llm-strategy:4">A cascade of four gates down the slide, with an orange pill labelled stuck falling through them one at a time. Gate one, try it yourself &mdash; trace, draw, debugger, Python Tutor &mdash; exits to unstuck. Gate two, the course material &mdash; the PrairieLearn modules, these slides &mdash; exits to unstuck. Only after both does the pill reach the third gate, drawn in orange: ask an LLM, with the line understand what it hands you; its exit, also in orange, is not unstuck but an arrow labelled then verify it that elbows down into gate four: ask us &mdash; verify it: office hours, lab, Piazza &mdash; which exits to unstuck. Last, a warning fades in under the gates: its answers may be wrong, and may solve the problem in a way this course has not taught you, which leaves you more to untangle, not less.</p>
 
   <!-- The order is the content, so the order is the picture — the same
        cascade as equals() four slides back, on purpose: equals() asks four
        questions in order, and so do you. Three of the four gates exit to
        "unstuck", which is the point: the LLM is the gate you only reach by
-       surviving the other three, and its exit is the only one that is not an
-       exit. 16h's responsibilities are folded in here — its verify line is
-       gate 4's second line, its debugger/Python Tutor line is gate 1's, and
+       surviving the first two, and its exit is the only one that is not an
+       exit — it elbows down into gate 4, ask us, which IS the verification
+       step. 16h's responsibilities are folded in here — its verify line is
+       gate 4 itself, its debugger/Python Tutor line is gate 1's, and
        "document every use" lives on the rule slide already. Unlike 14, the
        pill has a lane of its own at the left of each gate, so it never sits
        on the gate's text. viewBox = the body's rect. -->
@@ -38,23 +39,24 @@
       </g>
       <text class="lad__out lad__out--out frag" data-step="2" data-anim="fade" x="1336" y="569" data-sid="16i-llm-strategy:25">unstuck</text>
 
-      <!-- gate 3 -->
+      <!-- gate 3: only reached by surviving the first two, and the one exit that is not an exit —
+           its orange arrow elbows DOWN into gate 4, because what comes after the LLM is verification -->
       <rect class="lad__gate lad__gate--3 frag" data-step="3" x="280" y="656" width="900" height="96" rx="12" data-sid="16i-llm-strategy:26"/>
-      <text class="lad__q frag" data-step="3" data-anim="fade" x="496" y="696" data-sid="16i-llm-strategy:27">ask us</text>
-      <text class="lad__sub frag" data-step="3" data-anim="fade" x="496" y="738" data-sid="16i-llm-strategy:28">office hours, lab, lecture, Piazza</text>
-      <g class="lad__exit lad__exit--out frag" data-step="3" data-sid="16i-llm-strategy:29">
-        <line x1="1180" y1="704" x2="1290" y2="704"/><path d="M1312 704L1288 692V716Z"/>
+      <text class="lad__q frag" data-step="3" data-anim="fade" x="496" y="696" data-sid="16i-llm-strategy:27">ask an LLM</text>
+      <text class="lad__sub lad__sub--llm frag" data-step="3" data-anim="fade" x="496" y="738" data-sid="16i-llm-strategy:28">understand what it hands you</text>
+      <g class="lad__exit lad__exit--verify frag" data-step="3" data-sid="16i-llm-strategy:29">
+        <path class="lad__elbow" d="M1180 704H1240V770"/><path d="M1240 794L1228 770H1252Z"/>
       </g>
-      <text class="lad__out lad__out--out frag" data-step="3" data-anim="fade" x="1336" y="717" data-sid="16i-llm-strategy:30">unstuck</text>
+      <text class="lad__out lad__out--verify frag" data-step="3" data-anim="fade" x="1272" y="762" data-sid="16i-llm-strategy:30">then verify it</text>
 
-      <!-- gate 4: only reached by surviving the other three, and the one exit that is not an exit -->
+      <!-- gate 4: the verification step — you bring what the LLM gave you to a human -->
       <rect class="lad__gate lad__gate--4 frag" data-step="4" x="280" y="804" width="900" height="96" rx="12" data-sid="16i-llm-strategy:31"/>
-      <text class="lad__q frag" data-step="4" data-anim="fade" x="496" y="844" data-sid="16i-llm-strategy:32">ask an LLM</text>
-      <text class="lad__sub lad__sub--llm frag" data-step="4" data-anim="fade" x="496" y="886" data-sid="16i-llm-strategy:33">understand and verify what it hands you</text>
-      <g class="lad__exit lad__exit--verify frag" data-step="4" data-sid="16i-llm-strategy:34">
+      <text class="lad__q frag" data-step="4" data-anim="fade" x="496" y="844" data-sid="16i-llm-strategy:32">ask us</text>
+      <text class="lad__sub frag" data-step="4" data-anim="fade" x="496" y="886" data-sid="16i-llm-strategy:33">verify it: office hours, lab, Piazza</text>
+      <g class="lad__exit lad__exit--out frag" data-step="4" data-sid="16i-llm-strategy:34">
         <line x1="1180" y1="852" x2="1290" y2="852"/><path d="M1312 852L1288 840V864Z"/>
       </g>
-      <text class="lad__out lad__out--verify frag" data-step="4" data-anim="fade" x="1336" y="865" data-sid="16i-llm-strategy:35">then verify it</text>
+      <text class="lad__out lad__out--out frag" data-step="4" data-anim="fade" x="1336" y="865" data-sid="16i-llm-strategy:35">unstuck</text>
 
       <!-- step 5: the warning, under the cascade -->
       <text class="lad__note frag" data-step="5" data-anim="fade" x="960" y="944" data-sid="16i-llm-strategy:36">Its answers may be wrong, and may solve the problem in a way this course has not taught you &mdash;</text>
@@ -68,7 +70,7 @@
     </svg>
   </div>
   <div class="slide__number" data-sid="16i-llm-strategy:13"></div>
-  <aside class="notes" data-sid="16i-llm-strategy:14">The order is the content, and it is the same picture as equals() four slides back &mdash; say so. Gates 1 to 3 are where the learning is; gate 4 is a tool you reach for once you already know what you are stuck on. Point out that gates 2 and 3 cost nothing and are faster than they think &mdash; a UTA in lab looks at their actual project, which no chatbot does. Read the gates as a list of capabilities rather than prohibitions: every one is something they will be asked to do in a room with no laptop &mdash; trace code, draw the picture, write from scratch. The debugger and Python Tutor answer the same questions an LLM would, faster, and about their actual code. Gate 4&rsquo;s exit is the only one that is not &ldquo;unstuck&rdquo;: whatever it hands you, you understand it and you verify it before it goes anywhere near your project &mdash; and you document the use, exactly as the syllabus and each assignment describe; that line is on the rule slide, not here. Step 5 is the practical reason for the order: an answer that uses a construct we have not taught leaves you with more to untangle, not less.</aside>
+  <aside class="notes" data-sid="16i-llm-strategy:14">The order is the content, and it is the same picture as equals() four slides back &mdash; say so. Gates 1 and 2 are where the learning is; gate 3 is a tool you reach for once you already know what you are stuck on. Read the gates as a list of capabilities rather than prohibitions: every one is something they will be asked to do in a room with no laptop &mdash; trace code, draw the picture, write from scratch. The debugger and Python Tutor answer the same questions an LLM would, faster, and about their actual code. Gate 3&rsquo;s exit is the only one that is not &ldquo;unstuck&rdquo;: it drops you into gate 4. Whatever the LLM hands you, you understand it and then you bring it to us &mdash; office hours, lab, Piazza &mdash; and verify it before it goes anywhere near your project. Point out that this costs nothing and is faster than they think: a UTA in lab looks at their actual project and the LLM&rsquo;s actual answer, which no chatbot does. And you document the use, exactly as the syllabus and each assignment describe; that line is on the rule slide, not here. Step 5 is the practical reason for the order: an answer that uses a construct we have not taught leaves you with more to untangle, not less.</aside>
 
   <style>
     /* Slide-local: the help cascade, in 14-equals-hints' grammar so the room
@@ -94,7 +96,7 @@
       transition: stroke-dashoffset .6s var(--ease-smooth);
     }
     #slide-16i .frag.lad__gate.is-pending { opacity: 1; stroke-dashoffset: 1992; }
-    #slide-16i .lad__gate--4 { stroke: var(--accent-3); }
+    #slide-16i .lad__gate--3 { stroke: var(--accent-3); }
     #slide-16i .lad__q { font-family: var(--font-mono); font-size: var(--t-small); fill: var(--fg-0); transition: opacity .3s ease; }
     #slide-16i .lad__sub { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--fg-1); transition: opacity .3s ease; }
     #slide-16i .lad__sub--llm { fill: var(--accent-3); }
@@ -102,7 +104,7 @@
     #slide-16i .frag.lad__sub.is-current, #slide-16i .frag.lad__sub.is-past { transition-delay: .5s; }
 
     /* the exits, coded by what they mean */
-    #slide-16i .lad__exit line { fill: none; stroke: var(--edge); stroke-width: 5; stroke-linecap: round; }
+    #slide-16i .lad__exit line, #slide-16i .lad__exit .lad__elbow { fill: none; stroke: var(--edge); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
     #slide-16i .lad__exit path { fill: var(--edge); }
     #slide-16i .lad__exit--out { --edge: var(--stone); }
     #slide-16i .lad__exit--verify { --edge: var(--accent-3); }
