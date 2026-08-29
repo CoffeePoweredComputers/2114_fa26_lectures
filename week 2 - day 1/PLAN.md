@@ -1,5 +1,16 @@
 # Week 2 Day 1 — review and finalization plan
 
+> **Status (2026-08-29, later the same night): executed.** Commits `11d168a` (snapshot),
+> `62a74bd` (must-fixes + walkthroughs), `9ccaedc` (LLM chapter), and the tools commit
+> after it. Decisions taken: 16c folded into 16d; 16h folded into 16i; slide 11's
+> description fixed to match the drawing (the centre text stays removed); model =
+> `gpt2-medium`, prompt pair “I like to play” / “At the casino, I like to play”;
+> 14-equals-hints' pill lane moved off the gate text (found during the work).
+> Deck is now 28 slides. **Still open:** the two date questions (§7 item 6) —
+> `02` and `17` are unchanged and neutral — and a Slide Studio pass by the
+> instructor; nothing here was rendered in a browser.
+
+
 Written 2026-08-29 after reading all 30 slides, `js/deck.js`, `js/code-walk.js`,
 `css/deck.css`, `css/tokens.css`. Nothing has been edited yet; the deck was being
 touched in another session minutes before this was written (01b, the four
