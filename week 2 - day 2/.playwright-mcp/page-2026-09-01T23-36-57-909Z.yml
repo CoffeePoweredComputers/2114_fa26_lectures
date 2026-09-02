@@ -1,0 +1,36 @@
+- generic [ref=f4e1]:
+  - navigation [ref=f4e2]:
+    - link [ref=f4e3] [cursor=pointer]:
+      - /url: https://runestone.academy
+      - img "Runestone Logo" [ref=f4e4]
+  - main [ref=f4e5]:
+    - generic [ref=f4e7]:
+      - heading "Log In" [level=1] [ref=f4e8]
+      - generic [ref=f4e9]:
+        - generic [ref=f4e10]:
+          - generic [ref=f4e11]: Username
+          - textbox "Username" [active] [ref=f4e12]
+        - generic [ref=f4e13]:
+          - generic [ref=f4e14]: Password
+          - textbox "Password" [ref=f4e15]
+        - button "Log In" [ref=f4e16] [cursor=pointer]
+      - generic [ref=f4e17]:
+        - link "Forgot password?" [ref=f4e18] [cursor=pointer]:
+          - /url: /admin/auth/forgot-password
+        - text: ·
+        - link "Forgot username?" [ref=f4e19] [cursor=pointer]:
+          - /url: /admin/auth/forgot-username
+        - text: Don't have an account?
+        - link "Register" [ref=f4e20] [cursor=pointer]:
+          - /url: /admin/auth/register
+  - contentinfo [ref=f4e21]:
+    - generic [ref=f4e23]:
+      - text: © Copyright 2026 Runestone Academy Ltd •
+      - link "Privacy Policy" [ref=f4e24] [cursor=pointer]:
+        - /url: /admin/legal/privacy
+      - text: •
+      - link "Terms of Service" [ref=f4e25] [cursor=pointer]:
+        - /url: /admin/legal/terms
+      - text: •
+      - link "Legal & Compliance" [ref=f4e26] [cursor=pointer]:
+        - /url: /admin/legal

@@ -1,0 +1,317 @@
+- generic [active] [ref=e1]:
+  - button "Pause background motion" [ref=e2]
+  - generic [ref=e477]:
+    - heading "Week 2 and 3 overview" [level=2] [ref=e479]
+    - paragraph [ref=e480]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+    - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=e482]:
+      - generic [ref=e484]: now
+      - generic [ref=e499]: attendance required from this week
+      - generic [ref=e501]: Week 2 · this week
+      - generic [ref=e502]: Week 3 · next week
+      - generic [ref=e503]: Week 4 →
+      - generic [ref=e506]: Fri
+      - generic [ref=e507]: your lab day
+      - generic [ref=e509]: Week 2 homework
+      - generic [ref=e512]: Challenge Exercise 01
+      - generic [ref=e513]: Project 1 · from Week 3
+      - generic [ref=e514]: teams formed in this week’s lab
+      - generic [ref=e515]: Deliverable 1 · Scope, at your lab
+      - generic [ref=e516]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+      - generic [ref=e517]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+      - generic [ref=e518]: "Lab: Challenge Exercise 01 is due before your section meets."
+      - generic [ref=e519]: And then Project 1 — next week.
+    - generic [ref=e520]: 3 / 24
+  - generic:
+    - generic [ref=e44]:
+      - generic [ref=e45]: ◆ Studio
+      - button "Select (E)" [ref=e47] [cursor=pointer]
+      - button "＋ Add" [ref=e48] [cursor=pointer]
+      - generic [ref=e49]: slide 3 / 24
+      - button "✎ Sketch" [ref=e51] [cursor=pointer]
+      - button "⁂ Examples" [ref=e52] [cursor=pointer]
+      - button "Theme" [ref=e53] [cursor=pointer]
+      - button "Git" [ref=e54] [cursor=pointer]
+      - button "↻ Reload" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: ↻
+        - text: Reload
+      - button "▶ Present" [ref=e57] [cursor=pointer]
+      - button "🎙 Rehearse" [ref=e58] [cursor=pointer]
+      - button "🎤 Voice" [ref=e59] [cursor=pointer]
+      - button "⇲ Compact" [ref=e60] [cursor=pointer]
+      - button "⌫ Clear" [ref=e61] [cursor=pointer]
+      - button "⟲ New chat" [ref=e62] [cursor=pointer]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - button "Slides" [ref=e65] [cursor=pointer]
+        - button "Layers" [ref=e66] [cursor=pointer]
+        - button "Checks 467" [ref=e249] [cursor=pointer]:
+          - text: Checks
+          - generic [ref=e250]: "467"
+        - button "Rehearse" [ref=e68] [cursor=pointer]
+        - button "Describe23" [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]: "1"
+            - generic "01-title" [ref=e74]
+          - generic [ref=e75] [cursor=pointer]:
+            - generic [ref=e76]: "2"
+            - generic "01b-today" [ref=e77]
+          - generic [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: "3"
+            - generic "02-course-info" [ref=e80]
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: "4"
+            - generic "02b-chapter-1" [ref=e83]
+          - generic [ref=e84] [cursor=pointer]:
+            - generic [ref=e85]: "5"
+            - generic "03-vocabulary" [ref=e86]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: "6"
+            - generic "04-project-1" [ref=e89]
+          - generic [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]: "7"
+            - generic "04b-chapter-2" [ref=e92]
+          - generic [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]: "8"
+            - generic "05-peer-plus" [ref=e95]
+          - generic [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]: "9"
+            - generic "06-vote-setup" [ref=e98]
+          - generic [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: "10"
+            - generic "06b-walk-setup" [ref=e101]
+          - generic [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: "11"
+            - generic "07-vote-cases" [ref=e104]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: "12"
+            - generic "07b-walk-cases" [ref=e107]
+          - generic [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: "13"
+            - generic "08-vote-branch" [ref=e110]
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]: "14"
+            - generic "08b-walk-branch" [ref=e113]
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: "15"
+            - generic "08c-chapter-3" [ref=e116]
+          - generic [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: "16"
+            - generic "10-week2-practice" [ref=e119]
+          - generic [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: "17"
+            - generic "11-uml-diagram" [ref=e122]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: "18"
+            - generic "12-uml-answer" [ref=e125]
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]: "19"
+            - generic "13-npe-agemath" [ref=e128]
+          - generic [ref=e129] [cursor=pointer]:
+            - generic [ref=e130]: "20"
+            - generic "14-oldest-ask" [ref=e131]
+          - generic [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: "21"
+            - generic "15-oldest-code" [ref=e134]
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: "22"
+            - generic "16-npe-array" [ref=e137]
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: "23"
+            - generic "17-next-class" [ref=e140]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: "24"
+            - generic "99-closing" [ref=e143]
+        - button "＋ New slide" [ref=e144] [cursor=pointer]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]: Chat
+        - combobox "Claude model for chat edits" [ref=e148]:
+          - 'option "model: default" [selected]'
+          - option "fable"
+          - option "opus"
+          - option "sonnet"
+          - option "haiku"
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - button "Deck" [ref=e151] [cursor=pointer]
+          - button "＋" [ref=e153] [cursor=pointer]
+        - generic [ref=e157]:
+          - textbox "Ask Claude to change the selected element… (Enter to send)" [ref=e158]
+          - button "🎙" [disabled] [ref=e159]
+          - button "Send" [ref=e160] [cursor=pointer]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]: Steps
+        - generic [ref=e164]:
+          - text: "Transition:"
+          - combobox "Transition:" [ref=e165]:
+            - option "none" [selected]
+            - option "fade"
+            - option "slide"
+            - option "zoom"
+        - button "Tidy steps" [ref=e166] [cursor=pointer]
+        - button "Notes" [ref=e167] [cursor=pointer]
+        - button "▶ Play" [ref=e168] [cursor=pointer]
+      - generic [ref=e170]:
+        - button "Start" [ref=e521] [cursor=pointer]:
+          - iframe [ref=e522]:
+            - generic [ref=f20e1]:
+              - button "Pause background motion" [ref=f20e2]
+              - generic [ref=f20e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f20e6]
+                - paragraph [ref=f20e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f20e9]:
+                  - generic [ref=f20e11]: now
+                  - generic [ref=f20e14]: attendance required from this week
+                  - generic [ref=f20e16]: Week 2 · this week
+                  - generic [ref=f20e17]: Week 3 · next week
+                  - generic [ref=f20e18]: Week 4 →
+                  - generic [ref=f20e21]: Fri
+                  - generic [ref=f20e22]: your lab day
+                  - generic [ref=f20e24]: Week 2 homework
+                  - generic [ref=f20e27]: Challenge Exercise 01
+                  - generic [ref=f20e28]: Project 1 · from Week 3
+                  - generic [ref=f20e29]: teams formed in this week’s lab
+                  - generic [ref=f20e30]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f20e31]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f20e32]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f20e33]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f20e34]: And then Project 1 — next week.
+                - generic [ref=f20e35]: 1 / 1
+        - button "+" [ref=e524] [cursor=pointer]
+        - button "1" [ref=e525] [cursor=pointer]:
+          - iframe [ref=e526]:
+            - generic [ref=f21e1]:
+              - button "Pause background motion" [ref=f21e2]
+              - generic [ref=f21e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f21e6]
+                - paragraph [ref=f21e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f21e9]:
+                  - generic [ref=f21e11]: now
+                  - generic [ref=f21e14]: attendance required from this week
+                  - generic [ref=f21e16]: Week 2 · this week
+                  - generic [ref=f21e17]: Week 3 · next week
+                  - generic [ref=f21e18]: Week 4 →
+                  - generic [ref=f21e21]: Fri
+                  - generic [ref=f21e22]: your lab day
+                  - generic [ref=f21e24]: Week 2 homework
+                  - generic [ref=f21e27]: Challenge Exercise 01
+                  - generic [ref=f21e28]: Project 1 · from Week 3
+                  - generic [ref=f21e29]: teams formed in this week’s lab
+                  - generic [ref=f21e30]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f21e31]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f21e32]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f21e33]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f21e34]: And then Project 1 — next week.
+                - generic [ref=f21e35]: 1 / 1
+        - button "+" [ref=e528] [cursor=pointer]
+        - button "2" [ref=e529] [cursor=pointer]:
+          - iframe [ref=e530]:
+            - generic [ref=f22e1]:
+              - button "Pause background motion" [ref=f22e2]
+              - generic [ref=f22e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f22e6]
+                - paragraph [ref=f22e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f22e9]:
+                  - generic [ref=f22e11]: now
+                  - generic [ref=f22e14]: attendance required from this week
+                  - generic [ref=f22e16]: Week 2 · this week
+                  - generic [ref=f22e17]: Week 3 · next week
+                  - generic [ref=f22e18]: Week 4 →
+                  - generic [ref=f22e21]: Fri
+                  - generic [ref=f22e22]: your lab day
+                  - generic [ref=f22e24]: Week 2 homework
+                  - generic [ref=f22e27]: Challenge Exercise 01
+                  - generic [ref=f22e28]: Project 1 · from Week 3
+                  - generic [ref=f22e29]: teams formed in this week’s lab
+                  - generic [ref=f22e30]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f22e31]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f22e32]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f22e33]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f22e34]: And then Project 1 — next week.
+                - generic [ref=f22e35]: 1 / 1
+        - button "+" [ref=e532] [cursor=pointer]
+        - button "3" [ref=e533] [cursor=pointer]:
+          - iframe [ref=e534]:
+            - generic [ref=f23e1]:
+              - button "Pause background motion" [ref=f23e2]
+              - generic [ref=f23e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f23e6]
+                - paragraph [ref=f23e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f23e9]:
+                  - generic [ref=f23e11]: now
+                  - generic [ref=f23e14]: attendance required from this week
+                  - generic [ref=f23e16]: Week 2 · this week
+                  - generic [ref=f23e17]: Week 3 · next week
+                  - generic [ref=f23e18]: Week 4 →
+                  - generic [ref=f23e21]: Fri
+                  - generic [ref=f23e22]: your lab day
+                  - generic [ref=f23e24]: Week 2 homework
+                  - generic [ref=f23e27]: Challenge Exercise 01
+                  - generic [ref=f23e28]: Project 1 · from Week 3
+                  - generic [ref=f23e29]: teams formed in this week’s lab
+                  - generic [ref=f23e30]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f23e31]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f23e32]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f23e33]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f23e34]: And then Project 1 — next week.
+                - generic [ref=f23e35]: 1 / 1
+              - generic [ref=f23e36]: "Slide 1 of 1: Week 2 and 3 overview."
+        - button "+" [ref=e536] [cursor=pointer]
+        - button "4" [ref=e537] [cursor=pointer]:
+          - iframe [ref=e538]:
+            - generic [ref=f24e1]:
+              - button "Pause background motion" [ref=f24e2]
+              - generic [ref=f24e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f24e6]
+                - paragraph [ref=f24e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f24e9]:
+                  - generic [ref=f24e11]: now
+                  - generic [ref=f24e26]: attendance required from this week
+                  - generic [ref=f24e28]: Week 2 · this week
+                  - generic [ref=f24e29]: Week 3 · next week
+                  - generic [ref=f24e30]: Week 4 →
+                  - generic [ref=f24e33]: Fri
+                  - generic [ref=f24e34]: your lab day
+                  - generic [ref=f24e36]: Week 2 homework
+                  - generic [ref=f24e39]: Challenge Exercise 01
+                  - generic [ref=f24e40]: Project 1 · from Week 3
+                  - generic [ref=f24e41]: teams formed in this week’s lab
+                  - generic [ref=f24e42]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f24e43]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f24e44]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f24e45]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f24e46]: And then Project 1 — next week.
+                - generic [ref=f24e47]: 1 / 1
+        - button "+" [ref=e540] [cursor=pointer]
+        - button "5" [ref=e541] [cursor=pointer]:
+          - iframe [ref=e542]:
+            - generic [ref=f25e1]:
+              - button "Pause background motion" [ref=f25e2]
+              - generic [ref=f25e4]:
+                - heading "Week 2 and 3 overview" [level=2] [ref=f25e6]
+                - paragraph [ref=f25e7]: "A two-week axis with a highlighted column labelled now on Wednesday. First a bracket draws across both weeks — the calendar on Canvas: Week 2 this week, Week 3 next week, and Week 4 posted beyond the right-hand edge. Then a maroon-orange Week 2 homework bar leaves the now column and stops at Friday, with a pole rising at the Friday tick. Then the Challenge Exercise 01 bar runs solid through Monday and fades across the week to Friday, with a range line under the axis marked your lab day: it is due before your lab section, and sections meet all week. Then a lab room is drawn above the axis — four students seated and one orange UTA standing among them — and attendance is required from this week on. Last, a stone pole rises at next Monday, where Week 3 begins: Project 1, with teams formed in this week’s lab and Deliverable 1 due at your Week 3 lab. A caption under the axis reads: And then Project 1, next week."
+                - img "A two-week deadline axis with a now column, a lab room above it and a Project 1 marker at next Monday" [ref=f25e9]:
+                  - generic [ref=f25e11]: now
+                  - generic [ref=f25e26]: attendance required from this week
+                  - generic [ref=f25e28]: Week 2 · this week
+                  - generic [ref=f25e29]: Week 3 · next week
+                  - generic [ref=f25e30]: Week 4 →
+                  - generic [ref=f25e33]: Fri
+                  - generic [ref=f25e34]: your lab day
+                  - generic [ref=f25e36]: Week 2 homework
+                  - generic [ref=f25e39]: Challenge Exercise 01
+                  - generic [ref=f25e40]: Project 1 · from Week 3
+                  - generic [ref=f25e41]: teams formed in this week’s lab
+                  - generic [ref=f25e42]: Deliverable 1 · Scope, at your lab
+                  - generic [ref=f25e43]: "Canvas: Weeks 2, 3 and 4 are posted — read them together, the next three weeks overlap."
+                  - generic [ref=f25e44]: "PrairieLearn: content pages first, then the Week 2 homework — due Friday."
+                  - generic [ref=f25e45]: "Lab: Challenge Exercise 01 is due before your section meets."
+                  - generic [ref=f25e46]: And then Project 1 — next week.
+                - generic [ref=f25e47]: 1 / 1
+        - button "+" [ref=e544] [cursor=pointer]
+    - button "‹" [ref=e175] [cursor=pointer]
+    - button "›" [ref=e176] [cursor=pointer]
+    - button "⌄" [ref=e177] [cursor=pointer]

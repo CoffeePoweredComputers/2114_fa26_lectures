@@ -1,0 +1,65 @@
+{
+  "intent": "edit",
+  "slide": "10-icebreaker",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "scribble",
+      "bbox": [
+        1333,
+        612,
+        50,
+        57
+      ],
+      "overSid": "10-icebreaker:12",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1401,
+        733,
+        78,
+        53
+      ],
+      "overSid": "10-icebreaker:12",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1616,
+        677,
+        48,
+        52
+      ],
+      "overSid": "10-icebreaker:12",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1632,
+        647,
+        67,
+        69
+      ],
+      "overSid": "10-icebreaker:12",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1560,
+        551,
+        61,
+        46
+      ],
+      "overSid": "10-icebreaker:12",
+      "hint": "crossed-out or emphasised region"
+    }
+  ]
+}

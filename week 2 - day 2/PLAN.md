@@ -18,9 +18,9 @@ dividers → next-class), and the illustrated, stepped style of W1D2 / W2D1.
 - Part 2 · A **test** is how you check a promise. Three votes, escalating:
   does the fixture even exist (vote 1) → does the test cover every case
   (vote 2) → does 100 % coverage mean it is right (vote 3: **no**).
-- Part 3 · **Every line ran and it still blew up.** Four practice questions:
-  a class that keeps its parent's promise (UML → `Student`), then three
-  references that promised an object and delivered `null`.
+- Part 3 · **Every line ran and it still blew up.** Two practice questions,
+  both references that promised an object and delivered `null` (cut from
+  four on 2026-09-01 — see Status).
 
 Each slide's last beat is the *plant*; the next slide's first beat is the
 *pick-up*. Plants are named below as **→**.
@@ -31,10 +31,11 @@ Each slide's last beat is the *plant*; the next slide's first beat is the
 |---|------|------|
 | 1 | 01-title | cover (unchanged) |
 | 2 | 01b-today | three chapter tabs (sister of W2D1 01b-today) |
-| 3 | 02-course-info | this week's clock (sister of W2D1 02-course-info) → "and then Project 1 — next week" |
+| 3 | 02-course-info | this week's clock (sister of W2D1 02-course-info) → P1 marker, then the last beat: via-Web-CAT pill + pointer to the 18-webcat guide appendix (2026-09-01) |
 | 4 | 02b-chapter-1 | divider · PART 1 OF 3 · *Project 1, and the three words it needs* |
 | 5 | 03-vocabulary | promise vs. keeping it → "your Project 1 spec asks both: the promise, and how you keep it" |
 | 6 | 04-project-1 | Learning to Scope: the team walks the trail scope → spec → build (Weeks 3/4/5) → Deliverable 3 needs JUnit tests, one normal and one bad-input case per method — "what does a test actually prove?" |
+| 6b | new-slide | Appropriately Scoping — the apprentice at the master's anvil; scope small, talk to the TAs (added by the user 2026-09-01) |
 | 7 | 04b-chapter-2 | divider · PART 2 OF 3 · *What does a test prove?* |
 | 8 | 05-peer-plus | groups + routine (sister of W2D1 11-peer-plus) → "three questions, all on testing" |
 | 9 | 06-vote-setup | VOTE 1 static (unchanged) |
@@ -45,14 +46,16 @@ Each slide's last beat is the *plant*; the next slide's first beat is the
 | 14 | 08b-walk-branch | VOTE 3 · THE ANSWER — four lane-glyphs light up per option; D lights all three lanes **and fails** → "coverage says the line ran; it does not say it was right — Project 1 asks for a normal and a bad-input case per method" |
 | 15 | 08c-chapter-3 | divider · PART 3 OF 3 · *Every line ran. It still blew up.* |
 | 16 | 09-week1-practice | the callback to Monday's question (light touch) → "the short one is the one worth carrying into Project 1" |
-| 17 | 10-week2-practice | the map: four stops on one trail, three marked with the null hazard → "three of the four are the same exception" |
-| 18 | 11-uml-diagram | Person box, arrow, Student box build in → "write Student" |
-| 19 | 12-uml-answer | diagram ↔ code, paired by colour, four steps → "everything in Person's box is still there — it was promised" |
+| 17 | 10-week2-practice | the map: two stops on one trail, both marked with the null hazard → "both are the same exception" |
 | 20 | 13-npe-agemath | codewalk: two names, one null; line 4 throws, line 2 is the cause |
 | 21 | 14-oldest-ask | stick-figure scene: coworker, three Persons in, one slot empty → "fix it, and explain it" |
-| 22 | 15-oldest-code | every `getAge()` rings; the checks go *before* the comparisons |
-| 23 | 16-npe-array | codewalk: `Employee[5]`, five nulls (sister of W2D1 13b) → "filled twice: the array, then each slot" |
+| 22 | 15-oldest-code | every `getAge()` rings; the checks go *before* the comparisons → the 17 clock |
 | 24 | 17-next-class | the same clock as slide 3, drawn again (sister of W2D1 17-next-class) |
+| 24b | 18-webcat-guide | appendix cover · Web-CAT guide — Eclipse → VT CAS → Results (imported 2026-09-01) |
+| 24c | 18b-webcat-submit | STEP 1 OF 4 · Submit Assignment in Eclipse's Project menu (screenshot) |
+| 24d | 18c-webcat-signin | STEP 2 OF 4 · pick the assignment, VT sign-in, OK → Finish (screenshot) |
+| 24e | 18d-webcat-cas | STEP 3 OF 4 · the CAS login finishes in your regular browser — three cards |
+| 24f | 18e-webcat-results | STEP 4 OF 4 · Result Summary, scores, File Details (screenshot) |
 | 25 | 99-closing | dusk (unchanged) |
 
 ## Slide-by-slide: what it shows, how it builds, and the hand-off
@@ -67,10 +70,15 @@ three sentences.
 Redraw as the sister of W2D1 02-course-info (same clock, this week's dates).
 Three places work lives — Canvas (weeks 2, 3, 4 posted), PrairieLearn
 (modules, then Week 2 homework due **Friday**), Lab (Challenge Exercise 01
-due before your section; attendance counts from this week). Last step: a
+due before your section; attendance counts from this week). Then a
 stone marker at next Monday — **Project 1 · from Week 3**, teams formed in this
 week's lab, Deliverable 1 (scope) at your Week 3 lab. It is a marker, not a bar:
-Project 1 is next week's work. **→ "And then Project 1 — next week."**
+Project 1 is next week's work. Last step (6, added 2026-09-01 at the user's
+ask): a blue **via Web-CAT** pill grows at the Friday end of the homework
+bar and the closing caption points at the guide appendix (18-webcat-*) —
+the slide now ends on where the homework hands in, and the spoken hand-off
+into Project 1 lives in the notes. **→ the Web-CAT guide at the end of the
+deck; then, spoken: "and then Project 1 — next week."**
 
 ### 02b-chapter-1 · divider
 `PART 1 OF 3` / *Project 1, and the three words it needs*. `data-transition="fade"`.
@@ -109,6 +117,35 @@ caption: **Deliverable 3 needs JUnit tests — one normal case and one
 bad-input case per method. So what does a test actually prove?**
 **→ Part 2 answers that.** Notes carry the rest (EMRN/oral exam, GitHub,
 exceptions, Labor Day, GenAI and seating rules, example ideas).
+
+### new-slide · "Appropriately Scoping" (added by the user 2026-09-01)
+The scope document as an apprenticeship — the slide that keeps week-3 scope
+sheets from promising the next Instagram. Scene: a master smith (fg-1, the
+tutor — the callback is W2D1 07-the-deal's "your tutor / the apprentices")
+strikes a blade on an anvil once (Rotate about the fist, sparks fly, the
+icebreaker's hammer grammar); an apprentice (fg-0, you) watches. 1 the
+strike — nobody grades the apprentice on the sword; 2 a thought bubble
+grows: a huge ornate sword — the scope sheet is not a pitch; 3 the dream
+dims to stone (never crossed out — it is not wrong, just not week 3) while
+a small plain orange blade grows in the apprentice's hand; 4 two "?" speech
+bubbles, both directions. Caption: **We are not grading the sword. We are
+grading the smith you are becoming.** Left column (reworked 2026-09-01 at
+the user's ask for concreteness; re-laid as a card deck the same day after
+the stacked list overflowed the column, then made grid-stacked/auto-height
+after a fixed 330px pile clipped too — the pile now sizes to its tallest
+card, texts measured against real font metrics): cards dealt one
+per step, each new card covering the last (tilted corners peek), one
+DO/DON'T scope pair per card — a text game with character classes and
+GenAI-made text files, not the next Skyrim (the user's example) · a
+flashcard trainer that survives a malformed line, not the next Duolingo ·
+a budget tracker that flags overspending, not the next Venmo — and on step
+4 the final maroon-edged card, THE DEAL (the W2D1 07-the-deal callback):
+no right answer, guided practice, TAs give feedback, you iterate, you get
+better at scoping, specifying and building all semester. Notes carry the calibration-not-a-menu point, the
+shared shape of the do's (a few one-job classes, data from a file, bad
+input survived), the metacognition framing, EMRN-as-conversation, and the
+hand-off back to 04's plant (Deliverable 3 will test whatever you scope) so
+the 04b divider still lands.
 
 ### 04b-chapter-2 · divider
 `PART 2 OF 3` / *What does a test prove?*
@@ -231,6 +268,107 @@ Sister of W2D1 17-next-class, the same clock as slide 3 drawn again:
 stone bracket over Week 3 (teams from this week's lab, Deliverable 1 at your lab) → HW
 Week 2 **Friday** · Challenge Exercise 01 before your lab section. Last
 step: *Piazza first — turn instructor-post notifications on.*
+
+## Status — 2026-09-01 corrections (after the user's review)
+
+- **Part 2 retitled.** "What does a test prove?" was nonsense — vote 3's whole
+  point is that a test proves nothing. Now **"What does a passing test tell
+  you?"** on 01b's tab, the 04b divider, and 04's plant ("So what does a
+  passing test actually tell you?").
+- **Project 1 fully decoupled from data structures.** P1 has ZERO data
+  structures — a general introduction to Java (the Canvas overview's own
+  subtitle: *Java + Exceptions*); its only technical key words are
+  object-oriented Java and robust exception handling. Part 1 is now
+  **"Project 1 — Learning to Scope"** (01b tab + 02b divider); 04's kicker
+  carries JAVA + EXCEPTIONS and the scene points at the full brief (Canvas ·
+  Project 1 · Overview); 02's and 17's notes carry no vocab-before-P1 or
+  Bags-feeds-P1 claims.
+- **03-vocabulary replaced.** The interface/data-structure/ADT Bag scene is
+  gone from the deck (that vocabulary waits for the 3.1 Bags reading). The
+  file now holds **"Project 1: Key Words"** (the user's heading): two panels —
+  OO Java as three wired one-job classes, exception handling as the
+  overview's abc-instead-of-a-number story (crash → catch · ask again) —
+  closing on "no data structures required" + the Canvas pointer. Same
+  filename, so the manifest is untouched.
+- **Glyph rendering fixed deck-wide.** Class rules on `<defs>` children do
+  not reach `<use>` clones in the studio's renderer (figures rendered as
+  black silhouettes; slide 14's null-ghost crossfade was invisible). Ink now
+  lives inline on the defs content on 02/04/08b/10/14, with per-use colour
+  still inherited from the `<use>`'s parent where it varies (14's ghost).
+  New slide 03 draws direct, no defs.
+- **14-oldest-ask reworked.** The scene alone was confusing — the room was
+  asked to fix a method it had not seen. The slide is now code-left,
+  scene-right (practice 2's grammar): the full getOldest method from step 0
+  (signature wrapped to fit the column; 15 still shows it full width, so its
+  line numbers differ by one), the figures annotating it, same four steps
+  minus the coworker/you figures and bubble.
+- **09-week1-practice deleted by the user** (the CW Week 1 / X802 callback);
+  the manifest no longer lists it.
+- **new-slide.html added by the user (2026-09-01)** after 04, authored as the
+  apprentice-at-the-forge scene (see its section above): appropriately
+  scoping ≠ the next Instagram; metacognition + dialog with the TAs, treated
+  as an apprenticeship rather than "did I get the right answer". Filename
+  kept as the studio created it.
+- Provenance note: the four practice questions are the F25 deck's "CW – Week 2"
+  Code Workouts (`~/Downloads/F25 Week 2 Day 2.pdf` pp. 19–25): X774 Create
+  Child Class, the ageMath exception question, X754 NPE Practice 3 (getOldest),
+  X755 NPE Practice 4 (Employee array).
+- **Web-CAT guide appendix imported (2026-09-01).** The five slides of
+  `~/Downloads/Submitting Your Assignment - Web-CAT Guide.pptx` now sit
+  between 17-next-class and 99-closing as 18-webcat-guide + 18b–18e: a cover
+  (three grown --paper station plates, Eclipse → VT CAS Login → Web-CAT
+  Results) and the four STEP slides. The guide's three screenshots are from
+  the live F26 instance (HW Week 02: Polymorphism; the results page is a real
+  try #1 at 2/100 with 22 % coverage — 18e's notes tie that back to Part 2's
+  coverage vote). They live in `assets/webcat-*.png` on white plates — the
+  deck's first `<img>` slides; step points arrive as plain-fade frags; 18d
+  (the only step the source gives no screenshot) draws the CAS hand-off as
+  three grown cards, and its notes carry the two failure modes (cookies
+  blocked; browser closed before the confirmation).
+- **Practice set cut to two (2026-09-01, the user's ask).** Deleted
+  11-uml-diagram + 12-uml-answer (the UML question) and 16-npe-array (the
+  Employee-array repeat — the deck's own designated cut: 15 handed into it
+  with "one more, and you have seen it before", and its answer was "same bug
+  as Monday's `Student[80]`"). What stays: 13-npe-agemath (now PRACTICE 1)
+  and 14/15 getOldest (now PRACTICE 2). The 10-week2-practice map is redrawn
+  with two stops (same trail, stops at x 740/1140, sids kept), the hazard on
+  both, plant "Both are the same exception." Hand-offs fixed: 15's notes now
+  close into the 17 clock; 08c's and 01b's notes say two questions (08c's
+  stale callback to the deleted 09-week1-practice went too). Their PLAN
+  sections below are left as written; this bullet is the record.
+
+## Status — 2026-09-01, evening (Peer+ and PrairieLearn reconciled)
+
+- **Peer+ runs in Runestone, not PrairieLearn** — course
+  `virginiatech_peerplus_fall26`, assignment **"Peer Instruction W02D2"**
+  (zero included). 05-peer-plus (station 1 caption, sr-desc, notes) and
+  W2D1's 11-peer-plus notes corrected; both said PrairieLearn.
+- **Runestone vote 2 (`vtcs2_unitTesting_assertNull`) is broken as printed** —
+  the second assertion of every option is missing its closing `)`, the method
+  under test is missing its closing `}`, and the code uses curly quotes; all
+  inherited verbatim from F25. As printed A–C don't compile either, which
+  wrecks D's "does not compile" distractor. 07-vote-cases already shows the
+  clean version; the fix goes in Runestone (pending — needs an instructor
+  login). Keys checked by logic: vote 1 = **B only**, vote 2 = **A**,
+  vote 3 = **D**.
+- **Practice section cut to two questions (by the user):** 11-uml-diagram,
+  12-uml-answer and 16-npe-array deleted; 10-week2-practice is now a two-stop
+  map, "Week 2 Coding Practice (on PrairieLearn)". Lecture practice 1 = PL
+  `codeworkout/x752_null_pointer_exception_practice_1` (ageMath, two people);
+  practice 2 = PL `codeworkout/x754_null_pointer_exception_practice_3`
+  (getOldest). The PL Week 2 set also holds x753 (ageMath2, three people),
+  x755 (Employee array), x804 (Tablet equals), x805 (Computer[] array), x798
+  (generic reverse) and x800 (bounded wildcard) — not walked in lecture.
+  The naming skew is resolved on the slides: 14/15 kickers renumbered to
+  **PRACTICE 3**, 10's stop discs carry the PL question numbers (01 / 03, not
+  walk order), and 10 gained a static signpost note — *PrairieLearn ›
+  Assessments › Coding Practice · the stop number is the question number*
+  (the assessment holds ten; 2 and 4 are named in the notes as solo
+  practice).
+- **13-npe-agemath: gender → grade.** The fall26 PL Person is (age, name,
+  grade) — Ben's "F" is a letter grade. Heap label, sr-desc and notes
+  updated; the quoted code line `new Person(10, "Ben", "F")` already matched
+  the PL constructor order.
 
 ## Rules every rewritten slide follows
 - Motion is manim's only: Create (dashoffset draw-on), GrowFromCenter

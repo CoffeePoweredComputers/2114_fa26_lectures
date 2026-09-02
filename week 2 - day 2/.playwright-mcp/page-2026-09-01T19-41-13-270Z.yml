@@ -1,0 +1,382 @@
+- generic [active] [ref=e1]:
+  - button "Pause background motion" [ref=e2]
+  - generic [ref=e179]:
+    - generic [ref=e180]:
+      - paragraph [ref=e181]: PROJECT 1 · JAVA + EXCEPTIONS · WEEKS 3–5
+      - heading "Project 1 — Learning to Scope" [level=2] [ref=e182]
+    - paragraph [ref=e183]: "At left, the P1 column of Week 1’s project table: the tag P1, the title Learning to Scope, then four rows that light up one per step — teams of three, formed in lab this week; Week 3, scope, one page; Week 4, spec, the blueprint; Week 5, final, code and JUnit tests — and the lesson line, define before you build. At right, a dashed trail rises from bottom-left to top-right through three waypoint discs labelled Week 3 scope, Week 4 spec and Week 5 final, with a small grey Labor Day tick on the trail just before the first. On step 1 three orange busts, the team, stand up at the foot of the trail. Each of steps 2 to 4 walks the team along the trail to the next waypoint; the disc turns orange and a document grows above their heads: first a one-page sheet with five short lines, then a blueprint with three class boxes and two arrows, then a laptop with a tick on its screen and a small 3-minute tag. On step 5 a test list grows beside the laptop, normal case and bad input, each with a blue tick, and a caption under the scene asks what a passing test actually tells you. A static note in the scene’s lower right points to the full brief: the Project 1 overview page on Canvas."
+    - generic [ref=e184]:
+      - table [ref=e185]:
+        - rowgroup [ref=e186]:
+          - row [ref=e187]:
+            - columnheader [ref=e188]:
+              - paragraph [ref=e189]: P1
+              - text: Learning to Scope
+        - rowgroup [ref=e190]:
+          - row [ref=e191]:
+            - cell "Teams 3, formed in lab this week" [ref=e192]:
+              - generic [ref=e193]: Teams
+              - text: 3, formed in lab this week
+          - row [ref=e194]:
+            - cell "Week 3 Scope — one page" [ref=e195]:
+              - generic [ref=e196]: Week 3
+              - text: Scope — one page
+          - row [ref=e197]:
+            - cell "Week 4 Spec — the blueprint" [ref=e198]:
+              - generic [ref=e199]: Week 4
+              - text: Spec — the blueprint
+          - row [ref=e200]:
+            - cell "Week 5 Final — code, JUnit tests" [ref=e201]:
+              - generic [ref=e202]: Week 5
+              - text: Final — code, JUnit tests
+          - row [ref=e203]:
+            - cell "Define before you build" [ref=e204]
+      - img "A rising trail with three waypoints, Week 3 scope, Week 4 spec and Week 5 final; a team of three walks it one week at a time, leaving a scope sheet, a blueprint and a working laptop behind, and a test list grows beside the laptop at the end" [ref=e205]:
+        - generic [ref=e207]: Sep 7 · Labor Day
+        - generic [ref=e208]: "full brief: Canvas · Project 1 · Overview"
+        - generic [ref=e209]: Week 3 · scope
+        - generic [ref=e212]: Week 4 · spec
+        - generic [ref=e215]: Week 5 · final
+        - generic [ref=e228]: 3 min
+        - generic [ref=e234]:
+          - generic [ref=e237]: normal case
+          - generic [ref=e239]: bad input
+      - paragraph [ref=e247]: Deliverable 3 needs JUnit tests — a normal case and a bad-input case per method. So what does a passing test actually tell you?
+    - generic [ref=e248]: 6 / 24
+  - generic:
+    - generic [ref=e44]:
+      - generic [ref=e45]: ◆ Studio
+      - button "Select (E)" [ref=e47] [cursor=pointer]
+      - button "＋ Add" [ref=e48] [cursor=pointer]
+      - generic [ref=e49]: slide 6 / 24
+      - button "✎ Sketch" [ref=e51] [cursor=pointer]
+      - button "⁂ Examples" [ref=e52] [cursor=pointer]
+      - button "Theme" [ref=e53] [cursor=pointer]
+      - button "Git" [ref=e54] [cursor=pointer]
+      - button "↻ Reload" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: ↻
+        - text: Reload
+      - button "▶ Present" [ref=e57] [cursor=pointer]
+      - button "🎙 Rehearse" [ref=e58] [cursor=pointer]
+      - button "🎤 Voice" [ref=e59] [cursor=pointer]
+      - button "⇲ Compact" [ref=e60] [cursor=pointer]
+      - button "⌫ Clear" [ref=e61] [cursor=pointer]
+      - button "⟲ New chat" [ref=e62] [cursor=pointer]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - button "Slides" [ref=e65] [cursor=pointer]
+        - button "Layers" [ref=e66] [cursor=pointer]
+        - button "Checks 467" [ref=e249] [cursor=pointer]:
+          - text: Checks
+          - generic [ref=e250]: "467"
+        - button "Rehearse" [ref=e68] [cursor=pointer]
+        - button "Describe23" [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]: "1"
+            - generic "01-title" [ref=e74]
+          - generic [ref=e75] [cursor=pointer]:
+            - generic [ref=e76]: "2"
+            - generic "01b-today" [ref=e77]
+          - generic [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: "3"
+            - generic "02-course-info" [ref=e80]
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: "4"
+            - generic "02b-chapter-1" [ref=e83]
+          - generic [ref=e84] [cursor=pointer]:
+            - generic [ref=e85]: "5"
+            - generic "03-vocabulary" [ref=e86]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: "6"
+            - generic "04-project-1" [ref=e89]
+          - generic [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]: "7"
+            - generic "04b-chapter-2" [ref=e92]
+          - generic [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]: "8"
+            - generic "05-peer-plus" [ref=e95]
+          - generic [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]: "9"
+            - generic "06-vote-setup" [ref=e98]
+          - generic [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: "10"
+            - generic "06b-walk-setup" [ref=e101]
+          - generic [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: "11"
+            - generic "07-vote-cases" [ref=e104]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: "12"
+            - generic "07b-walk-cases" [ref=e107]
+          - generic [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: "13"
+            - generic "08-vote-branch" [ref=e110]
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]: "14"
+            - generic "08b-walk-branch" [ref=e113]
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: "15"
+            - generic "08c-chapter-3" [ref=e116]
+          - generic [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: "16"
+            - generic "10-week2-practice" [ref=e119]
+          - generic [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: "17"
+            - generic "11-uml-diagram" [ref=e122]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: "18"
+            - generic "12-uml-answer" [ref=e125]
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]: "19"
+            - generic "13-npe-agemath" [ref=e128]
+          - generic [ref=e129] [cursor=pointer]:
+            - generic [ref=e130]: "20"
+            - generic "14-oldest-ask" [ref=e131]
+          - generic [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: "21"
+            - generic "15-oldest-code" [ref=e134]
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: "22"
+            - generic "16-npe-array" [ref=e137]
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: "23"
+            - generic "17-next-class" [ref=e140]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: "24"
+            - generic "99-closing" [ref=e143]
+        - button "＋ New slide" [ref=e144] [cursor=pointer]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]: Chat
+        - combobox "Claude model for chat edits" [ref=e148]:
+          - 'option "model: default" [selected]'
+          - option "fable"
+          - option "opus"
+          - option "sonnet"
+          - option "haiku"
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - button "Deck" [ref=e151] [cursor=pointer]
+          - button "＋" [ref=e153] [cursor=pointer]
+        - generic [ref=e157]:
+          - textbox "Ask Claude to change the selected element… (Enter to send)" [ref=e158]
+          - button "🎙" [disabled] [ref=e159]
+          - button "Send" [ref=e160] [cursor=pointer]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]: Steps
+        - generic [ref=e164]:
+          - text: "Transition:"
+          - combobox "Transition:" [ref=e165]:
+            - option "none" [selected]
+            - option "fade"
+            - option "slide"
+            - option "zoom"
+        - button "Tidy steps" [ref=e166] [cursor=pointer]
+        - button "Notes" [ref=e167] [cursor=pointer]
+        - button "▶ Play" [ref=e168] [cursor=pointer]
+      - generic [ref=e170]:
+        - button "Start" [ref=e251] [cursor=pointer]:
+          - iframe [ref=e252]:
+            - generic [ref=f2e1]:
+              - button "Pause background motion" [ref=f2e2]
+              - generic [ref=f2e4]:
+                - generic [ref=f2e5]:
+                  - paragraph [ref=f2e6]: PROJECT 1 · JAVA + EXCEPTIONS · WEEKS 3–5
+                  - heading "Project 1 — Learning to Scope" [level=2] [ref=f2e7]
+                - paragraph [ref=f2e8]: "At left, the P1 column of Week 1’s project table: the tag P1, the title Learning to Scope, then four rows that light up one per step — teams of three, formed in lab this week; Week 3, scope, one page; Week 4, spec, the blueprint; Week 5, final, code and JUnit tests — and the lesson line, define before you build. At right, a dashed trail rises from bottom-left to top-right through three waypoint discs labelled Week 3 scope, Week 4 spec and Week 5 final, with a small grey Labor Day tick on the trail just before the first. On step 1 three orange busts, the team, stand up at the foot of the trail. Each of steps 2 to 4 walks the team along the trail to the next waypoint; the disc turns orange and a document grows above their heads: first a one-page sheet with five short lines, then a blueprint with three class boxes and two arrows, then a laptop with a tick on its screen and a small 3-minute tag. On step 5 a test list grows beside the laptop, normal case and bad input, each with a blue tick, and a caption under the scene asks what a passing test actually tells you. A static note in the scene’s lower right points to the full brief: the Project 1 overview page on Canvas."
+                - generic [ref=f2e9]:
+                  - table [ref=f2e10]:
+                    - rowgroup [ref=f2e11]:
+                      - row [ref=f2e12]:
+                        - columnheader [ref=f2e13]:
+                          - paragraph [ref=f2e14]: P1
+                          - text: Learning to Scope
+                    - rowgroup [ref=f2e15]:
+                      - row [ref=f2e16]:
+                        - cell "Teams 3, formed in lab this week" [ref=f2e17]:
+                          - generic [ref=f2e18]: Teams
+                          - text: 3, formed in lab this week
+                      - row [ref=f2e19]:
+                        - cell "Week 3 Scope — one page" [ref=f2e20]:
+                          - generic [ref=f2e21]: Week 3
+                          - text: Scope — one page
+                      - row [ref=f2e22]:
+                        - cell "Week 4 Spec — the blueprint" [ref=f2e23]:
+                          - generic [ref=f2e24]: Week 4
+                          - text: Spec — the blueprint
+                      - row [ref=f2e25]:
+                        - cell "Week 5 Final — code, JUnit tests" [ref=f2e26]:
+                          - generic [ref=f2e27]: Week 5
+                          - text: Final — code, JUnit tests
+                      - row [ref=f2e28]:
+                        - cell "Define before you build" [ref=f2e29]
+                  - img "A rising trail with three waypoints, Week 3 scope, Week 4 spec and Week 5 final; a team of three walks it one week at a time, leaving a scope sheet, a blueprint and a working laptop behind, and a test list grows beside the laptop at the end" [ref=f2e30]:
+                    - generic [ref=f2e32]: Sep 7 · Labor Day
+                    - generic [ref=f2e33]: "full brief: Canvas · Project 1 · Overview"
+                    - generic [ref=f2e34]: Week 3 · scope
+                    - generic [ref=f2e37]: Week 4 · spec
+                    - generic [ref=f2e40]: Week 5 · final
+                    - generic [ref=f2e53]: 3 min
+                    - generic [ref=f2e59]:
+                      - generic [ref=f2e62]: normal case
+                      - generic [ref=f2e64]: bad input
+                  - paragraph [ref=f2e72]: Deliverable 3 needs JUnit tests — a normal case and a bad-input case per method. So what does a passing test actually tell you?
+                - generic [ref=f2e73]: 1 / 1
+        - button "+" [ref=e254] [cursor=pointer]
+        - button "1" [ref=e255] [cursor=pointer]:
+          - iframe [ref=e256]:
+            - generic [ref=f3e1]:
+              - button "Pause background motion" [ref=f3e2]
+              - generic [ref=f3e4]:
+                - generic [ref=f3e5]:
+                  - paragraph [ref=f3e6]: PROJECT 1 · JAVA + EXCEPTIONS · WEEKS 3–5
+                  - heading "Project 1 — Learning to Scope" [level=2] [ref=f3e7]
+                - paragraph [ref=f3e8]: "At left, the P1 column of Week 1’s project table: the tag P1, the title Learning to Scope, then four rows that light up one per step — teams of three, formed in lab this week; Week 3, scope, one page; Week 4, spec, the blueprint; Week 5, final, code and JUnit tests — and the lesson line, define before you build. At right, a dashed trail rises from bottom-left to top-right through three waypoint discs labelled Week 3 scope, Week 4 spec and Week 5 final, with a small grey Labor Day tick on the trail just before the first. On step 1 three orange busts, the team, stand up at the foot of the trail. Each of steps 2 to 4 walks the team along the trail to the next waypoint; the disc turns orange and a document grows above their heads: first a one-page sheet with five short lines, then a blueprint with three class boxes and two arrows, then a laptop with a tick on its screen and a small 3-minute tag. On step 5 a test list grows beside the laptop, normal case and bad input, each with a blue tick, and a caption under the scene asks what a passing test actually tells you. A static note in the scene’s lower right points to the full brief: the Project 1 overview page on Canvas."
+                - generic [ref=f3e9]:
+                  - table [ref=f3e10]:
+                    - rowgroup [ref=f3e11]:
+                      - row [ref=f3e12]:
+                        - columnheader [ref=f3e13]:
+                          - paragraph [ref=f3e14]: P1
+                          - text: Learning to Scope
+                    - rowgroup [ref=f3e15]:
+                      - row [ref=f3e16]:
+                        - cell "Teams 3, formed in lab this week" [ref=f3e17]:
+                          - generic [ref=f3e18]: Teams
+                          - text: 3, formed in lab this week
+                      - row [ref=f3e19]:
+                        - cell "Week 3 Scope — one page" [ref=f3e20]:
+                          - generic [ref=f3e21]: Week 3
+                          - text: Scope — one page
+                      - row [ref=f3e22]:
+                        - cell "Week 4 Spec — the blueprint" [ref=f3e23]:
+                          - generic [ref=f3e24]: Week 4
+                          - text: Spec — the blueprint
+                      - row [ref=f3e25]:
+                        - cell "Week 5 Final — code, JUnit tests" [ref=f3e26]:
+                          - generic [ref=f3e27]: Week 5
+                          - text: Final — code, JUnit tests
+                      - row [ref=f3e28]:
+                        - cell "Define before you build" [ref=f3e29]
+                  - img "A rising trail with three waypoints, Week 3 scope, Week 4 spec and Week 5 final; a team of three walks it one week at a time, leaving a scope sheet, a blueprint and a working laptop behind, and a test list grows beside the laptop at the end" [ref=f3e30]:
+                    - generic [ref=f3e32]: Sep 7 · Labor Day
+                    - generic [ref=f3e33]: "full brief: Canvas · Project 1 · Overview"
+                    - generic [ref=f3e34]: Week 3 · scope
+                    - generic [ref=f3e37]: Week 4 · spec
+                    - generic [ref=f3e40]: Week 5 · final
+                    - generic [ref=f3e53]: 3 min
+                    - generic [ref=f3e59]:
+                      - generic [ref=f3e62]: normal case
+                      - generic [ref=f3e64]: bad input
+                  - paragraph [ref=f3e72]: Deliverable 3 needs JUnit tests — a normal case and a bad-input case per method. So what does a passing test actually tell you?
+                - generic [ref=f3e73]: 1 / 1
+        - button "+" [ref=e258] [cursor=pointer]
+        - button "2" [ref=e259] [cursor=pointer]:
+          - iframe [ref=e260]:
+            - button "Pause background motion" [ref=f4e2]
+        - button "+" [ref=e262] [cursor=pointer]
+        - button "3" [ref=e263] [cursor=pointer]:
+          - iframe [ref=e264]:
+            - button "Pause background motion" [ref=f5e2]
+        - button "+" [ref=e266] [cursor=pointer]
+        - button "4" [ref=e267] [cursor=pointer]:
+          - iframe [ref=e268]:
+            - generic [ref=f6e1]:
+              - button "Pause background motion" [ref=f6e2]
+              - generic [ref=f6e4]:
+                - generic [ref=f6e5]:
+                  - paragraph [ref=f6e6]: PROJECT 1 · JAVA + EXCEPTIONS · WEEKS 3–5
+                  - heading "Project 1 — Learning to Scope" [level=2] [ref=f6e7]
+                - paragraph [ref=f6e8]: "At left, the P1 column of Week 1’s project table: the tag P1, the title Learning to Scope, then four rows that light up one per step — teams of three, formed in lab this week; Week 3, scope, one page; Week 4, spec, the blueprint; Week 5, final, code and JUnit tests — and the lesson line, define before you build. At right, a dashed trail rises from bottom-left to top-right through three waypoint discs labelled Week 3 scope, Week 4 spec and Week 5 final, with a small grey Labor Day tick on the trail just before the first. On step 1 three orange busts, the team, stand up at the foot of the trail. Each of steps 2 to 4 walks the team along the trail to the next waypoint; the disc turns orange and a document grows above their heads: first a one-page sheet with five short lines, then a blueprint with three class boxes and two arrows, then a laptop with a tick on its screen and a small 3-minute tag. On step 5 a test list grows beside the laptop, normal case and bad input, each with a blue tick, and a caption under the scene asks what a passing test actually tells you. A static note in the scene’s lower right points to the full brief: the Project 1 overview page on Canvas."
+                - generic [ref=f6e9]:
+                  - table [ref=f6e10]:
+                    - rowgroup [ref=f6e11]:
+                      - row [ref=f6e12]:
+                        - columnheader [ref=f6e13]:
+                          - paragraph [ref=f6e14]: P1
+                          - text: Learning to Scope
+                    - rowgroup [ref=f6e15]:
+                      - row [ref=f6e16]:
+                        - cell "Teams 3, formed in lab this week" [ref=f6e17]:
+                          - generic [ref=f6e18]: Teams
+                          - text: 3, formed in lab this week
+                      - row [ref=f6e19]:
+                        - cell "Week 3 Scope — one page" [ref=f6e20]:
+                          - generic [ref=f6e21]: Week 3
+                          - text: Scope — one page
+                      - row [ref=f6e22]:
+                        - cell "Week 4 Spec — the blueprint" [ref=f6e23]:
+                          - generic [ref=f6e24]: Week 4
+                          - text: Spec — the blueprint
+                      - row [ref=f6e25]:
+                        - cell "Week 5 Final — code, JUnit tests" [ref=f6e26]:
+                          - generic [ref=f6e27]: Week 5
+                          - text: Final — code, JUnit tests
+                      - row [ref=f6e28]:
+                        - cell "Define before you build" [ref=f6e29]
+                  - img "A rising trail with three waypoints, Week 3 scope, Week 4 spec and Week 5 final; a team of three walks it one week at a time, leaving a scope sheet, a blueprint and a working laptop behind, and a test list grows beside the laptop at the end" [ref=f6e30]:
+                    - generic [ref=f6e32]: Sep 7 · Labor Day
+                    - generic [ref=f6e33]: "full brief: Canvas · Project 1 · Overview"
+                    - generic [ref=f6e34]: Week 3 · scope
+                    - generic [ref=f6e37]: Week 4 · spec
+                    - generic [ref=f6e40]: Week 5 · final
+                    - generic [ref=f6e53]: 3 min
+                    - generic [ref=f6e59]:
+                      - generic [ref=f6e62]: normal case
+                      - generic [ref=f6e64]: bad input
+                  - paragraph [ref=f6e72]: Deliverable 3 needs JUnit tests — a normal case and a bad-input case per method. So what does a passing test actually tell you?
+                - generic [ref=f6e73]: 1 / 1
+        - button "+" [ref=e270] [cursor=pointer]
+        - button "5" [ref=e271] [cursor=pointer]:
+          - iframe [ref=e272]:
+            - generic [ref=f7e1]:
+              - button "Pause background motion" [ref=f7e2]
+              - generic [ref=f7e4]:
+                - generic [ref=f7e5]:
+                  - paragraph [ref=f7e6]: PROJECT 1 · JAVA + EXCEPTIONS · WEEKS 3–5
+                  - heading "Project 1 — Learning to Scope" [level=2] [ref=f7e7]
+                - paragraph [ref=f7e8]: "At left, the P1 column of Week 1’s project table: the tag P1, the title Learning to Scope, then four rows that light up one per step — teams of three, formed in lab this week; Week 3, scope, one page; Week 4, spec, the blueprint; Week 5, final, code and JUnit tests — and the lesson line, define before you build. At right, a dashed trail rises from bottom-left to top-right through three waypoint discs labelled Week 3 scope, Week 4 spec and Week 5 final, with a small grey Labor Day tick on the trail just before the first. On step 1 three orange busts, the team, stand up at the foot of the trail. Each of steps 2 to 4 walks the team along the trail to the next waypoint; the disc turns orange and a document grows above their heads: first a one-page sheet with five short lines, then a blueprint with three class boxes and two arrows, then a laptop with a tick on its screen and a small 3-minute tag. On step 5 a test list grows beside the laptop, normal case and bad input, each with a blue tick, and a caption under the scene asks what a passing test actually tells you. A static note in the scene’s lower right points to the full brief: the Project 1 overview page on Canvas."
+                - generic [ref=f7e9]:
+                  - table [ref=f7e10]:
+                    - rowgroup [ref=f7e11]:
+                      - row [ref=f7e12]:
+                        - columnheader [ref=f7e13]:
+                          - paragraph [ref=f7e14]: P1
+                          - text: Learning to Scope
+                    - rowgroup [ref=f7e15]:
+                      - row [ref=f7e16]:
+                        - cell "Teams 3, formed in lab this week" [ref=f7e17]:
+                          - generic [ref=f7e18]: Teams
+                          - text: 3, formed in lab this week
+                      - row [ref=f7e19]:
+                        - cell "Week 3 Scope — one page" [ref=f7e20]:
+                          - generic [ref=f7e21]: Week 3
+                          - text: Scope — one page
+                      - row [ref=f7e22]:
+                        - cell "Week 4 Spec — the blueprint" [ref=f7e23]:
+                          - generic [ref=f7e24]: Week 4
+                          - text: Spec — the blueprint
+                      - row [ref=f7e25]:
+                        - cell "Week 5 Final — code, JUnit tests" [ref=f7e26]:
+                          - generic [ref=f7e27]: Week 5
+                          - text: Final — code, JUnit tests
+                      - row [ref=f7e28]:
+                        - cell "Define before you build" [ref=f7e29]
+                  - img "A rising trail with three waypoints, Week 3 scope, Week 4 spec and Week 5 final; a team of three walks it one week at a time, leaving a scope sheet, a blueprint and a working laptop behind, and a test list grows beside the laptop at the end" [ref=f7e30]:
+                    - generic [ref=f7e32]: Sep 7 · Labor Day
+                    - generic [ref=f7e33]: "full brief: Canvas · Project 1 · Overview"
+                    - generic [ref=f7e34]: Week 3 · scope
+                    - generic [ref=f7e37]: Week 4 · spec
+                    - generic [ref=f7e40]: Week 5 · final
+                    - generic [ref=f7e53]: 3 min
+                    - generic [ref=f7e59]:
+                      - generic [ref=f7e62]: normal case
+                      - generic [ref=f7e64]: bad input
+                  - paragraph [ref=f7e72]: Deliverable 3 needs JUnit tests — a normal case and a bad-input case per method. So what does a passing test actually tell you?
+                - generic [ref=f7e73]: 1 / 1
+        - button "+" [ref=e274] [cursor=pointer]
+    - button "‹" [ref=e175] [cursor=pointer]
+    - button "›" [ref=e176] [cursor=pointer]
+    - button "⌄" [ref=e177] [cursor=pointer]

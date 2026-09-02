@@ -1,0 +1,8 @@
+[     304ms] TypeError: Cannot read properties of undefined (reading 'slide')
+    at http://localhost:44241/js/code-walk.js:368:21
+    at startFit (http://localhost:44241/__studio/overlay.js?v=1787682675000:1072:12)
+    at boot (http://localhost:44241/__studio/overlay.js?v=1787682675000:6611:58)
+    at http://localhost:44241/__studio/overlay.js?v=1787682675000:6612:42
+    at http://localhost:44241/__studio/overlay.js?v=1787682675000:6616:3
+    at http://localhost:44241/__studio/overlay.js?v=1787682675000:6618:3
+[     520ms] [ERROR] Failed to load resource: the server responded with a status of 404 (Not Found) @ http://localhost:44241/favicon.ico:0

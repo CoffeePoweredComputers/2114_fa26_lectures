@@ -1,0 +1,178 @@
+- generic [active] [ref=e1]:
+  - button "Pause background motion" [ref=e2]
+  - generic [ref=e4]:
+    - heading "Today" [level=2] [ref=e6]
+    - paragraph [ref=e7]: "Three chapters, each arriving in turn as a numbered column with a drawing of what the chapter is about. One, three words, and Project 1: a contract sheet with four lines of text and a signed signature line. Two, what does a passing test tell you: an open laptop whose screen shows a tick on the left and a cross on the right. Three, every line ran and it still blew up: three code lines, each with a small tick in the gutter saying it ran, and a maroon cross at the end of the last one."
+    - list [ref=e9]:
+      - listitem [ref=e10]:
+        - img "A contract sheet with a signature line" [ref=e11]
+        - paragraph [ref=e18]: "01"
+        - heading "Three words, and Project 1" [level=3] [ref=e19]
+      - listitem [ref=e20]:
+        - img "An open laptop whose screen shows a tick and a cross" [ref=e21]
+        - paragraph [ref=e29]: "02"
+        - heading "What does a passing test tell you?" [level=3] [ref=e30]
+      - listitem [ref=e31]:
+        - img "Three code lines, each ticked as run, with a cross at the end of the last" [ref=e32]
+        - paragraph [ref=e41]: "03"
+        - heading "Every line ran. It still blew up." [level=3] [ref=e42]
+    - generic [ref=e43]: 2 / 24
+  - generic:
+    - generic [ref=e44]:
+      - generic [ref=e45]: ◆ Studio
+      - button "Select (E)" [ref=e47] [cursor=pointer]
+      - button "＋ Add" [ref=e48] [cursor=pointer]
+      - generic [ref=e49]: slide 2 / 24
+      - button "✎ Sketch" [ref=e51] [cursor=pointer]
+      - button "⁂ Examples" [ref=e52] [cursor=pointer]
+      - button "Theme" [ref=e53] [cursor=pointer]
+      - button "Git" [ref=e54] [cursor=pointer]
+      - button "↻ Reload" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: ↻
+        - text: Reload
+      - button "▶ Present" [ref=e57] [cursor=pointer]
+      - button "🎙 Rehearse" [ref=e58] [cursor=pointer]
+      - button "🎤 Voice" [ref=e59] [cursor=pointer]
+      - button "⇲ Compact" [ref=e60] [cursor=pointer]
+      - button "⌫ Clear" [ref=e61] [cursor=pointer]
+      - button "⟲ New chat" [ref=e62] [cursor=pointer]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - button "Slides" [ref=e65] [cursor=pointer]
+        - button "Layers" [ref=e66] [cursor=pointer]
+        - button "Checks" [ref=e67] [cursor=pointer]
+        - button "Rehearse" [ref=e68] [cursor=pointer]
+        - button "Describe23" [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]: "1"
+            - generic "01-title" [ref=e74]
+          - generic [ref=e75] [cursor=pointer]:
+            - generic [ref=e76]: "2"
+            - generic "01b-today" [ref=e77]
+          - generic [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: "3"
+            - generic "02-course-info" [ref=e80]
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: "4"
+            - generic "02b-chapter-1" [ref=e83]
+          - generic [ref=e84] [cursor=pointer]:
+            - generic [ref=e85]: "5"
+            - generic "03-vocabulary" [ref=e86]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: "6"
+            - generic "04-project-1" [ref=e89]
+          - generic [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]: "7"
+            - generic "04b-chapter-2" [ref=e92]
+          - generic [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]: "8"
+            - generic "05-peer-plus" [ref=e95]
+          - generic [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]: "9"
+            - generic "06-vote-setup" [ref=e98]
+          - generic [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: "10"
+            - generic "06b-walk-setup" [ref=e101]
+          - generic [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: "11"
+            - generic "07-vote-cases" [ref=e104]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: "12"
+            - generic "07b-walk-cases" [ref=e107]
+          - generic [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: "13"
+            - generic "08-vote-branch" [ref=e110]
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]: "14"
+            - generic "08b-walk-branch" [ref=e113]
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: "15"
+            - generic "08c-chapter-3" [ref=e116]
+          - generic [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: "16"
+            - generic "10-week2-practice" [ref=e119]
+          - generic [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: "17"
+            - generic "11-uml-diagram" [ref=e122]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: "18"
+            - generic "12-uml-answer" [ref=e125]
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]: "19"
+            - generic "13-npe-agemath" [ref=e128]
+          - generic [ref=e129] [cursor=pointer]:
+            - generic [ref=e130]: "20"
+            - generic "14-oldest-ask" [ref=e131]
+          - generic [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: "21"
+            - generic "15-oldest-code" [ref=e134]
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: "22"
+            - generic "16-npe-array" [ref=e137]
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: "23"
+            - generic "17-next-class" [ref=e140]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: "24"
+            - generic "99-closing" [ref=e143]
+        - button "＋ New slide" [ref=e144] [cursor=pointer]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]: Chat
+        - combobox "Claude model for chat edits" [ref=e148]:
+          - 'option "model: default" [selected]'
+          - option "fable"
+          - option "opus"
+          - option "sonnet"
+          - option "haiku"
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - button "Deck" [ref=e151] [cursor=pointer]
+          - button "＋" [ref=e153] [cursor=pointer]
+        - generic [ref=e157]:
+          - textbox "Ask Claude to change the selected element… (Enter to send)" [ref=e158]
+          - button "🎙" [disabled] [ref=e159]
+          - button "Send" [ref=e160] [cursor=pointer]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]: Steps
+        - generic [ref=e164]:
+          - text: "Transition:"
+          - combobox "Transition:" [ref=e165]:
+            - option "none" [selected]
+            - option "fade"
+            - option "slide"
+            - option "zoom"
+        - button "Tidy steps" [ref=e166] [cursor=pointer]
+        - button "Notes" [ref=e167] [cursor=pointer]
+        - button "▶ Play" [ref=e168] [cursor=pointer]
+      - generic [ref=e170]:
+        - button "Start" [ref=e171] [cursor=pointer]:
+          - iframe [ref=e172]:
+            - generic [ref=f1e1]:
+              - button "Pause background motion" [ref=f1e2]
+              - generic [ref=f1e4]:
+                - heading "Today" [level=2] [ref=f1e6]
+                - paragraph [ref=f1e7]: "Three chapters, each arriving in turn as a numbered column with a drawing of what the chapter is about. One, three words, and Project 1: a contract sheet with four lines of text and a signed signature line. Two, what does a passing test tell you: an open laptop whose screen shows a tick on the left and a cross on the right. Three, every line ran and it still blew up: three code lines, each with a small tick in the gutter saying it ran, and a maroon cross at the end of the last one."
+                - list [ref=f1e9]:
+                  - listitem [ref=f1e10]:
+                    - img "A contract sheet with a signature line" [ref=f1e11]
+                    - paragraph [ref=f1e18]: "01"
+                    - heading "Three words, and Project 1" [level=3] [ref=f1e19]
+                  - listitem [ref=f1e20]:
+                    - img "An open laptop whose screen shows a tick and a cross" [ref=f1e21]
+                    - paragraph [ref=f1e29]: "02"
+                    - heading "What does a passing test tell you?" [level=3] [ref=f1e30]
+                  - listitem [ref=f1e31]:
+                    - img "Three code lines, each ticked as run, with a cross at the end of the last" [ref=f1e32]
+                    - paragraph [ref=f1e41]: "03"
+                    - heading "Every line ran. It still blew up." [level=3] [ref=f1e42]
+                - generic [ref=f1e43]: 1 / 1
+              - generic [ref=f1e44]: "Slide 1 of 1: Today."
+        - button "+" [ref=e174] [cursor=pointer]
+    - button "‹" [ref=e175] [cursor=pointer]
+    - button "›" [ref=e176] [cursor=pointer]
+    - button "⌄" [ref=e177] [cursor=pointer]
+  - generic [ref=e178]: "Slide 2 of 24: Today."

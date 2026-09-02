@@ -1,0 +1,385 @@
+- generic [active] [ref=e1]:
+  - button "Pause background motion" [ref=e2]
+  - generic [ref=e344]:
+    - generic [ref=e345]:
+      - paragraph [ref=e346]: PRACTICE 3 · NULL POINTER
+      - heading "Make getOldest survive a null" [level=2] [ref=e347]
+    - paragraph [ref=e348]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+    - generic [ref=e349]:
+      - generic [ref=e350]:
+        - paragraph [ref=e351]: the method your coworker wrote
+        - list [ref=e352]:
+          - listitem [ref=e353]: public Person getOldest(Person personA,
+          - listitem [ref=e354]: "Person personB, Person personC) {"
+          - listitem [ref=e355]: "if (personA.getAge() >= personB.getAge()) {"
+          - listitem [ref=e356]: "if (personA.getAge() >= personC.getAge()) {"
+          - listitem [ref=e357]: return personA;
+          - listitem [ref=e358]: "} else {"
+          - listitem [ref=e359]: return personC;
+          - listitem [ref=e360]: "}"
+          - listitem [ref=e361]: "} else if (personB.getAge() >= personC.getAge()) {"
+          - listitem [ref=e362]: return personB;
+          - listitem [ref=e363]: "} else {"
+          - listitem [ref=e364]: return personC;
+          - listitem [ref=e365]: "}"
+          - listitem [ref=e366]: "}"
+      - generic [ref=e367]:
+        - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=e368]:
+          - generic [ref=e375]: "58"
+          - generic [ref=e376]: "31"
+          - generic [ref=e377]: "null"
+          - generic [ref=e378]: "44"
+          - generic [ref=e381]: "58"
+          - generic [ref=e384]: oldest
+        - generic [ref=e388]:
+          - paragraph [ref=e389]: what it should do instead
+          - paragraph [ref=e390]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+        - paragraph [ref=e391]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+    - generic [ref=e392]: 20 / 24
+  - generic:
+    - generic [ref=e44]:
+      - generic [ref=e45]: ◆ Studio
+      - button "Select (E)" [ref=e47] [cursor=pointer]
+      - button "＋ Add" [ref=e48] [cursor=pointer]
+      - generic [ref=e49]: slide 20 / 24
+      - button "✎ Sketch" [ref=e51] [cursor=pointer]
+      - button "⁂ Examples" [ref=e52] [cursor=pointer]
+      - button "Theme" [ref=e53] [cursor=pointer]
+      - button "Git" [ref=e54] [cursor=pointer]
+      - button "↻ Reload" [ref=e55] [cursor=pointer]:
+        - generic [ref=e56]: ↻
+        - text: Reload
+      - button "▶ Present" [ref=e57] [cursor=pointer]
+      - button "🎙 Rehearse" [ref=e58] [cursor=pointer]
+      - button "🎤 Voice" [ref=e59] [cursor=pointer]
+      - button "⇲ Compact" [ref=e60] [cursor=pointer]
+      - button "⌫ Clear" [ref=e61] [cursor=pointer]
+      - button "⟲ New chat" [ref=e62] [cursor=pointer]
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - button "Slides" [ref=e65] [cursor=pointer]
+        - button "Layers" [ref=e66] [cursor=pointer]
+        - button "Checks 467" [ref=e249] [cursor=pointer]:
+          - text: Checks
+          - generic [ref=e250]: "467"
+        - button "Rehearse" [ref=e68] [cursor=pointer]
+        - button "Describe23" [ref=e69] [cursor=pointer]
+      - generic [ref=e70]:
+        - generic [ref=e71]:
+          - generic [ref=e72] [cursor=pointer]:
+            - generic [ref=e73]: "1"
+            - generic "01-title" [ref=e74]
+          - generic [ref=e75] [cursor=pointer]:
+            - generic [ref=e76]: "2"
+            - generic "01b-today" [ref=e77]
+          - generic [ref=e78] [cursor=pointer]:
+            - generic [ref=e79]: "3"
+            - generic "02-course-info" [ref=e80]
+          - generic [ref=e81] [cursor=pointer]:
+            - generic [ref=e82]: "4"
+            - generic "02b-chapter-1" [ref=e83]
+          - generic [ref=e84] [cursor=pointer]:
+            - generic [ref=e85]: "5"
+            - generic "03-vocabulary" [ref=e86]
+          - generic [ref=e87] [cursor=pointer]:
+            - generic [ref=e88]: "6"
+            - generic "04-project-1" [ref=e89]
+          - generic [ref=e90] [cursor=pointer]:
+            - generic [ref=e91]: "7"
+            - generic "04b-chapter-2" [ref=e92]
+          - generic [ref=e93] [cursor=pointer]:
+            - generic [ref=e94]: "8"
+            - generic "05-peer-plus" [ref=e95]
+          - generic [ref=e96] [cursor=pointer]:
+            - generic [ref=e97]: "9"
+            - generic "06-vote-setup" [ref=e98]
+          - generic [ref=e99] [cursor=pointer]:
+            - generic [ref=e100]: "10"
+            - generic "06b-walk-setup" [ref=e101]
+          - generic [ref=e102] [cursor=pointer]:
+            - generic [ref=e103]: "11"
+            - generic "07-vote-cases" [ref=e104]
+          - generic [ref=e105] [cursor=pointer]:
+            - generic [ref=e106]: "12"
+            - generic "07b-walk-cases" [ref=e107]
+          - generic [ref=e108] [cursor=pointer]:
+            - generic [ref=e109]: "13"
+            - generic "08-vote-branch" [ref=e110]
+          - generic [ref=e111] [cursor=pointer]:
+            - generic [ref=e112]: "14"
+            - generic "08b-walk-branch" [ref=e113]
+          - generic [ref=e114] [cursor=pointer]:
+            - generic [ref=e115]: "15"
+            - generic "08c-chapter-3" [ref=e116]
+          - generic [ref=e117] [cursor=pointer]:
+            - generic [ref=e118]: "16"
+            - generic "10-week2-practice" [ref=e119]
+          - generic [ref=e120] [cursor=pointer]:
+            - generic [ref=e121]: "17"
+            - generic "11-uml-diagram" [ref=e122]
+          - generic [ref=e123] [cursor=pointer]:
+            - generic [ref=e124]: "18"
+            - generic "12-uml-answer" [ref=e125]
+          - generic [ref=e126] [cursor=pointer]:
+            - generic [ref=e127]: "19"
+            - generic "13-npe-agemath" [ref=e128]
+          - generic [ref=e129] [cursor=pointer]:
+            - generic [ref=e130]: "20"
+            - generic "14-oldest-ask" [ref=e131]
+          - generic [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: "21"
+            - generic "15-oldest-code" [ref=e134]
+          - generic [ref=e135] [cursor=pointer]:
+            - generic [ref=e136]: "22"
+            - generic "16-npe-array" [ref=e137]
+          - generic [ref=e138] [cursor=pointer]:
+            - generic [ref=e139]: "23"
+            - generic "17-next-class" [ref=e140]
+          - generic [ref=e141] [cursor=pointer]:
+            - generic [ref=e142]: "24"
+            - generic "99-closing" [ref=e143]
+        - button "＋ New slide" [ref=e144] [cursor=pointer]
+    - generic [ref=e145]:
+      - generic [ref=e146]:
+        - generic [ref=e147]: Chat
+        - combobox "Claude model for chat edits" [ref=e148]:
+          - 'option "model: default" [selected]'
+          - option "fable"
+          - option "opus"
+          - option "sonnet"
+          - option "haiku"
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - button "Deck" [ref=e151] [cursor=pointer]
+          - button "＋" [ref=e153] [cursor=pointer]
+        - generic [ref=e157]:
+          - textbox "Ask Claude to change the selected element… (Enter to send)" [ref=e158]
+          - button "🎙" [disabled] [ref=e159]
+          - button "Send" [ref=e160] [cursor=pointer]
+    - generic [ref=e161]:
+      - generic [ref=e162]:
+        - generic [ref=e163]: Steps
+        - generic [ref=e164]:
+          - text: "Transition:"
+          - combobox "Transition:" [ref=e165]:
+            - option "none" [selected]
+            - option "fade"
+            - option "slide"
+            - option "zoom"
+        - button "Tidy steps" [ref=e166] [cursor=pointer]
+        - button "Notes" [ref=e167] [cursor=pointer]
+        - button "▶ Play" [ref=e168] [cursor=pointer]
+      - generic [ref=e170]:
+        - button "Start" [ref=e324] [cursor=pointer]:
+          - iframe [ref=e325]:
+            - generic [ref=f8e1]:
+              - button "Pause background motion" [ref=f8e2]
+              - generic [ref=f8e4]:
+                - generic [ref=f8e5]:
+                  - paragraph [ref=f8e6]: PRACTICE 3 · NULL POINTER
+                  - heading "Make getOldest survive a null" [level=2] [ref=f8e7]
+                - paragraph [ref=f8e8]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+                - generic [ref=f8e9]:
+                  - generic [ref=f8e10]:
+                    - paragraph [ref=f8e11]: the method your coworker wrote
+                    - list [ref=f8e12]:
+                      - listitem [ref=f8e13]: public Person getOldest(Person personA,
+                      - listitem [ref=f8e14]: "Person personB, Person personC) {"
+                      - listitem [ref=f8e15]: "if (personA.getAge() >= personB.getAge()) {"
+                      - listitem [ref=f8e16]: "if (personA.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f8e17]: return personA;
+                      - listitem [ref=f8e18]: "} else {"
+                      - listitem [ref=f8e19]: return personC;
+                      - listitem [ref=f8e20]: "}"
+                      - listitem [ref=f8e21]: "} else if (personB.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f8e22]: return personB;
+                      - listitem [ref=f8e23]: "} else {"
+                      - listitem [ref=f8e24]: return personC;
+                      - listitem [ref=f8e25]: "}"
+                      - listitem [ref=f8e26]: "}"
+                  - generic [ref=f8e27]:
+                    - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=f8e28]:
+                      - generic [ref=f8e35]: "58"
+                      - generic [ref=f8e36]: "31"
+                      - generic [ref=f8e37]: "null"
+                      - generic [ref=f8e38]: "44"
+                      - generic [ref=f8e41]: "58"
+                      - generic [ref=f8e44]: oldest
+                    - generic [ref=f8e48]:
+                      - paragraph [ref=f8e49]: what it should do instead
+                      - paragraph [ref=f8e50]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+                    - paragraph [ref=f8e51]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+                - generic [ref=f8e52]: 1 / 1
+              - generic [ref=f8e53]: "Slide 1 of 1: Make getOldest survive a null."
+        - button "+" [ref=e327] [cursor=pointer]
+        - button "1" [ref=e328] [cursor=pointer]:
+          - iframe [ref=e329]:
+            - generic [ref=f9e1]:
+              - button "Pause background motion" [ref=f9e2]
+              - generic [ref=f9e4]:
+                - generic [ref=f9e5]:
+                  - paragraph [ref=f9e6]: PRACTICE 3 · NULL POINTER
+                  - heading "Make getOldest survive a null" [level=2] [ref=f9e7]
+                - paragraph [ref=f9e8]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+                - generic [ref=f9e9]:
+                  - generic [ref=f9e10]:
+                    - paragraph [ref=f9e11]: the method your coworker wrote
+                    - list [ref=f9e12]:
+                      - listitem [ref=f9e13]: public Person getOldest(Person personA,
+                      - listitem [ref=f9e14]: "Person personB, Person personC) {"
+                      - listitem [ref=f9e15]: "if (personA.getAge() >= personB.getAge()) {"
+                      - listitem [ref=f9e16]: "if (personA.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f9e17]: return personA;
+                      - listitem [ref=f9e18]: "} else {"
+                      - listitem [ref=f9e19]: return personC;
+                      - listitem [ref=f9e20]: "}"
+                      - listitem [ref=f9e21]: "} else if (personB.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f9e22]: return personB;
+                      - listitem [ref=f9e23]: "} else {"
+                      - listitem [ref=f9e24]: return personC;
+                      - listitem [ref=f9e25]: "}"
+                      - listitem [ref=f9e26]: "}"
+                  - generic [ref=f9e27]:
+                    - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=f9e28]:
+                      - generic [ref=f9e35]: "58"
+                      - generic [ref=f9e36]: "31"
+                      - generic [ref=f9e37]: "null"
+                      - generic [ref=f9e38]: "44"
+                      - generic [ref=f9e41]: "58"
+                      - generic [ref=f9e44]: oldest
+                    - generic [ref=f9e48]:
+                      - paragraph [ref=f9e49]: what it should do instead
+                      - paragraph [ref=f9e50]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+                    - paragraph [ref=f9e51]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+                - generic [ref=f9e52]: 1 / 1
+              - generic [ref=f9e53]: "Slide 1 of 1: Make getOldest survive a null."
+        - button "+" [ref=e331] [cursor=pointer]
+        - button "2" [ref=e332] [cursor=pointer]:
+          - iframe [ref=e333]:
+            - generic [ref=f10e1]:
+              - button "Pause background motion" [ref=f10e2]
+              - generic [ref=f10e4]:
+                - generic [ref=f10e5]:
+                  - paragraph [ref=f10e6]: PRACTICE 3 · NULL POINTER
+                  - heading "Make getOldest survive a null" [level=2] [ref=f10e7]
+                - paragraph [ref=f10e8]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+                - generic [ref=f10e9]:
+                  - generic [ref=f10e10]:
+                    - paragraph [ref=f10e11]: the method your coworker wrote
+                    - list [ref=f10e12]:
+                      - listitem [ref=f10e13]: public Person getOldest(Person personA,
+                      - listitem [ref=f10e14]: "Person personB, Person personC) {"
+                      - listitem [ref=f10e15]: "if (personA.getAge() >= personB.getAge()) {"
+                      - listitem [ref=f10e16]: "if (personA.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f10e17]: return personA;
+                      - listitem [ref=f10e18]: "} else {"
+                      - listitem [ref=f10e19]: return personC;
+                      - listitem [ref=f10e20]: "}"
+                      - listitem [ref=f10e21]: "} else if (personB.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f10e22]: return personB;
+                      - listitem [ref=f10e23]: "} else {"
+                      - listitem [ref=f10e24]: return personC;
+                      - listitem [ref=f10e25]: "}"
+                      - listitem [ref=f10e26]: "}"
+                  - generic [ref=f10e27]:
+                    - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=f10e28]:
+                      - generic [ref=f10e35]: "58"
+                      - generic [ref=f10e36]: "31"
+                      - generic [ref=f10e37]: "null"
+                      - generic [ref=f10e38]: "44"
+                      - generic [ref=f10e41]: "58"
+                      - generic [ref=f10e44]: oldest
+                    - generic [ref=f10e48]:
+                      - paragraph [ref=f10e49]: what it should do instead
+                      - paragraph [ref=f10e50]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+                    - paragraph [ref=f10e51]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+                - generic [ref=f10e52]: 1 / 1
+              - generic [ref=f10e53]: "Slide 1 of 1: Make getOldest survive a null."
+        - button "+" [ref=e335] [cursor=pointer]
+        - button "3" [ref=e336] [cursor=pointer]:
+          - iframe [ref=e337]:
+            - generic [ref=f11e1]:
+              - button "Pause background motion" [ref=f11e2]
+              - generic [ref=f11e4]:
+                - generic [ref=f11e5]:
+                  - paragraph [ref=f11e6]: PRACTICE 3 · NULL POINTER
+                  - heading "Make getOldest survive a null" [level=2] [ref=f11e7]
+                - paragraph [ref=f11e8]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+                - generic [ref=f11e9]:
+                  - generic [ref=f11e10]:
+                    - paragraph [ref=f11e11]: the method your coworker wrote
+                    - list [ref=f11e12]:
+                      - listitem [ref=f11e13]: public Person getOldest(Person personA,
+                      - listitem [ref=f11e14]: "Person personB, Person personC) {"
+                      - listitem [ref=f11e15]: "if (personA.getAge() >= personB.getAge()) {"
+                      - listitem [ref=f11e16]: "if (personA.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f11e17]: return personA;
+                      - listitem [ref=f11e18]: "} else {"
+                      - listitem [ref=f11e19]: return personC;
+                      - listitem [ref=f11e20]: "}"
+                      - listitem [ref=f11e21]: "} else if (personB.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f11e22]: return personB;
+                      - listitem [ref=f11e23]: "} else {"
+                      - listitem [ref=f11e24]: return personC;
+                      - listitem [ref=f11e25]: "}"
+                      - listitem [ref=f11e26]: "}"
+                  - generic [ref=f11e27]:
+                    - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=f11e28]:
+                      - generic [ref=f11e35]: "58"
+                      - generic [ref=f11e36]: "31"
+                      - generic [ref=f11e37]: "null"
+                      - generic [ref=f11e38]: "44"
+                      - generic [ref=f11e41]: "58"
+                      - generic [ref=f11e44]: oldest
+                    - generic [ref=f11e48]:
+                      - paragraph [ref=f11e49]: what it should do instead
+                      - paragraph [ref=f11e50]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+                    - paragraph [ref=f11e51]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+                - generic [ref=f11e52]: 1 / 1
+              - generic [ref=f11e53]: "Slide 1 of 1: Make getOldest survive a null."
+        - button "+" [ref=e339] [cursor=pointer]
+        - button "4" [ref=e340] [cursor=pointer]:
+          - iframe [ref=e341]:
+            - generic [ref=f12e1]:
+              - button "Pause background motion" [ref=f12e2]
+              - generic [ref=f12e4]:
+                - generic [ref=f12e5]:
+                  - paragraph [ref=f12e6]: PRACTICE 3 · NULL POINTER
+                  - heading "Make getOldest survive a null" [level=2] [ref=f12e7]
+                - paragraph [ref=f12e8]: "On the left, an editor holds the method a coworker wrote: getOldest takes three Person parameters and returns the oldest by comparing getAge calls in a chain of if and else branches. On the right, a scene annotates it. First three head-and-shoulders figures grow in a row, tagged with ages 58, 31 and 44, and an arrow wipes across to a fourth figure tagged 58 wearing an orange oldest badge: the method working as intended. Then the middle figure fades to a dashed grey outline, its tag becomes null, and a maroon cross grows over the output: the method fails whenever one of the three is null. Then a rule tile appears: if a parameter is null, return the oldest of the people who are not; if all three are null, return null. Last, a caption: fix it, and work out how you would explain the problem to the coworker who wrote it."
+                - generic [ref=f12e9]:
+                  - generic [ref=f12e10]:
+                    - paragraph [ref=f12e11]: the method your coworker wrote
+                    - list [ref=f12e12]:
+                      - listitem [ref=f12e13]: public Person getOldest(Person personA,
+                      - listitem [ref=f12e14]: "Person personB, Person personC) {"
+                      - listitem [ref=f12e15]: "if (personA.getAge() >= personB.getAge()) {"
+                      - listitem [ref=f12e16]: "if (personA.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f12e17]: return personA;
+                      - listitem [ref=f12e18]: "} else {"
+                      - listitem [ref=f12e19]: return personC;
+                      - listitem [ref=f12e20]: "}"
+                      - listitem [ref=f12e21]: "} else if (personB.getAge() >= personC.getAge()) {"
+                      - listitem [ref=f12e22]: return personB;
+                      - listitem [ref=f12e23]: "} else {"
+                      - listitem [ref=f12e24]: return personC;
+                      - listitem [ref=f12e25]: "}"
+                      - listitem [ref=f12e26]: "}"
+                  - generic [ref=f12e27]:
+                    - img "Three people go into getOldest and the oldest comes out wearing a badge, until the middle slot is empty — null — and the output takes a cross" [ref=f12e28]:
+                      - generic [ref=f12e35]: "58"
+                      - generic [ref=f12e36]: "31"
+                      - generic [ref=f12e37]: "null"
+                      - generic [ref=f12e38]: "44"
+                      - generic [ref=f12e41]: "58"
+                      - generic [ref=f12e44]: oldest
+                    - generic [ref=f12e48]:
+                      - paragraph [ref=f12e49]: what it should do instead
+                      - paragraph [ref=f12e50]: If a parameter is null, return the oldest of the people who are not. If all three are null, return null.
+                    - paragraph [ref=f12e51]: Fix it — and work out how you would explain the problem to the coworker who wrote it.
+                - generic [ref=f12e52]: 1 / 1
+              - generic [ref=f12e53]: "Slide 1 of 1: Make getOldest survive a null."
+        - button "+" [ref=e343] [cursor=pointer]
+    - button "‹" [ref=e175] [cursor=pointer]
+    - button "›" [ref=e176] [cursor=pointer]
+    - button "⌄" [ref=e177] [cursor=pointer]

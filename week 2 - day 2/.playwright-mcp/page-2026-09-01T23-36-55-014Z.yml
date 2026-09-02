@@ -1,0 +1,109 @@
+- generic [active] [ref=f1e1]:
+  - generic [ref=f1e2]:
+    - generic:
+      - generic:
+        - link "Donate" [ref=f1e4] [cursor=pointer]:
+          - /url: https://runestone.academy/admin/auth/donate
+        - generic [ref=f1e5]:
+          - list:
+            - listitem:
+              - list [ref=f1e6]:
+                - listitem [ref=f1e7]:
+                  - link "About Us":
+                    - /url: about-us.html
+                    - paragraph [ref=f1e10] [cursor=pointer]: About Us
+                - listitem [ref=f1e11]:
+                  - link "Math Textbooks":
+                    - /url: math-textbooks.html
+                    - paragraph [ref=f1e14] [cursor=pointer]: Math Textbooks
+                - listitem [ref=f1e15]:
+                  - link "CS Textbooks":
+                    - /url: computer-science-textbooks.html
+                    - paragraph [ref=f1e18] [cursor=pointer]: CS Textbooks
+                - listitem [ref=f1e19]:
+                  - link "Contact":
+                    - /url: contact.html
+                    - paragraph [ref=f1e22] [cursor=pointer]: Contact
+                - listitem [ref=f1e23]:
+                  - link "News":
+                    - /url: https://blog.runestone.academy/index.html
+                    - paragraph [ref=f1e26] [cursor=pointer]: News
+                - listitem [ref=f1e27]:
+                  - link "Instructors":
+                    - /url: instructors.html
+                    - paragraph [ref=f1e30] [cursor=pointer]: Instructors
+        - link "Log In" [ref=f1e32] [cursor=pointer]:
+          - /url: https://runestone.academy/admin/auth/login
+  - generic [ref=f1e33]:
+    - generic:
+      - generic:
+        - generic:
+          - heading "Free Online Textbooks for Math and Computer Science" [level=1] [ref=f1e35]
+          - heading "Learn math and computer science with Runestone Academy" [level=2] [ref=f1e37]
+          - link "Register & Get Started" [ref=f1e39] [cursor=pointer]:
+            - /url: https://runestone.academy/admin/get-started
+  - generic [ref=f1e40]:
+    - generic:
+      - generic:
+        - heading "Our mission is to equip the nation’s STEM teachers with open-source content, tools and strategies they need to create engaging, accessible, and effective learning experiences for their students" [level=2] [ref=f1e42]
+        - paragraph [ref=f1e44]: Runestone Academy offers a wide range of free online textbooks for math and computer science. Whether you are a student, teacher, or self-learner, our textbooks provide comprehensive and interactive resources to help you master these subjects. With clear explanations, engaging examples, and interactive exercises, learning math and computer science has never been easier. Explore our textbooks today and start your learning journey with Runestone Academy.
+  - generic [ref=f1e45]:
+    - generic:
+      - paragraph [ref=f1e47]: Interactive Textbook exercises
+      - generic [ref=f1e56]:
+        - generic:
+          - button "Pause" [pressed] [ref=f1e57] [cursor=pointer]
+          - generic:
+            - generic:
+              - slider "Seek": "0"
+              - progressbar [aria-hidden]: "% buffered"
+              - generic: 00:00
+          - timer "Current time": 00:00
+          - generic:
+            - button "Unmute" [pressed] [ref=f1e59] [cursor=pointer]
+            - slider "Volume": "0"
+          - button "Enter fullscreen" [ref=f1e61] [cursor=pointer]
+  - generic [ref=f1e66]:
+    - generic:
+      - generic:
+        - generic:
+          - paragraph [ref=f1e68]: Student Comments
+          - generic [ref=f1e74]:
+            - blockquote [ref=f1e75]:
+              - paragraph [ref=f1e76]: “I liked how everything was on Runestone and there was one platform for all of the preview problems, notes, solutions, and homework assignments. It's easy and convenient.”
+            - paragraph [ref=f1e77]
+        - blockquote [ref=f1e84]:
+          - paragraph [ref=f1e85]: “Runestone was definitely superior to other platforms. Being able to open the problems up in the textbook and do them there instead of a different website really added something to the class”
+      - blockquote [ref=f1e92]:
+        - paragraph [ref=f1e93]: “I loved having Runestone. Having the homework and preview in the textbook was helpful... I especially like how it saves your answers and how the interface allows you to type equations really well.”
+  - generic [ref=f1e94]:
+    - heading [level=3] [ref=f1e96]:
+      - button "Discover Our Textbooks" [ref=f1e97] [cursor=pointer]
+    - generic:
+      - generic:
+        - img "Blackboard with handwritten mathematical example for solve on lesson during studies in classroom of university" [ref=f1e100]
+        - generic:
+          - link "Math" [ref=f1e105] [cursor=pointer]:
+            - /url: math-textbooks.html
+          - link "Computer Science" [ref=f1e107] [cursor=pointer]:
+            - /url: computer-science-textbooks.html
+        - img "Person Using Macbook Pro" [ref=f1e110]
+  - generic [ref=f1e114]:
+    - generic:
+      - generic:
+        - heading "Professors have this to say." [level=1] [ref=f1e116]
+        - generic:
+          - generic:
+            - generic:
+              - generic:
+                - generic [ref=f1e122]:
+                  - paragraph [ref=f1e123]: In teaching introductory programming with Python, I can’t
+                  - paragraph [ref=f1e124]: live without the online interactive python book “How to Think Like
+                  - paragraph [ref=f1e125]: a Computer Scientist ”. With this book I can demo code in lecture, and students can experiment with concepts in the book as they learn them. With a free account, it keeps track of what you have read and problems you have already answered.
+                - paragraph [ref=f1e127]: Dr. Susan Rodger, Duke University
+  - generic [ref=f1e129]:
+    - paragraph [ref=f1e130]: Google Analytics is a web analysis service provided by Google. Google utilizes the data collected to track and examine the use of this site, to prepare reports on its activities and share them with other Google services.
+    - paragraph [ref=f1e131]: Google may use the data collected to contextualize and personalize the ads of its own advertising network.
+    - paragraph [ref=f1e132]:
+      - text: "Personal data collected: Cookie and Usage Data. Place of processing: USA."
+      - button "Find Google's privacy policy here." [ref=f1e133] [cursor=pointer]
