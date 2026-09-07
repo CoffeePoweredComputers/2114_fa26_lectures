@@ -4,7 +4,7 @@
     <h2 data-sid="08-vote-branch:4">Which implementation of contains does not work?</h2>
   </header>
   <p class="sr-only slide__desc" data-sid="08-vote-branch:5">A peer-instruction question about the ArrayBag class. On the left, the class&rsquo;s two fields &mdash; an array of entries and a count of how many are in use &mdash; plus two given methods in full: getFrequencyOf, which loops over the array counting matches, and getIndexOf, a private helper that loops over the array and returns the index of the first match, or minus one if none is found. On the right, four candidate implementations of contains, labeled A through D. A walks the array with a while loop and a found flag. B returns whether getIndexOf is greater than minus one. C returns whether getFrequencyOf is greater than zero. D walks the array with a while loop whose bound is less-than-or-equal-to numberOfEntries instead of less-than.</p>
-  <div class="slide__body grid grid--code" data-sid="08-vote-branch:6">
+  <div class="slide__body grid grid--code code-tag" data-sid="08-vote-branch:6">
     <div class="editor" data-sid="08-vote-branch:7">
       <p class="editor__bar" data-sid="08-vote-branch:8">the ArrayBag class</p>
       <ol class="editor__code" data-sid="08-vote-branch:9">
@@ -31,7 +31,7 @@
         <li data-sid="08-vote-branch:30">}</li>
       </ol>
     </div>
-    <ol class="opts" data-sid="08-vote-branch:31">
+    <ol class="opts opts--code" data-sid="08-vote-branch:31">
       <li data-sid="08-vote-branch:32">
         <ol class="editor__code" data-sid="08-vote-branch:33">
           <li data-sid="08-vote-branch:34"><span class="tok-key">boolean</span> found = <span class="tok-key">false</span>;</li>
@@ -73,25 +73,10 @@
   <aside class="notes" data-sid="08-vote-branch:60">Answer: D &mdash; its bound, i &lt;= numberOfEntries instead of i &lt; numberOfEntries, lets i reach one past the last valid index. With, say, 5 entries the valid indexes are 0 to 4; D's loop still runs the check at i = 5, and contents[5] is out of bounds &mdash; an ArrayIndexOutOfBoundsException, and it fires exactly when the entry being searched for is not in the bag, since that is the only case where the loop runs that far. A is a correct, if verbose, linear scan with a found flag &mdash; i still increments every iteration, so it terminates. B correctly reuses getIndexOf: any non-negative index means a match turned up. C correctly reuses getFrequencyOf: any count greater than zero means the entry is present. D is the only one that cannot be used as written.</aside>
 
   <style>
-    /* Slide-local: both panels are full code (left is the given class, all
-       21 lines; right is four full candidate implementations of contains)
-       so both run at the token floor (t-tag, 21px) with a tight line-height
-       — the only way this much Java clears the available height on one
-       slide. Right stacks its four options as lettered cards with a tinted
-       background instead of full editor chrome (bar + border), since a
-       bordered box per option at this length costs more height than it is
-       worth. Both sides share a compact gutter (32px numbers + 16px, band
-       to 48px, the pattern other vote slides use for dense code). Whole-
-       canvas pixel geometry for the split; all values from tokens. */
+    /* Slide-local: the given class (21 lines) beside four candidate bodies of
+       contains — 44 lines of Java, so the body takes .code-tag (the token floor,
+       tight leading, gutter numerals at the code size) and the options are
+       .opts--code cards. Only the column split lives here; all values from tokens. */
     #slide-08 .slide__body { grid-template-columns: 900px 1fr; align-items: start; }
-    #slide-08 .editor__code {
-      padding: var(--s-1) var(--s-2) var(--s-1) 0;
-      font-size: var(--t-tag);
-      line-height: 1.2;
-    }
-    #slide-08 .editor__code li::before { width: var(--s-4); margin-right: var(--s-2); }
-    #slide-08 .opts { margin-top: 0; }
-    #slide-08 .opts li { margin: var(--s-1) 0; }
-    #slide-08 .opts .editor__code { background: var(--bg-1); border-radius: var(--r-2); }
   </style>
 </section>

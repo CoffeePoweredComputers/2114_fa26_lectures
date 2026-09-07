@@ -165,7 +165,7 @@ html.no-motion *::after {
 /* ---- slide head: optional kicker over the title -------------------------- */
 .slide__head { flex: 0 0 auto; margin-bottom: var(--s-5); }
 .slide__head h1, .slide__head h2 { margin-bottom: 0; }
-.slide__kicker {
+.slide .slide__kicker {                 /* .slide prefix: a bare class loses to .slide p (see .editor__bar) */
   font-family: var(--font-body);
   font-size: var(--t-small);
   text-transform: uppercase;
@@ -175,9 +175,9 @@ html.no-motion *::after {
 }
 
 /* ---- small muted footnote ----------------------------------------------- */
-.note { font-size: var(--t-small); color: var(--fg-1); }
+.slide .note { font-size: var(--t-small); color: var(--fg-1); }   /* .slide prefix: see .editor__bar */
 
-.slide__lede {
+.slide .slide__lede {
   font-size: var(--t-h3);
   line-height: 1.25;
   color: var(--fg-1);
@@ -201,7 +201,7 @@ html.no-motion *::after {
 .tile--display h3 { font-size: var(--t-h3); }   /* hero tiles keep the display scale */
 .tile p, .tile ul, .tile ol { font-size: var(--t-small); }
 .tile > :last-child { margin-bottom: 0; }
-.tile__label {
+.slide .tile__label {
   font-family: var(--font-mono);
   font-size: var(--t-small);
   color: var(--edge);
@@ -276,8 +276,10 @@ html.no-motion *::after {
   background: var(--bg-1);
   overflow: hidden;                     /* keeps the bar inside the rounded corners */
 }
-.editor__bar {
-  margin: 0;                            /* the bar is often a <p> — kill the type ramp's margin */
+.slide .editor__bar {                   /* .slide prefix: the bar is usually a <p>, and the .slide p type ramp
+                                           (0,1,1) outranks a bare class — without it the bar renders at --t-body
+                                           with the ramp's 24px margin */
+  margin: 0;
   padding: var(--s-1) var(--s-3);
   border-bottom: 3px solid var(--chrome);
   background: color-mix(in srgb, var(--stone) 30%, var(--bg-1));
@@ -319,6 +321,33 @@ html.no-motion *::after {
 .tok-key { color: var(--accent-1); font-weight: 700; }
 .tok-num { color: var(--accent-2); }
 
+/* ---- code density modifiers — set ONE on the slide body; every editor on that
+   slide follows, so a slide never restates the editor's type rules locally.
+   .code-dense: --t-micro code with the compact gutter (32px numerals + 16px) and
+   a 16px right pad — 10–12-line panes beside a diagram (06, 06b, 07b).
+   .code-tag: the token floor, tight leading, 8px pane padding — the two-column
+   vote slides carrying ~44 lines of Java (07, 08). The gutter numeral INHERITS
+   the code size there: pinned at --t-micro it sets every 21px line box to 33.6px
+   and hands the height back. Both narrow the gutter band to match. ------------ */
+.code-dense .editor__code {
+  padding: var(--s-2) var(--s-2) var(--s-2) 0;
+  font-size: var(--t-micro);
+}
+.code-tag .editor__code {
+  padding: var(--s-1) var(--s-2) var(--s-1) 0;
+  font-size: var(--t-tag);
+  line-height: 1.2;
+}
+.code-dense .editor__code,
+.code-tag .editor__code {
+  background: linear-gradient(90deg,
+    color-mix(in srgb, var(--stone) 20%, var(--bg-1)) 0 calc(var(--s-4) + var(--s-1)),
+    transparent calc(var(--s-4) + var(--s-1)));
+}
+.code-dense .editor__code li::before,
+.code-tag .editor__code li::before { width: var(--s-4); margin-right: var(--s-2); }
+.code-tag .editor__code li::before { font-size: inherit; }
+
 /* ---- lettered answers: the choices of a peer-instruction or practice
    question. Lettered because that is how the room calls them out, and the
    marker takes the heading maroon so the letter reads before the text. An
@@ -334,11 +363,17 @@ html.no-motion *::after {
    the body ramp. */
 .slide .opts li p { margin: 0; font-size: var(--t-small); }
 .slide .opts li p + p { margin-top: var(--s-1); }
-.slide .opts__code {
+.slide .opts li .opts__code {           /* out-specifies .slide .opts li p above, which would otherwise win */
   font-family: var(--font-mono);
   font-size: var(--t-micro);
   line-height: 1.5;
 }
+/* An option that is itself a code pane: a bare .editor__code card, tinted, with
+   no bar or border — the letter marker is its label. .opts--code tightens the
+   item margins so four of them stack. Used by the two contains vote slides. */
+.slide .opts .editor__code { background: var(--bg-1); border-radius: var(--r-2); }
+.slide .opts--code { margin-top: 0; }
+.slide .opts--code > li { margin: var(--s-1) 0; }   /* > : the code lines inside a card keep their zero margin */
 
 /* ---- reference diagram: names on the left, heap objects on the right, one
    arrow per name. Two names sharing an object = one box spanning both rows. */

@@ -14,9 +14,18 @@
   </svg>
   <header class="slide__head" data-sid="01-title:4">
     <p class="slide__kicker" data-sid="01-title:9">CS 2114 · FALL 2026 · WEEK 3 · DAY 1</p>
-    <h1 data-sid="01-title:5" style="width: 1750px; max-width: 1750px">Software Design &amp; Data Structures</h1>
+    <h1 data-sid="01-title:5">Software Design &amp; Data Structures</h1>
   </header>
   <p class="sr-only slide__desc" data-sid="01-title:12" data-hash="fae7a49889" data-desc="auto">A title card. The course name, the semester and Virginia Tech's Department of Computer Science stand over a misty mountain ridge that runs along the bottom of the slide.</p>
   <p class="note" data-sid="01-title:7" style="color: var(--accent-3)">Virginia Tech · Department of Computer Science</p>
   <div class="slide__number" data-sid="01-title:8"></div>
+
+  <style data-sid="01-title:13">
+    /* Slide-local: the course name runs as one line — 1729px at --t-h1, 33px past
+       the body on each side; the title slide has no stone edge, so the margin
+       takes it. The head sizes to its content and the centred flex column centres
+       the overhang. The deck default (max-width 1320) would break it in two. */
+    #slide-01 .slide__head { width: max-content; }
+    #slide-01 h1 { max-width: none; white-space: nowrap; }
+  </style>
 </section>
