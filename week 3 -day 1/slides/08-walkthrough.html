@@ -1,0 +1,94 @@
+<section class="slide slide--warmup" id="slide-08" data-sid="08-walkthrough:1" data-transition="fade">
+  <header class="slide__head" data-sid="08-walkthrough:2">
+    <p class="slide__kicker" data-sid="08-walkthrough:3">JAVA &middot; ARRAYBAG &middot; MULTIPLE CHOICE</p>
+    <h2 data-sid="08-walkthrough:4">Which contains() Implementation Cannot Be Used?</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="08-walkthrough:5">A multiple-choice question: four candidate implementations of contains(T anEntry) for an ArrayBag, labeled A through D, arranged as code cards. Option A walks the array with a while loop and a found flag. Option D walks the array with a while loop bounded by i less-than-or-equal-to numberOfEntries instead of i less-than numberOfEntries. Option B returns whether getIndexOf is greater than minus one. Option C returns whether getFrequencyOf is greater than zero. A prompt at the bottom asks which one cannot be used, with quick-pick chips A through D.</p>
+  <div class="slide__body" data-sid="08-walkthrough:6">
+    <ol class="grid grid--2 grid--tiles quiz-options" data-sid="08-walkthrough:7">
+      <li class="editor" data-sid="08-walkthrough:8">
+        <p class="editor__bar" data-sid="08-walkthrough:9">Option A</p>
+        <ol class="editor__code" data-sid="08-walkthrough:10">
+          <li data-sid="08-walkthrough:11"><span class="tok-key">public boolean</span> contains(T anEntry) {</li>
+          <li data-sid="08-walkthrough:12">    <span class="tok-key">boolean</span> found = <span class="tok-key">false</span>;</li>
+          <li data-sid="08-walkthrough:13">    <span class="tok-key">int</span> i = <span class="tok-num">0</span>;</li>
+          <li data-sid="08-walkthrough:14">&nbsp;</li>
+          <li data-sid="08-walkthrough:15">    <span class="tok-key">while</span> (!found &amp;&amp; (i &lt; numberOfEntries)) {</li>
+          <li data-sid="08-walkthrough:16">        <span class="tok-key">if</span> (anEntry.equals(contents[i])) {</li>
+          <li data-sid="08-walkthrough:17">            found = <span class="tok-key">true</span>;</li>
+          <li data-sid="08-walkthrough:18">        }</li>
+          <li data-sid="08-walkthrough:19">        i++;</li>
+          <li data-sid="08-walkthrough:20">    }</li>
+          <li data-sid="08-walkthrough:21">    <span class="tok-key">return</span> found;</li>
+          <li data-sid="08-walkthrough:22">}</li>
+        </ol>
+      </li>
+      <li class="editor" data-sid="08-walkthrough:23">
+        <p class="editor__bar" data-sid="08-walkthrough:24">Option D</p>
+        <ol class="editor__code" data-sid="08-walkthrough:25">
+          <li data-sid="08-walkthrough:26"><span class="tok-key">public boolean</span> contains(T anEntry) {</li>
+          <li data-sid="08-walkthrough:27">    <span class="tok-key">int</span> i = <span class="tok-num">0</span>;</li>
+          <li data-sid="08-walkthrough:28">&nbsp;</li>
+          <li data-sid="08-walkthrough:29">    <span class="tok-key">while</span> (i &lt;= numberOfEntries) {</li>
+          <li data-sid="08-walkthrough:30">        <span class="tok-key">if</span> (anEntry.equals(contents[i])) {</li>
+          <li data-sid="08-walkthrough:31">            <span class="tok-key">return true</span>;</li>
+          <li data-sid="08-walkthrough:32">        }</li>
+          <li data-sid="08-walkthrough:33">        i++;</li>
+          <li data-sid="08-walkthrough:34">    }</li>
+          <li data-sid="08-walkthrough:35">    <span class="tok-key">return false</span>;</li>
+          <li data-sid="08-walkthrough:36">}</li>
+        </ol>
+      </li>
+      <li class="editor" data-sid="08-walkthrough:37">
+        <p class="editor__bar" data-sid="08-walkthrough:38">Option B</p>
+        <ol class="editor__code" data-sid="08-walkthrough:39">
+          <li data-sid="08-walkthrough:40"><span class="tok-key">public boolean</span> contains(T anEntry) {</li>
+          <li data-sid="08-walkthrough:41">    <span class="tok-key">return</span> getIndexOf(anEntry) &gt; <span class="tok-num">-1</span>;</li>
+          <li data-sid="08-walkthrough:42">}</li>
+        </ol>
+      </li>
+      <li class="editor" data-sid="08-walkthrough:43">
+        <p class="editor__bar" data-sid="08-walkthrough:44">Option C</p>
+        <ol class="editor__code" data-sid="08-walkthrough:45">
+          <li data-sid="08-walkthrough:46"><span class="tok-key">public boolean</span> contains(T anEntry) {</li>
+          <li data-sid="08-walkthrough:47">    <span class="tok-key">return</span> getFrequencyOf(anEntry) &gt; <span class="tok-num">0</span>;</li>
+          <li data-sid="08-walkthrough:48">}</li>
+        </ol>
+      </li>
+    </ol>
+    <div class="quiz-prompt" data-sid="08-walkthrough:49">
+      <p data-sid="08-walkthrough:50">Which one is incorrect?</p>
+      <ul class="chips" data-sid="08-walkthrough:51">
+        <li data-sid="08-walkthrough:52">A</li>
+        <li data-sid="08-walkthrough:53">B</li>
+        <li data-sid="08-walkthrough:54">C</li>
+        <li data-sid="08-walkthrough:55">D</li>
+      </ul>
+    </div>
+  </div>
+  <div class="slide__number" data-sid="08-walkthrough:56"></div>
+  <aside class="notes" data-sid="08-walkthrough:57">Answer: D &mdash; its bound, i &lt;= numberOfEntries instead of i &lt; numberOfEntries, lets i reach one past the last valid index, so contents[numberOfEntries] throws ArrayIndexOutOfBoundsException whenever the entry being searched for is not in the bag. A is a correct, if verbose, linear scan with a found flag. B correctly reuses getIndexOf: any non-negative index means a match turned up. C correctly reuses getFrequencyOf: any count greater than zero means the entry is present. D is the only one that cannot be used as written. Options are ordered A, D, B, C on the grid so the two long panels share a row and the two short ones share the other &mdash; read by the letter in each card's bar, not by position.</aside>
+
+  <style>
+    /* Slide-local: four candidate implementations as code cards in a 2x2
+       grid. A and D are laid out in the same row (both long) so that row's
+       height is set once, not twice — pairing two long panels with two
+       short ones (B, C) in the other row would force the grid to pay for
+       the long panel's height on both rows. Letters live in each card's bar,
+       so the layout is free to optimize without losing "which is which".
+       Code drops to the token floor (t-tag) with a tight line-height, the
+       same floor 08-vote-branch and 08-walkthrough's siblings use for dense
+       Java. All values from tokens. */
+    #slide-08 .quiz-options { gap: var(--s-2); margin: 0; }
+    #slide-08 .quiz-options .editor__bar { padding: var(--s-1) var(--s-2); font-size: var(--t-tag); }
+    #slide-08 .quiz-options .editor__code {
+      padding: var(--s-1) var(--s-2) var(--s-1) 0;
+      font-size: var(--t-tag);
+      line-height: 1.2;
+    }
+    #slide-08 .quiz-options .editor__code li::before { width: var(--s-4); margin-right: var(--s-2); }
+    #slide-08 .quiz-prompt { display: flex; align-items: center; gap: var(--s-3); margin: var(--s-3) 0 0; }
+    #slide-08 .quiz-prompt p { margin: 0; font-size: var(--t-small); color: var(--fg-1); }
+    #slide-08 .quiz-prompt .chips li { font-family: var(--font-mono); font-weight: 700; }
+  </style>
+</section>

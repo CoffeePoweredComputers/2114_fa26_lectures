@@ -1,0 +1,42 @@
+{
+  "intent": "edit",
+  "slide": "02-course-info",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "ellipse",
+      "bbox": [
+        1053,
+        633,
+        774,
+        65
+      ],
+      "overSid": "02-course-info:54"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        698,
+        613,
+        519,
+        107
+      ],
+      "overSid": "02-course-info:5",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        669,
+        691,
+        139,
+        53
+      ],
+      "overSid": "02-course-info:5",
+      "hint": "crossed-out or emphasised region"
+    }
+  ]
+}
