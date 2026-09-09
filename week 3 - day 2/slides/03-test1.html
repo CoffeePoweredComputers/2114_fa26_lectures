@@ -1,0 +1,132 @@
+<section class="slide" id="slide-03" data-sid="03-test1:1">
+  <header class="slide__head" data-sid="03-test1:2">
+    <h2 data-sid="03-test1:3">Test 1 is two weeks from today</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="03-test1:4">A three-week axis of days, weekends shaded, with today, Thursday September 10, in a highlighted column at the left and the weeks labelled Week 3 to Week 6 underneath. First a blue pole rises on Sunday September 13, labelled 4.1 Assessment 1 Info, due Sunday evening. Then a taller maroon pole rises on Thursday September 24, labelled Test 1, in class, and a bracket spans the fourteen days from today to it, labelled 14 days. Then a third pole rises on Thursday October 1, labelled Test 1 Redo, in class. A one-sentence caption under the axis changes with each step; the last reads that the homework, the challenge exercises and the modules between now and then are the practice.</p>
+
+  <!-- The legacy slide said "Test 1 will be in 2 weeks, there is an
+       information sheet". Drawn instead of said: the same day-track grammar as
+       the clock, stretched to three weeks so the test sits on the axis with the
+       page that explains it (4.1, Sunday) and the redo the schedule already
+       lists (the Thursday after). 72.4 px per day from today at x 200 to
+       Thu Oct 1 at x 1720; weekends shaded so "two weeks" reads as ten class
+       days. Step 1 the 4.1 pole (PrairieLearn blue), step 2 the test pole
+       (maroon, the rule) and the 14-day bracket, step 3 the redo pole (the
+       deadline mix), step 4 the caption only. Poles draw on by dashoffset,
+       labels FadeIn, the bracket draws on. What the test covers is deliberately
+       not stated — 4.1 says it; the notes say to read it off 4.1. -->
+  <div class="slide__body" data-sid="03-test1:5">
+    <svg class="t1" viewBox="128 232 1664 752" preserveAspectRatio="xMidYMax meet" role="img"
+         aria-label="A three-week axis from today to October 1 with poles on the 4.1 due date, Test 1 and the Test 1 redo" data-sid="03-test1:6">
+      <!-- step 0: weekends, today, the axis, the weeks -->
+      <rect class="t1__wknd" x="344" y="380" width="145" height="320" data-sid="03-test1:7"/>
+      <rect class="t1__wknd" x="851" y="380" width="145" height="320" data-sid="03-test1:8"/>
+      <rect class="t1__wknd" x="1358" y="380" width="145" height="320" data-sid="03-test1:9"/>
+      <rect class="t1__now" x="164" y="380" width="72" height="320" data-sid="03-test1:10"/>
+      <text class="t1__cta" x="200" y="412" data-sid="03-test1:11">today</text>
+      <line class="t1__axis" x1="128" y1="700" x2="1792" y2="700" data-sid="03-test1:12"/>
+      <path class="t1__tick" d="M200 700v14M272 700v14M345 700v14M417 700v14M490 700v14M562 700v14M634 700v14M707 700v14M779 700v14M852 700v14M924 700v14M996 700v14M1069 700v14M1141 700v14M1214 700v14M1286 700v14M1358 700v14M1431 700v14M1503 700v14M1575 700v14M1648 700v14M1720 700v14" data-sid="03-test1:13"/>
+      <text class="t1__day t1__day--start" x="164" y="748" data-sid="03-test1:14">Thu Sep 10</text>
+      <text class="t1__week t1__week--end" x="272" y="810" data-sid="03-test1:15">Week 3</text>
+      <text class="t1__week" x="634" y="810" data-sid="03-test1:16">Week 4</text>
+      <text class="t1__week" x="1141" y="810" data-sid="03-test1:17">Week 5</text>
+      <text class="t1__week" x="1648" y="810" data-sid="03-test1:18">Week 6</text>
+
+      <!-- step 1: the page that explains the test — 4.1, due Sunday -->
+      <line class="t1__pole t1__ink--pl frag" data-step="1" pathLength="100" x1="417" y1="700" x2="417" y2="580" data-sid="03-test1:19"/>
+      <circle class="t1__dot t1__ink--pl frag" data-step="1" data-anim="fade" cx="417" cy="580" r="10" data-sid="03-test1:20"/>
+      <text class="t1__label t1__ink--pl frag" data-step="1" data-anim="fade" x="417" y="512" data-sid="03-test1:21">4.1 Assessment 1 Info</text>
+      <text class="t1__sub frag" data-step="1" data-anim="fade" x="417" y="548" data-sid="03-test1:22">due Sunday evening</text>
+      <text class="t1__day frag" data-step="1" data-anim="fade" x="417" y="748" data-sid="03-test1:23">Sun Sep 13</text>
+
+      <!-- step 2: the test, and the fourteen days to it -->
+      <line class="t1__pole t1__pole--test t1__ink--test frag" data-step="2" pathLength="100" x1="1213" y1="700" x2="1213" y2="420" data-sid="03-test1:24"/>
+      <circle class="t1__dot t1__ink--test frag" data-step="2" data-anim="fade" cx="1213" cy="420" r="12" data-sid="03-test1:25"/>
+      <text class="t1__test frag" data-step="2" data-anim="fade" x="1213" y="352" data-sid="03-test1:26">Test 1</text>
+      <text class="t1__sub frag" data-step="2" data-anim="fade" x="1213" y="392" data-sid="03-test1:27">Thursday Sep 24 &middot; in class</text>
+      <text class="t1__day frag" data-step="2" data-anim="fade" x="1213" y="748" data-sid="03-test1:28">Thu Sep 24</text>
+      <path class="t1__span frag" data-step="2" pathLength="100" d="M200 484v-14H1213v14" data-sid="03-test1:29"/>
+      <text class="t1__days frag" data-step="2" data-anim="fade" x="706" y="454" data-sid="03-test1:30">14 days</text>
+
+      <!-- step 3: the redo the schedule already lists -->
+      <line class="t1__pole t1__ink--redo frag" data-step="3" pathLength="100" x1="1720" y1="700" x2="1720" y2="580" data-sid="03-test1:31"/>
+      <circle class="t1__dot t1__ink--redo frag" data-step="3" data-anim="fade" cx="1720" cy="580" r="10" data-sid="03-test1:32"/>
+      <text class="t1__label t1__ink--redo t1__label--end frag" data-step="3" data-anim="fade" x="1792" y="512" data-sid="03-test1:33">Test 1 Redo</text>
+      <text class="t1__sub t1__label--end frag" data-step="3" data-anim="fade" x="1792" y="548" data-sid="03-test1:34">Thursday Oct 1 &middot; in class</text>
+      <text class="t1__day t1__day--end frag" data-step="3" data-anim="fade" x="1792" y="748" data-sid="03-test1:35">Thu Oct 1</text>
+
+      <!-- captions: one sentence per beat -->
+      <text class="t1__cap frag" data-step="1" x="960" y="930" data-sid="03-test1:36">Sunday: 4.1 Assessment 1 Info &mdash; how the test runs and what it covers. Read it first.</text>
+      <text class="t1__cap frag" data-step="2" x="960" y="930" data-sid="03-test1:37">Thursday September 24, in class: Test 1. Fourteen days from today.</text>
+      <text class="t1__cap frag" data-step="3" x="960" y="930" data-sid="03-test1:38">Thursday October 1, in class: the redo &mdash; already on the calendar.</text>
+      <text class="t1__cap frag" data-step="4" x="960" y="930" data-sid="03-test1:39">The practice between now and then is the homework, the challenge exercises and the modules.</text>
+    </svg>
+  </div>
+  <div class="slide__number" data-sid="03-test1:40"></div>
+  <aside class="notes" data-sid="03-test1:41">Three dates, in order. Step 1 &mdash; Sunday: the 4.1 content page on PrairieLearn is the Assessment 1 information sheet; it is due with the rest of the 4.x modules, and it is where the format and the coverage are written down &mdash; read the coverage off that page rather than improvising it here. Step 2 &mdash; Thursday September 24, in class, in this room: Test 1, fourteen days from today, ten class days. Step 3 &mdash; Thursday October 1, in class: the Test 1 redo is on the schedule already; say what the redo is for in your own words. Step 4 &mdash; the practice between now and then is the work already on the clock: this week&rsquo;s and next week&rsquo;s homework, Challenge Exercises 03 and 04, and the 4.x and 5.x modules. Not said on the slide: whether the test uses a lockdown browser or a trial quiz &mdash; the Fall 2025 deck had one; confirm before promising it. Then Part 2.</aside>
+
+  <style data-sid="03-test1:42">
+    /* Slide-local: the three-week runway to Test 1, in the clock's grammar —
+       day ticks, shaded weekends, a highlighted today column, poles that draw
+       on. Ink follows the deck: PrairieLearn blue for the 4.1 page, the heading
+       maroon for the test (the rule), the deadline mix for the redo, stone for
+       the axis. Labels are mono at the chrome size, the test name at the display
+       size; the redo's labels end-anchor on the axis end so nothing runs past
+       the body. Used by this slide only, all values from tokens. */
+    #slide-03 .slide__body { position: relative; }
+    #slide-03 .t1 { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+
+    #slide-03 .t1__wknd { fill: color-mix(in srgb, var(--stone) 14%, var(--bg-0)); }
+    #slide-03 .t1__now { fill: color-mix(in srgb, var(--accent-1) 12%, var(--bg-0)); }
+    #slide-03 .t1__cta { font-family: var(--font-display); font-size: var(--t-small); fill: var(--accent-1); text-anchor: middle; }
+    #slide-03 .t1__axis, #slide-03 .t1__tick { fill: none; stroke: var(--stone); stroke-width: 3; stroke-linecap: round; }
+    #slide-03 .t1__day { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--fg-1); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .t1__week { font-family: var(--font-mono); font-size: var(--t-small); fill: var(--fg-1); text-anchor: middle; }
+    #slide-03 .t1__week--end, #slide-03 .t1__day--end { text-anchor: end; }   /* the axis ends: labels end on the body edge */
+    #slide-03 .t1__day--start { text-anchor: start; }
+
+    /* three inks, one per date */
+    #slide-03 .t1__ink--pl { --edge: var(--accent-2); }
+    #slide-03 .t1__ink--test { --edge: var(--accent-1); }
+    #slide-03 .t1__ink--redo { --edge: color-mix(in srgb, var(--accent-1) 50%, var(--accent-3)); }
+
+    /* poles draw up; dots and labels fade in once the pole has arrived */
+    #slide-03 .t1__pole {
+      fill: none; stroke: var(--edge); stroke-width: 4; stroke-linecap: round;
+      stroke-dasharray: 100;
+      transition: stroke-dashoffset .45s var(--ease-smooth);
+    }
+    #slide-03 .t1__pole--test { stroke-width: 6; }
+    #slide-03 .frag.t1__pole.is-pending { opacity: 1; stroke-dashoffset: 100; }
+    #slide-03 .frag.t1__pole.is-current, #slide-03 .frag.t1__pole.is-past { stroke-dashoffset: 0; }
+    #slide-03 .t1__dot { fill: var(--edge); transition: opacity .3s ease; }
+    #slide-03 .t1__label { font-family: var(--font-mono); font-size: var(--t-micro); font-weight: 700; fill: var(--edge); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .t1__sub { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--fg-1); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .t1__label--end { text-anchor: end; }
+    #slide-03 .t1__test { font-family: var(--font-display); font-size: var(--t-h3); fill: var(--accent-1); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .frag.t1__dot.is-current, #slide-03 .frag.t1__dot.is-past,
+    #slide-03 .frag.t1__label.is-current, #slide-03 .frag.t1__label.is-past,
+    #slide-03 .frag.t1__sub.is-current, #slide-03 .frag.t1__sub.is-past,
+    #slide-03 .frag.t1__test.is-current, #slide-03 .frag.t1__test.is-past,
+    #slide-03 .frag.t1__day.is-current, #slide-03 .frag.t1__day.is-past { transition-delay: .4s; }
+
+    /* the fourteen days: a bracket that draws on after the test pole */
+    #slide-03 .t1__span { fill: none; stroke: var(--accent-1); stroke-width: 3; stroke-linecap: round; stroke-dasharray: 100; transition: stroke-dashoffset .6s var(--ease-smooth); }
+    #slide-03 .frag.t1__span.is-pending { opacity: 1; stroke-dashoffset: 100; }
+    #slide-03 .frag.t1__span.is-current, #slide-03 .frag.t1__span.is-past { stroke-dashoffset: 0; transition-delay: .5s; }
+    #slide-03 .t1__days { font-family: var(--font-mono); font-size: var(--t-micro); font-weight: 700; fill: var(--accent-1); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .frag.t1__days.is-current, #slide-03 .frag.t1__days.is-past { transition-delay: 1s; }
+
+    /* the caption row: the current beat's sentence, and only that one */
+    #slide-03 .t1__cap { font-family: var(--font-display); font-size: var(--t-small); fill: var(--accent-1); text-anchor: middle; transition: opacity .3s ease; }
+    #slide-03 .frag.t1__cap.is-current { transition-delay: .6s; }
+    #slide-03 .frag.t1__cap.is-past { opacity: 0; }
+
+    @media (prefers-reduced-motion: reduce) {
+      #slide-03 .t1__pole, #slide-03 .t1__dot, #slide-03 .t1__label, #slide-03 .t1__sub, #slide-03 .t1__test,
+      #slide-03 .t1__day, #slide-03 .t1__span, #slide-03 .t1__days, #slide-03 .t1__cap {
+        transition-duration: 0s !important; transition-delay: 0s !important;
+      }
+    }
+  </style>
+</section>
