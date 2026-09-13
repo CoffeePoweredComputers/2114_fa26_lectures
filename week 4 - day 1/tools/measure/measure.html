@@ -1,0 +1,49 @@
+<!doctype html><meta charset="utf-8"><title>measuring</title>
+<iframe id="f" width="1920" height="1080" style="border:0"></iframe>
+<pre id="out"></pre>
+<script>
+try { localStorage.setItem('deck:no-motion', '1'); } catch (e) {}
+const f = document.getElementById('f'), out = document.getElementById('out'), res = [];
+function measure(win) {
+  const doc = win.document, st = win.deck.state;
+  const sec = doc.querySelectorAll('.deck > section')[st.slide - 1];
+  const body = sec.querySelector('.slide__body');
+  const br = body ? body.getBoundingClientRect() : null;
+  let maxB = 0, maxR = 0, minL = 9999; const over = [], clipped = [];
+  sec.querySelectorAll('*').forEach(el => {
+    if (el.closest('aside.notes') || el.closest('.sr-only') || el.tagName === 'STYLE' || el.closest('defs') || el.classList.contains('slide__number') || el.classList.contains('slide__body') || el.classList.contains('slide__head') || el.classList.contains('decor') || el.closest('.decor')) return;
+    const cs = win.getComputedStyle(el);
+    if (cs.display === 'none' || cs.visibility === 'hidden' || parseFloat(cs.opacity) === 0) return;
+    const tag = el.tagName.toLowerCase();
+    if (tag === 'svg' || tag === 'g') return;
+    const r = el.getBoundingClientRect();
+    if (r.width === 0 && r.height === 0) return;
+    if (r.bottom > maxB) maxB = r.bottom; if (r.right > maxR) maxR = r.right; if (r.left < minL) minL = r.left;
+    const label = tag + '.' + [...el.classList].join('.') + ' "' + (el.textContent || '').trim().replace(/\s+/g, ' ').slice(0, 28) + '" [' + Math.round(r.left) + ',' + Math.round(r.top) + '→' + Math.round(r.right) + ',' + Math.round(r.bottom) + ']';
+    if (r.bottom > 984.5 || r.right > 1792.5 || r.left < 127.5 || r.top < 95) over.push(label);
+    if (el.matches('.editor__code li') && el.scrollWidth > el.clientWidth + 1) clipped.push(label);
+  });
+  return { slide: st.slide, step: st.step, file: (win.SLIDE_MANIFEST || [])[st.slide - 1], maxB: Math.round(maxB), maxR: Math.round(maxR), minL: Math.round(minL), bodyTop: br ? Math.round(br.top) : null, bodyBottom: br ? Math.round(br.bottom) : null, over, clipped };
+}
+f.addEventListener('load', () => {
+  const win = f.contentWindow;
+  win.addEventListener('slides:loaded', () => {
+    (win.document.fonts ? win.document.fonts.ready : Promise.resolve()).then(() => setTimeout(run, 300));
+  });
+  function run() {
+    const n = win.deck.state.slides.length; let i = 1;
+    function next() {
+      if (i > n) { out.textContent = 'MEASURE_JSON ' + JSON.stringify(res); document.title = 'done'; return; }
+      const ms = win.deck.state.slides[i - 1].maxStep; let k = 0;
+      function step() {
+        if (k > ms) { i++; next(); return; }
+        win.location.hash = '#' + i + (k ? '.' + k : '');
+        setTimeout(() => { res.push(measure(win)); k++; step(); }, 80);
+      }
+      step();
+    }
+    next();
+  }
+});
+f.src = 'deck/index.html';
+</script>

@@ -35,7 +35,5 @@ vote 3's heading aligned to Q2's "could not be used" — both edits made in day 
 - Timing: five questions in one hour is about eight minutes each including the answer; the
   timers are a uniform 5:00, which alone is 25 minutes — vote 1 is a straight trace, votes 2
   and 5 are where groups argue, so the per-slide `data-timer` values may want to differ.
-- 17's notes say Test 1 is "Thursday September 24, in class"; this section meets Monday and
-  Wednesday.
 - Vote 5: "linear" is Week 5 vocabulary, glossed in two lines under the drawing; Runestone sets
   the O(n) as math — check it renders. Activity id unverified.

@@ -35,20 +35,21 @@ Engine, CSS and JS are W3D1's copies (the fixed deck.css), plus `.verdict` and
 
 ## Translated, dropped, unverified
 
-- **Trial Quiz (lockdown browser, passcode)** — dropped: nothing on the Fall 2026 schedule
-  says Test 1 uses one. If it does, it is one slide before 17.
+- **Trial Quiz (lockdown browser, passcode)** — dropped: not a Fall 2026 thing.
 - **"Lab and PostLab", Web-CAT, CodeWorkout** — dropped (Fall 2026: PrairieLearn, GitHub,
   EMRN; labs carry Project 1 deliverables).
 - **Project 1 setup list (JRE, TestableRandom, Web-CAT responses)** — that was the Fall
   2025 Bag project; Fall 2026's P1 is Learning to Scope, already on 02's clock (D1 at this
   week's lab, D2 at next week's).
-- **"Test 1 in 2 weeks, there is an information sheet"** — was translated to a Test 1
-  runway slide (03-test1 + its Part 1 divider 02b-chapter-1); **removed from the manifest
-  2026-09-08 at the user's ask**. The two files stay on disk, out of the deck; the parts
-  were renumbered 1 of 2 / 2 of 2.
-- **Runestone assignment name and the vote-2 activity id** are unverified (the PDF crops
-  it); vote 1's id is `vtcs2_arraybags_efficiency`. Check the live questions before class —
-  they outrank the PDF.
+- **"Test 1 in 2 weeks, there is an information sheet"** — dropped entirely, 2026-09-08 at
+  the user's ask: the runway slide and its Part 1 divider were taken out of the manifest and
+  then deleted from disk, and the test is not mentioned anywhere in the deck — 17's notes lost
+  the "off the right edge" sentence and 02's and 17's notes no longer name the 4.1 module.
+  The parts are numbered 1 of 2 / 2 of 2.
+- **Runestone**: the live W03D2 text was checked 2026-09-08 (the user pasted it) — vote 1 is
+  verbatim (`vtcs2_arraybags_efficiency`), vote 2 was the wrong question and is now the
+  linear-time one. The assignment name and vote 2's activity id are still unverified, and
+  whether the O(n) in vote 2's stem renders is worth a look on the projector.
 - **toString is also W3D1's Part 3** (slides 10/10b). It is in this deck because it is in
   the PDF; drop it from whichever day does not use it.
 - The now column sits on Thursday (TR section). Monday was Labor Day, so the MW section
