@@ -40,6 +40,7 @@ draw, and every bug is an arrow into the wrong box."**
 | 11-linkedbag-add | `add` walked line by line: new node grows, its arrow draws to the old first, `firstNode` swings, the count strikes 3→4 → "so where does the cost move? (Week 5)" |
 | 13-hw-reads | the homework as pointer moves, part 1: walk to the end · look one ahead · match by value · two pointers — one picture per press, the rule in the caption, problem numbers on the index |
 | 13b-hw-writes | part 2: add after · remove · splice a chain in · rotate/reverse · the LinkedBag four — moved arrows orange, replaced arrows dashed, unreachable nodes stone → "pick five: one from each move you find hard" |
+| 16-project-d3 | Project 1 Deliverable 3 (Week 5 lab) as a room scene: your group's presenter at a screen, the other groups at tables; the screen plays the four parts of the 10-minute talk and part 4 (GenAI) radiates to the room → "one thing the other groups do not know yet"; the brief is in the notes |
 | 17-next-class | the same clock, static; caption: charged laptop + LockDown Browser installed for Wed/Thu |
 | 99-closing | dusk |
 
