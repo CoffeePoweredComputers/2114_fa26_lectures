@@ -1,0 +1,145 @@
+<section class="slide slide--warmup" id="slide-04" data-sid="04-count-contains:1">
+  <header class="slide__head" data-sid="04-count-contains:2">
+    <p class="slide__kicker" data-sid="04-count-contains:3">COUNTING MOVES &middot; A LOOP</p>
+    <h2 data-sid="04-count-contains:4">contains: one compare per entry</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="04-count-contains:5">A walkthrough of contains under a program-counter bar, with short names: the array is a, its count is n, the entry sought is x. On the right, the call bag dot contains of gnu, where gnu is not in the bag; a four-cell array holding ant, bee, cat and dog; the locals; and a large counter labelled compares. Step one: found is false and i is 0. Steps two to five: the bar sits on the loop while each cell in turn takes a maroon edge and the counter rolls from 0 to 4. Step six: return false; four entries, four compares. Step seven: the array grows in place to eight cells, the cells shrinking to make room and eel, fox, hen and jay growing in; the counter resets to 0 and the bar returns to the first two lines. Step eight: the loop runs again and all eight cells take the maroon edge one after another while the counter rolls to 8. Step nine: return false; the caption says twice the entries, twice the compares: linear.</p>
+
+  <!-- The first count of the hour. The method is Week 3's contains with the
+       names shortened (a for contents, n for numberOfEntries, x for anEntry)
+       so the code can sit at the full small size. The loop body stays under
+       the bar for four presses (data-hold) while one cell per press takes
+       the maroon edge of the cost. Then the array GROWS IN PLACE (the cells
+       shrink, four more grow in) and the same walk runs again on the same
+       lines (data-also), compressed to one press for the loop, so the room
+       sees the same code cost twice as much. -->
+  <div class="slide__body grid grid--code code-mid cc" data-sid="04-count-contains:6">
+    <div class="editor" data-sid="04-count-contains:7">
+      <p class="editor__bar" data-sid="04-count-contains:8">contains (Week 3, option A)</p>
+      <div class="editor__pc" data-sid="04-count-contains:9"></div>
+      <ol class="editor__code" data-sid="04-count-contains:10">
+        <li data-sid="04-count-contains:11"><span class="tok-key" data-sid="04-count-contains:12">boolean</span> contains(T x) {</li>
+        <li class="walkline frag" data-step="1" data-also="7" data-sid="04-count-contains:13">    <span class="tok-key" data-sid="04-count-contains:14">boolean</span> found = <span class="tok-key" data-sid="04-count-contains:15">false</span>;</li>
+        <li class="walkline frag" data-step="1" data-also="7" data-sid="04-count-contains:16">    <span class="tok-key" data-sid="04-count-contains:17">int</span> i = <span class="tok-num" data-sid="04-count-contains:18">0</span>;</li>
+        <li class="walkline frag" data-step="2" data-hold="5" data-also="8" data-sid="04-count-contains:19">    <span class="tok-key" data-sid="04-count-contains:20">while</span> (!found &amp;&amp; i &lt; n) {</li>
+        <li class="walkline frag" data-step="2" data-hold="5" data-also="8" data-sid="04-count-contains:21">        <span class="tok-key" data-sid="04-count-contains:22">if</span> (x.equals(a[i]))</li>
+        <li class="walkline frag" data-step="2" data-hold="5" data-also="8" data-sid="04-count-contains:23">            found = <span class="tok-key" data-sid="04-count-contains:24">true</span>;</li>
+        <li class="walkline frag" data-step="2" data-hold="5" data-also="8" data-sid="04-count-contains:25">        i++;</li>
+        <li class="walkline frag" data-step="2" data-hold="5" data-also="8" data-sid="04-count-contains:26">    }</li>
+        <li class="walkline frag" data-step="6" data-also="9" data-sid="04-count-contains:27">    <span class="tok-key" data-sid="04-count-contains:28">return</span> found;</li>
+        <li data-sid="04-count-contains:29">}</li>
+      </ol>
+    </div>
+
+    <div class="codewalk cc__right" data-sid="04-count-contains:30">
+      <p class="cc__call" data-sid="04-count-contains:31">bag.contains("gnu") &mdash; and gnu is not in the bag</p>
+      <p class="cc__meta" data-sid="04-count-contains:32">n = <span class="cc__vals" data-sid="04-count-contains:33"><span class="cc__nv cc__nv--4" data-sid="04-count-contains:34">4</span><span class="cc__nv cc__nv--8" data-sid="04-count-contains:35">8</span></span> &nbsp;&middot;&nbsp; i = <span class="cc__vals" data-sid="04-count-contains:36"><span class="cc__val cc__val--0" data-sid="04-count-contains:37">0</span><span class="cc__val cc__val--1" data-sid="04-count-contains:38">1</span><span class="cc__val cc__val--2" data-sid="04-count-contains:39">2</span><span class="cc__val cc__val--3" data-sid="04-count-contains:40">3</span><span class="cc__val cc__val--4" data-sid="04-count-contains:41">4</span><span class="cc__val cc__val--8" data-sid="04-count-contains:42">8</span></span> &nbsp;&middot;&nbsp; found = false</p>
+      <ol class="arr" data-sid="04-count-contains:43">
+        <li class="arr__cell arr__cell--0" style="--i: 0" data-sid="04-count-contains:44"><span class="arr__idx" data-sid="04-count-contains:45">0</span><span class="arr__v" data-sid="04-count-contains:46">ant</span></li>
+        <li class="arr__cell arr__cell--1" style="--i: 1" data-sid="04-count-contains:47"><span class="arr__idx" data-sid="04-count-contains:48">1</span><span class="arr__v" data-sid="04-count-contains:49">bee</span></li>
+        <li class="arr__cell arr__cell--2" style="--i: 2" data-sid="04-count-contains:50"><span class="arr__idx" data-sid="04-count-contains:51">2</span><span class="arr__v" data-sid="04-count-contains:52">cat</span></li>
+        <li class="arr__cell arr__cell--3" style="--i: 3" data-sid="04-count-contains:53"><span class="arr__idx" data-sid="04-count-contains:54">3</span><span class="arr__v" data-sid="04-count-contains:55">dog</span></li>
+        <li class="arr__cell arr__cell--x" style="--i: 4" data-sid="04-count-contains:56"><span class="arr__idx" data-sid="04-count-contains:57">4</span><span class="arr__v" data-sid="04-count-contains:58">eel</span></li>
+        <li class="arr__cell arr__cell--x" style="--i: 5" data-sid="04-count-contains:59"><span class="arr__idx" data-sid="04-count-contains:60">5</span><span class="arr__v" data-sid="04-count-contains:61">fox</span></li>
+        <li class="arr__cell arr__cell--x" style="--i: 6" data-sid="04-count-contains:62"><span class="arr__idx" data-sid="04-count-contains:63">6</span><span class="arr__v" data-sid="04-count-contains:64">hen</span></li>
+        <li class="arr__cell arr__cell--x" style="--i: 7" data-sid="04-count-contains:65"><span class="arr__idx" data-sid="04-count-contains:66">7</span><span class="arr__v" data-sid="04-count-contains:67">jay</span></li>
+      </ol>
+      <div class="moves" data-sid="04-count-contains:68">
+        <p class="moves__label" data-sid="04-count-contains:69">compares</p>
+        <div class="moves__stack" data-sid="04-count-contains:70">
+          <div class="heap-obj__field" data-sid="04-count-contains:71"><p class="heap-val heap-val--old frag" data-step="2" data-sid="04-count-contains:72">0</p><p class="heap-val frag" data-step="2" data-sid="04-count-contains:73">1</p></div>
+          <div class="heap-obj__field" data-sid="04-count-contains:74"><p class="heap-val heap-val--old frag" data-step="3" data-sid="04-count-contains:75">1</p><p class="heap-val frag" data-step="3" data-sid="04-count-contains:76">2</p></div>
+          <div class="heap-obj__field" data-sid="04-count-contains:77"><p class="heap-val heap-val--old frag" data-step="4" data-sid="04-count-contains:78">2</p><p class="heap-val frag" data-step="4" data-sid="04-count-contains:79">3</p></div>
+          <div class="heap-obj__field" data-sid="04-count-contains:80"><p class="heap-val heap-val--old frag" data-step="5" data-sid="04-count-contains:81">3</p><p class="heap-val frag" data-step="5" data-sid="04-count-contains:82">4</p></div>
+          <div class="heap-obj__field" data-roll="off" data-sid="04-count-contains:83"><p class="heap-val heap-val--old frag" data-step="7" data-sid="04-count-contains:84">4</p><p class="heap-val frag" data-step="7" data-sid="04-count-contains:85">0</p></div>
+          <div class="heap-obj__field" data-sid="04-count-contains:86"><p class="heap-val heap-val--old frag" data-step="8" data-sid="04-count-contains:87">0</p><p class="heap-val frag" data-step="8" data-sid="04-count-contains:88">8</p></div>
+        </div>
+      </div>
+      <div class="codewalk__caps" data-sid="04-count-contains:89">
+        <p class="walkcap cap--1 frag" data-step="1" data-sid="04-count-contains:90">Looking for gnu. found is false, i is 0. Nothing compared yet.</p>
+        <p class="walkcap cap--2 frag" data-step="2" data-sid="04-count-contains:91">i = 0: is gnu equal to ant? No. i becomes 1.</p>
+        <p class="walkcap cap--3 frag" data-step="3" data-sid="04-count-contains:92">i = 1: bee? No.</p>
+        <p class="walkcap cap--4 frag" data-step="4" data-sid="04-count-contains:93">i = 2: cat? No.</p>
+        <p class="walkcap cap--5 frag" data-step="5" data-sid="04-count-contains:94">i = 3: dog? No. i is 4: the loop ends.</p>
+        <p class="walkcap cap--6 frag" data-step="6" data-sid="04-count-contains:95">return false. Four entries, four compares. Not there means every entry gets looked at.</p>
+        <p class="walkcap cap--7 frag" data-step="7" data-sid="04-count-contains:96">The same bag, now with eight entries. The same call: found false, i zero, nothing compared.</p>
+        <p class="walkcap cap--8 frag" data-step="8" data-sid="04-count-contains:97">The loop runs eight times. Eight compares.</p>
+        <p class="walkcap walkcap--plant cap--9 frag" data-step="9" data-sid="04-count-contains:98">Twice the entries, twice the compares. The moves grow with n: linear.</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide__number" data-sid="04-count-contains:99"></div>
+  <aside class="notes" data-sid="04-count-contains:100">This is the contains the room chose in Week 3, option A, with the names shortened: a is contents, n is numberOfEntries, x is the entry we are looking for. The only new thing is the number on the right. Say what we count: a move is one thing the computer does that we care about, here one call to equals. Step 1: found false, i zero. Steps 2 to 5: press once per entry, ant, bee, cat, dog, and watch the counter; gnu is not in the bag, so no compare succeeds and the loop stops only when i reaches n. Step 6: return false; four entries, four compares. Ask: and if gnu were at index 0? One compare, the best case. We count the worst case, because that is the one that grows. Step 7: the bag doubles in place, same call from the top. Step 8: the loop runs eight times. Step 9: twice the entries, twice the compares. The word for that is linear. Next: a method whose count does not grow at all.</aside>
+
+  <style data-sid="04-count-contains:101">
+    /* Slide-local: the editor at --t-code (660 px clears the 29-character
+       while line: 29 × 19.2 + 70 of chrome), the bag on the right inside a
+       .codewalk so the moves counter can roll (deck.css .moves). The array is
+       one flex row: four cells at 100 px, and four more that start collapsed
+       (width 0, no border, the gap cancelled by a negative margin) and grow
+       in on step 7 while the first four shrink to 76 px, so the row stays
+       inside the 912 px column (8 × 76 + 7 × 8 = 664). Compared cells keep
+       the cost's maroon edge; step 7 resets them and step 8 lights all eight
+       in a stagger. i and n crossfade in place (replaced values, no roll); the
+       counter resets 4 → 0 by crossfade (data-roll off) and rolls 0 → 8 on the
+       second run. Every recolour is keyed to the caption frags through
+       :has(), so a back-step reverses it. All values from tokens; used by
+       this slide only. */
+    #slide-04 .cc { grid-template-columns: 660px minmax(0, 1fr); column-gap: var(--s-4); align-items: start; }
+    #slide-04 .cc__right { display: grid; row-gap: var(--s-3); align-content: start; }
+    #slide-04 .cc__call { margin: 0; font-family: var(--font-mono); font-size: var(--t-micro); line-height: 1.3; color: var(--fg-0); }
+    #slide-04 .cc__meta { margin: 0; font-family: var(--font-mono); font-size: var(--t-micro); line-height: 1.3; color: var(--fg-1); }
+    #slide-04 .cc__vals { display: inline-grid; vertical-align: baseline; }
+    #slide-04 .cc__val, #slide-04 .cc__nv { grid-area: 1 / 1; opacity: 0; color: var(--fg-0); transition: opacity .25s ease; }
+    #slide-04 .cc__val--0, #slide-04 .cc__nv--4 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--2:not(.is-pending)) .cc__val--0 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--2:not(.is-pending)) .cc__val--1 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--3:not(.is-pending)) .cc__val--1 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--3:not(.is-pending)) .cc__val--2 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--4:not(.is-pending)) .cc__val--2 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--4:not(.is-pending)) .cc__val--3 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--5:not(.is-pending)) .cc__val--3 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--5:not(.is-pending)) .cc__val--4 { opacity: 1; }
+    /* step 7: the second run starts over — n is 8, i is 0 again */
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .cc__val--4 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .cc__val--0 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .cc__nv--4 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .cc__nv--8 { opacity: 1; }
+    #slide-04 .cc__right:has(.cap--8:not(.is-pending)) .cc__val--0 { opacity: 0; }
+    #slide-04 .cc__right:has(.cap--8:not(.is-pending)) .cc__val--8 { opacity: 1; }
+
+    #slide-04 .arr { display: flex; align-items: center; gap: var(--s-1); list-style: none; margin: 0; padding: 0; }
+    #slide-04 .arr li { margin: 0; }
+    #slide-04 .arr__cell {
+      position: relative; flex: 0 0 auto; width: 100px; height: 100px; box-sizing: border-box; overflow: hidden; padding-top: 0;
+      display: flex; align-items: center; justify-content: center;
+      border: 3px solid var(--stone); border-radius: var(--r-2); background: var(--bg-1);
+      transition: width .6s var(--ease-smooth), height .6s var(--ease-smooth), padding .6s var(--ease-smooth), margin .6s var(--ease-smooth), opacity .3s ease, border-color .3s ease, background-color .3s ease;
+    }
+    #slide-04 .arr__idx { position: absolute; top: var(--s-1); left: var(--s-1); font-family: var(--font-mono); font-size: var(--t-tag); color: var(--fg-1); transition: font-size .6s var(--ease-smooth), top .6s var(--ease-smooth), left .6s var(--ease-smooth); }
+    #slide-04 .arr__v { font-family: var(--font-mono); font-size: var(--t-micro); color: var(--fg-0); transition: font-size .6s var(--ease-smooth); }
+    /* the four cells that are not there yet */
+    #slide-04 .arr__cell--x { width: 0; opacity: 0; border-width: 0; margin-left: calc(-1 * var(--s-1)); }
+    /* step 7: the array grows in place */
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .arr__cell { width: 76px; height: 76px; padding-top: 14px; }
+    /* smaller cells, smaller labels: the index stays in its corner strip, the value under it */
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .arr__v { font-size: var(--t-tag); }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .arr__idx { font-size: 14px; top: 3px; left: 5px; }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .arr__cell--x { opacity: 1; border-width: 3px; margin-left: 0; transition-delay: calc(.2s + (var(--i) - 4) * .1s); }
+
+    /* the sweep: a compared cell takes the cost's maroon and keeps it; the second run resets and relights all eight */
+    #slide-04 .cc__right:has(.cap--2:not(.is-pending)) .arr__cell--0,
+    #slide-04 .cc__right:has(.cap--3:not(.is-pending)) .arr__cell--1,
+    #slide-04 .cc__right:has(.cap--4:not(.is-pending)) .arr__cell--2,
+    #slide-04 .cc__right:has(.cap--5:not(.is-pending)) .arr__cell--3 { border-color: var(--accent-1); background: color-mix(in srgb, var(--accent-1) 10%, var(--bg-0)); }
+    #slide-04 .cc__right:has(.cap--7:not(.is-pending)) .arr__cell { border-color: var(--stone); background: var(--bg-1); }
+    #slide-04 .cc__right:has(.cap--8:not(.is-pending)) .arr__cell { border-color: var(--accent-1); background: color-mix(in srgb, var(--accent-1) 10%, var(--bg-0)); transition-delay: calc(.2s + var(--i) * .12s); }
+
+    #slide-04 .codewalk__caps { min-height: 110px; }
+    #slide-04 .walkcap--plant { font-family: var(--font-display); color: var(--accent-1); }
+
+    @media (prefers-reduced-motion: reduce) {
+      #slide-04 .arr__cell, #slide-04 .cc__val, #slide-04 .cc__nv { transition-duration: 0s !important; transition-delay: 0s !important; }
+    }
+  </style>
+</section>
