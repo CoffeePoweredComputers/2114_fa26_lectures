@@ -1,0 +1,132 @@
+{
+  "intent": "edit",
+  "slide": "14b-acm-code",
+  "canvas": {
+    "w": 1920,
+    "h": 1080
+  },
+  "items": [
+    {
+      "kind": "line",
+      "bbox": [
+        1016,
+        443,
+        255,
+        128
+      ],
+      "from": [
+        1016,
+        443
+      ],
+      "to": [
+        1271,
+        572
+      ],
+      "toSid": "14b-acm-code:9"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        481,
+        530,
+        758,
+        39
+      ],
+      "from": [
+        481,
+        532
+      ],
+      "to": [
+        1239,
+        569
+      ],
+      "toSid": "14b-acm-code:9"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        427,
+        590,
+        808,
+        43
+      ],
+      "from": [
+        427,
+        613
+      ],
+      "to": [
+        1235,
+        590
+      ],
+      "toSid": "14b-acm-code:16"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        338,
+        641,
+        911,
+        183
+      ],
+      "overSid": "14b-acm-code:6",
+      "hint": "crossed-out or emphasised region"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        964,
+        623,
+        307,
+        53
+      ],
+      "from": [
+        964,
+        676
+      ],
+      "to": [
+        1271,
+        623
+      ],
+      "toSid": "14b-acm-code:16"
+    },
+    {
+      "kind": "line",
+      "bbox": [
+        1281,
+        521,
+        9,
+        169
+      ],
+      "from": [
+        1281,
+        521
+      ],
+      "to": [
+        1289,
+        689
+      ],
+      "toSid": "14b-acm-code:19"
+    },
+    {
+      "kind": "ellipse",
+      "bbox": [
+        1263,
+        470,
+        523,
+        231
+      ],
+      "overSid": "14b-acm-code:7"
+    },
+    {
+      "kind": "scribble",
+      "bbox": [
+        1330,
+        562,
+        382,
+        48
+      ],
+      "overSid": "14b-acm-code:9",
+      "hint": "crossed-out or emphasised region"
+    }
+  ]
+}

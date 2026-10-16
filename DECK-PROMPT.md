@@ -4,8 +4,8 @@ Paste this file (or `@DECK-PROMPT.md`) at the start of a session, then say what 
 build, for example "Build week 4 day 1 from ~/Downloads/F25 Week 4 Day 1.pdf" or "Add a
 vote + answer pair to week 3 day 2 for Runestone question X".
 Compiled 2026-09-12 from the Week 1–3 decks, updated after Week 4 (2026-09-12) and after
-Week 5 Day 1 (2026-09-20). Facts marked unverified are unverified; do not state them as
-settled.
+Week 5 Day 1 (2026-09-20), the Week 6 Day 1 shell (2026-09-25) and Week 7 (2026-10-04). Facts marked unverified
+are unverified; do not state them as settled.
 
 ---
 
@@ -15,7 +15,16 @@ settled.
    `assets/` and `slides/NN-name.html` fragments. No dependencies; it needs an HTTP server.
 2. Clone `css/`, `js/`, `assets/fonts`, `assets/stone-edge.svg`, `studio.config.json` and
    `tools/` from `week 5 - day 1/`. Those are the newest shared copies (W4D1's block PC
-   bar, two-ring timers and ligature fix; W5D1's `data-hold` and `.moves`).
+   bar, two-ring timers and ligature fix; W5D1's `data-hold` and `.moves`). Since
+   2026-10-04 the newest `deck.css` is the one in `week 6 - day 1` and both Week 7 decks
+   (identical; it adds `.ln__tech`); `js/` and `tools/` are unchanged since W5D1. Clone
+   from `week 7 - day 2`, including `.slide-studio/permissions.json`. Since 2026-10-11
+   the newest copies are the Week 8 decks': `tokens.css` bundles Liberation Sans and
+   Liberation Serif (OFL) at the head of the body and display stacks so that every
+   browser on every OS renders the metrics the sweep measured (the system fonts Verdana
+   and Georgia are 10–15% wider than the Nimbus substitutes on the authoring machine),
+   `assets/fonts/` holds their eight WOFF files, and `deck.js` has the Safari fallback for
+   arrow swings. Clone from `week 8 - day 2`.
 3. Write `PLAN.md` first (through-line, chapter table, per-slide steps and plant, what was
    translated, dropped or left unverified). Then the slides. Then `add_sids.py`, `lint.py`,
    `measure/run.sh`. Then stop; the instructor reviews in Slide Studio.
@@ -75,6 +84,11 @@ settled.
 | `week 3 - wednesday` | MW make-up deck (Labor Day); `js/timer.js` 5:00 discussion countdown |
 | `week 4 - day 1` | first deck serving both sections: the two-track `now` band and the Test 1 band on the clock; SVG chain scenes (Link boxes `data \| next`, blue marker arrows that swing via a CSS `d: path()` transition) in `04`, `07b`, `09b`, `11`; a 2×2 `.opts--code` grid for four long code options (`09`); four synchronised lanes (`09b`) |
 | `week 4 - day 2` | the review deck: `04-test-map` (regions), recall slides (copies of earlier static votes with a `.verdict` on step 1), the 10:00 `.timer` at 400 px (`14`), DO/DON'T cards (`13`) |
+| `week 6 - day 1` | the Test 1 results chart (`04`: average score per question by topic, variant whiskers, practice pills); the ethics arc, part 2 (`14`–`16c`: moral distance scene, three-lens cards, one case three ways, the ten-minute discussion on the timer); the Week 6/7 clock with the Test 1 Redo band on this week as step 1; three votes (a stack trace walked with the stack drawn top-up, the store hierarchy walked as fields-go-up UML, requirements sorted into two bins); the ACM Code's first four headings with the vague words marked and the 'I'm not an ethicist' veil, the five-station pipeline (ideas → your questions in a form → an interview with an ethicist → the clips → a class discussion), the ten-minute discussion with a form plate |
+| `week 7 - day 1` | the Eight Key Questions board (`06b`: the handbook's eight cards, option letters landing on four, one option with no card); the ACM Code tested against one action (`07b`: three quoted principles, the tested one takes an orange edge, a ruled-out one turns stone); the call-stack grammar (`09`–`09c`: `fact(3)` going down, coming back up with blue return pills, then the base case struck out in place and the stack climbing past its box to StackOverflowError); a vote whose options are lists of calls (`11`: each call a `nowrap` span, two per line) |
+| `week 7 - day 2` | a code line that moves (`04b`: two spans trade places by `translateY(±48px)`, the gutter numbers stay); the call stack beside an output plate (`06b`, `07b`); frames whose local is a reference (`09`, `10b`, `12`: `curr` → a mini node box, a blue ring moving along the chain); a method written from three questions (`12`: `walkline--new` per question, then run); homework cards with the question to think hardest about (`13`). Its `02`/`17` are derived from Day 1's by moving the `now` band; edit Day 1's first |
+| `week 8 - day 1` | a linked queue walked with two references (`04`–`04c`: `enqueue` grows the chain at the back and `lastNode` swings; `dequeue` moves `firstNode` and clears `lastNode` only when the queue empties, then throws on empty; `04c` the same enqueue without `lastNode`, a `curr` ring walking six nodes against one visit, two counters); DLNode boxes `prev \| data \| next` with arrows above and below the chain (`06`, `06b`, `08b`); a truth board (`09b`: one column per state of the deque, the wrong option's cell tinted); homework cards for half a problem set (`11`, the linked-queue four; Day 2 holds the array four). Its `02`/`17` were derived from W7D1's by a third agent, Day 2's by substitution from Day 1's |
+| `week 8 - day 2` | the array strip for queues (`04`–`04d`: 96 px cells on a 108 px pitch under the editor, `frontIndex` above and `backIndex` below as blue pills that really move, a wrap as a real move from the last cell to cell 0, the video's table of `%` cases built one row per press, the three wrap-up tests walked as lines with no method under the PC); slot-counting answer walks (`06b`, `07b`: 128 px cells, occupied slots wash orange in order with a tally); seven options at the micro size with 48 px discs (`07`) |
 | `week 5 - day 1` | concept introduction as pseudocode walkthroughs (`04`–`04d`: real code under the PC bar, the array it touches, a rolling moves counter, the doubling test, then the graph that names O(1)/O(n)/O(n²)); every vote answer is the same walk of the real method; `data-hold` in `deck.js`; the shared `.moves` counter in `deck.css`; SVG array strips with exact travel (`06b`); values as opaque boxes that slide over neighbours (`09b`); a marker that moves (`10b`); a swinging `topNode` (`11b`) |
 
 ---
@@ -139,7 +153,9 @@ cp "week 5 - day 1"/index.html           "week N - day M"/        # then fix <ti
    needs `chromium`; run with the sandbox disabled). Treat slack under 30 px as unfinished
    and re-measure after every layout change. On 2026-09-20 `chromium --headless=new
    --dump-dom` returned no DOM and hung for 5 minutes; if that recurs, compute the budget
-   by hand (PIL plus greedy wrap, §6) and say that the sweep did not run. Never `pkill -f`
+   by hand (PIL plus greedy wrap, §6) and say that the sweep did not run. On 2026-09-25 it ran
+   normally in about a minute as `timeout -k 5 150 tools/measure/run.sh "$PWD"`; run it that
+   way so a hang cannot take the session. Never `pkill -f`
    a pattern that appears in your own command line; it kills the shell.
 5. Stop. No Playwright, no screenshot loops; the instructor reviews in Slide Studio. Leave
    clearly marked placeholders for facts you do not have. List what is unverified.
@@ -225,6 +241,23 @@ comments state the reason for each choice.
 | long timer | `week 4 - day 2/slides/14-lockdown-run.html` | the same `.timer` block, `data-timer="600"`, seed `10:00`, slide-local `position: static` and a 400 px arc |
 | concept intro (counting walkthrough) | `week 5 - day 1/slides/04-count-contains.html`, `04b-count-add.html`, `04c-count-pairs.html`, `04d-big-o.html` | the instructor's standing rule (2026-09-20): a new concept gets a few slides of step-by-step pseudocode walkthroughs with animation. Real code with short names (a, n, x) at `--t-code` (`.code-mid`) under the PC bar, the structure it touches on the right, a `.moves` counter, one caption per press; then the structure GROWS IN PLACE (cells shrink and more grow in; a grid's extra tracks animate from 0) and the same lines run again (`data-also`) with the counter reset by a `data-roll="off"` pair; then the graph that names the shapes. Never a second copy of the structure beside the first |
 | loop walk | `week 5 - day 1/slides/09b-walk-top0.html` (shift), `06b-walk-grow.html` (copy loop; two arrays in one SVG; `contents` swings) | `data-hold` on the loop's walklines; one iteration per press on the right; a value slides one pitch (`translateX(-pitch)`) and the value it overwrites fades out as it arrives; no opaque boxes (they showed as grey artifacts) |
+| test results chart | `week 6 - day 1/slides/02b-test1-graph.html` | the item analysis as a dot-and-whisker chart laid out as a table, in one SVG: rows grouped under the W4D2 test-map topics (topics ordered by mean score, rows lowest first), each row = the test question number in mono + a short name + a hairline under it, x = **average score** 0–100% (`x = 860 + 6 × percent`), the dot at the student-weighted mean, the whisker from the lowest- to the highest-scoring variant, and a blue pill at the right naming the practice-exam question for that type. Ink dots, no good/bad colouring, no per-row numbers. `slide--warmup` with no kicker (its 68 px went into row spacing) so 16 rows at a 40 px pitch fit, with a 12 px gap plus a heavier rule between topics; the rows are generated from a data table, not hand-placed. The instructor rejected, in turn, a ranked bar list ("super text heavy"), a "share missed" axis with maroon "hard" dots ("none of this missed-it"), a separate practice map and worked examples ("every student might have gotten a different question wrong") |
+| ethics scene | `week 6 - day 1/slides/15-moral-distance.html` (one engineer, a dashed gap that draws on, a crowd of twenty under a display numeral, a two-line definition, three chips); Week 1's `21-elephant`, `22-privilege` (veil), `23-on-whose-backs` (tiles), `24-von-braun`, `25-move-fast`, `26-start-now` | the ethics arc's grammar: quiet typographic beats, the two-weight pen, almost no text on the slide, the talk in the notes. Part 1 = W1D1 20–26b (privilege and responsibility · implications · agency), part 2 = W6D1 14–16c (moral distance · three lenses · one case · discussion) |
+| three-lens cards | `week 6 - day 1/slides/16-three-lenses.html` | three `.tile`s in the garden's colours (orange · mix · blue), each a drawing, the lens's one question in display maroon, its words as chips in the tile's colour, and the 6.1 module's Eight Key Questions name as a stone chip |
+| one case, three lenses | `week 6 - day 1/slides/16b-one-case.html` | the case as a small lede, three rows one per press (a coloured lens label 240 px left, a bold lead question and one sentence right, two lines each), a coda |
+| group discussion | `week 6 - day 1/slides/16c-discussion.html` | three `.steps` on the left (900 px), the 10:00 `.timer` at 400 px on the right, the read-out line under the steps |
+| design vote (long options) | `week 6 - day 1/slides/06-vote-store.html`, `07-vote-reqs.html` | the `.vote` layout with `--long` options, the left panel narrowed to 640 px and the options at the micro size with 8 px rows: five 70–110-character options do not fit the shared layout at the small size. Quote a multi-part stem in full: the question line as the lede, the bullets as cards on the left. The left drawing must not point at an option |
+| stack trace walk | `week 6 - day 1/slides/05c-walk-stack.html` | the operations under the PC bar at the code size (`code-mid`), the stack as a column of cells top-up in one SVG on the right (cells 220 × 88, 94 px pitch): a push grows a cell in, a pop fades one out via `:has(.cap--k:not(.is-pending))`, a popped value that is kept lands in a blue pill, one caption per press, `.verdict` under the editor |
+| UML "fields go up" walk | `week 6 - day 1/slides/06b-walk-store.html` | class boxes in canvas px; shared field lines translate out of every subclass into one superclass box (three copies converge), the kept lines close up, the rect `height` transitions, the generalisation bus draws on and its hollow triangle fades in; the move is driven off the superclass frag by `:has(...:not(.is-pending))`; one caption per press; `.verdict` under the SVG |
+| two-bin sort walk | `week 6 - day 1/slides/07b-walk-reqs.html` | statements as cards between two dashed bins; each card is a frag that never hides and translates into its bin on its step; the tag naming the kind lands beside the bin; card text 30 mono characters a line at 21 px in a 432 px card |
+| quoted code + veil | `week 6 - day 1/slides/14b-acm-code.html` | a document quoted on a `--paper` sheet (mono source line, numbered items), the loaded words as `<mark>`s that wash orange one after another (`--i` stagger), then W1D1 24's veil (`position: absolute; inset: 0`, blurred and whitened, a display sentence, a maroon turn under a rule) as the slide's last presses. The sweep reports the veil as overflow: it covers the whole slide by design |
+| pipeline in a line | `week 6 - day 1/slides/14c-pipeline.html` | five stations across the body (pitch 332), each an icon in the two-weight pen over a maroon numeral and a two-line caption, an arrow that Creates into each station (shaft draws, head fades after), the students' stations in the orange edge, "today" in stone under the ones that happen now |
+| lens slide (one concept, three beats) | `week 6 - day 1/slides/16b-utilitarianism.html`, `16c`, `16d` | the overview's drawing at 640 px in the concept's colour; right, definition + chips, the running case through this concept, the catch; headings one line at the warmup size (≤ ~70 characters) |
+| discussion with a form | `week 6 - day 1/slides/16e-discussion.html` | `.steps` with nested chip lists (suppress the numeral on them), the 10:00 `.timer` at 320 px over a `.scan` plate (QR + short link); QR via `qrencode -o assets/<name>.png -s 8 -m 2 "<url>"` |
+| call-stack walk | `week 7 - day 1/slides/09-walk-calls.html`, `09b-walk-returns.html`, `09c-walk-base.html`, `11b-walk-countdown.html`; `week 7 - day 2/slides/04-walk-before.html`, `06b-walk-entry.html`, `10b-walk-chain.html`, `12-write-count.html` | the method under the PC bar (`data-also` for lines every call runs), one SVG at 1:1 on the right: frames 440 × 88 at a 96 px pitch, top-up, the call in mono on the left and its local on the right; the running frame is the orange 18% tint with an orange stroke, a waiting frame `--bg-1` with an `--fg-1` stroke and a stone `waiting on line k` note (beside the frame in Day 1, inside it in Day 2 where an output plate sits beside the stack); a frame GrowsFromCenter on its call and fades on its return; a returned value is a blue pill that moves one pitch down; printed output fades in on a `--paper` plate labelled `output`; every state change is a `:has(.cap--k:not(.is-pending))` rule in step order, so back-steps reverse. Day 1 draws the stack inside a thin stone box with `main` at the bottom (needed for the overflow on `09c`); Day 2 uses a base line |
+| line move | `week 7 - day 2/slides/04b-walk-after.html` | to show that moving one line changes the output: wrap the two lines' code in `inline-block` spans and translate them one line height in opposite directions on step 1, then run the same walk again; the PC bar follows the `li`, so the walklines' steps are assigned by where the code ends up |
+| key-question board | `week 7 - day 1/slides/06b-walk-deny.html` | a framework's named questions as a 4 × 2 board of cards quoted from the source document; per press one card takes the orange tint and the option's maroon letter disc, with one concrete sentence about the case in the caption row; the option that is not in the framework is a dashed stone chip with no card; the verdict takes the caption's cell |
+| scripted crash with sound | `week 7 - day 1/slides/09c-walk-base.html` | the one slide with a timed sequence and audio: a slide-local `<script>` (deck.js re-creates slide scripts) listens to `deck:stepchange`, plays only when its step is reached forward, and sets a single `data-crash` attribute on the section (`run`, `freeze`, `blue`) that CSS styles; anything else (back-step, direct link, `m`, `?embed=1`) shows the end state still and silent. Sound is synthesised with Web Audio and unlocked by a `keydown` listener while the slide is active, because navigation is announced from `hashchange`, after the key press. The sweep flags the full-slide crash screen at that step by design |
 | cost table | `week 5 - day 1/slides/12-cost-table.html` | two mono tables side by side, O(1) blue and O(n) maroon, exceptions in a footnote |
 
 Deck shape since W2D2: `01-title → 01b-today → 02-course-info → [divider → chapter
@@ -347,7 +380,10 @@ Recipes (all from shipped slides):
 #slide-NN .frag.arr.is-pending { opacity: 1; stroke-dashoffset: 100; }
 #slide-NN .head { transition: opacity .2s ease; }                        /* <path class="head frag" data-anim="fade" d="M224 150 L212 144 L212 156 Z"> */
 #slide-NN .frag.head.is-current, #slide-NN .frag.head.is-past { transition-delay: .4s; }
-/* Swing — an SVG arrow re-points (Transform): two cubics with the same command shape, W4D1 07b */
+/* Swing — an SVG arrow re-points (Transform): two cubics with the same command shape, W4D1 07b.
+   Safari has no CSS `d` property, so the element ALSO carries the same paths keyed by step,
+   data-swing='[[4,"M260 130 C 330 130, 150 250, 150 344"]]', and deck.js (W8) sets the d
+   attribute from it when CSS.supports('d', …) is false. Both, always. */
 #slide-NN .arr { transition: d .7s var(--ease-smooth); }               /* d="M260 130 C 320 130, 390 130, 454 130" in the markup */
 #slide-NN .slide__body:has(.cap--4:not(.is-pending)) .arr--20 { d: path("M260 130 C 330 130, 150 250, 150 344"); }
 /* Rotate about a point (an arm, a hammer) — W1D2 07-help-balance */
@@ -504,6 +540,15 @@ Schedule ahead (`cs2114-schedule-fall2026.html`, `cs2114-deadline-schedule.csv`)
 | 7 | Oct 5–9 | Recursion | 7.2 Assessment 2 Info · 7.3 Recursion · 7.4 Midterm Checkpoint | Week 7: Recursion | — | P2 D2 Spec · declare generic type | Fall Break Fri Oct 9; PI W7D1 + W7D2 |
 | 8 | Oct 12–16 | Queues | 8.1 Queues | Week 8: Queues | 08 Carrano Deque | P2 D3 Prototype + tests · 2+ element types | PI W8D1 + W8D2 |
 
+The 6.1 Ethics module (OpenDSA-derived, due Sun Sep 27): objectives = identify ethical
+issues, analyse with the ACM Code, defend positions; sections = intro, the ACM Code's
+imperatives (1.1–1.7), JMU's Eight Key Questions (fairness · outcomes · responsibilities ·
+character · liberty · empathy · authority · rights); readings include the Facebook
+emotional-contagion case and the Moral Machine. The PL question
+`javaFundamentals/ethicsDevOps/ethics_dos_position` names "utilitarianism, deontology,
+virtue ethics, social contract theory" as the course's theories. Project 2 carries a
+graded ethics reflection on GenAI use (W1D1 spec).
+
 Later modules: 9.1 Lists, 9.2 More on Generics (Sun Oct 18); 10.1 Assessment 3 Info,
 10.2 Comparing and Sorting, 10.3 Iterators (Sun Oct 25); 11.3 Project 5 (Sun Nov 1).
 Homework: Week 9 Lists & Generics, Week 10 Sorting & Iterators, Week 12 Team Project.
@@ -560,6 +605,77 @@ Q3 no stem or class code. W05D1's four questions have PrairieLearn twins in
 `questions/dataStructures/efficiency` (`u08q08_efficiency_arraybag_c` is Q1 verbatim,
 key O(n); `u08q10_efficiency_arraystack_c/_d` are Q2/Q3, keys O(n)/O(1)).
 
+Peer Instruction W06D1 (final paste 2026-09-27): three questions, all run — 1 stack tracing
+(`vtcs2_stacks_tracing`: push K P G R, pop into str, pop, push V, push str; key C = R V P K),
+2 the athletic-store hierarchy (`vtcs2_inhertance_override_2_202507-2`, key A assumed), 3
+functional vs non-functional requirements (`vtcs2_design_nonfunctionalreqs_202507`, key D
+assumed). An earlier five-question version (linked-chain pop, constructor/override trace)
+was superseded. Keys are not in a Runestone paste; the results view shows them.
+
+Peer Instruction W07D1 (paste 2026-10-04): 1 the DDoS deny list and the Eight Key Questions
+(key B assumed: money is not one of the eight; handbook `~/Downloads/8kq-handbook-web.pdf`),
+2 the DevOps manager and the ACM Code (key C, 1.6, per the PL twin `ethicsdevops_a`; the
+Runestone paste has no question sentence, the twin's is "Which ethical principle could
+possibly be violated if you give in to curiosity and look at the customer's financial
+information?"), 3 `countDown(0, "GAMEOVER")` (key C by tracing; twin
+`u09q02_recursion_countdown_c`). W07D2: 1 `example(3)` Entry/Exit (A), 2 `mirror(4)` (A),
+3 `displayChain` with the print below the call (B, reverse); all three by tracing. The PL
+twins `u09q03_recursion_linkedchain_a` and `_d` have keys that do not match their code as
+written; not fixed. acm.org returns 403 to fetches from this machine: the ACM sentences on
+W7D1 `07b` are from memory and need a manual check. Week 7 homework "Week 7: Recursion —
+Coding Practice" (power, countdownList, reverse, arrayToString, sumFrom; best 3 of 5, 10
+points each) is due Fri Oct 9 11:59 PM, which is Fall Break; unconfirmed whether it moves.
+Canvas names Project 2 "Linked Chains + Generics" (the schedule page said "Bag + Generics").
+
+Peer Instruction W08D1 / W08D2 (paste 2026-10-11; the instructor called it "week 7", but
+Week 7 was built and the paste says W08: go by the paste's assignment name). W08D1: 1
+`removeBack`'s `lastNode == null` case (`vtcs2_deque_edgeCases`, key D "one item"; twin
+`dataStructures/queues/u10q07_linkeddeque_tracing_b` verbatim), 2 which `isEmpty` body is
+wrong for a doubly linked deque (`vtcs2_deque_isEmpty`, key D `firstNode == lastNode`;
+twin `_c`). W08D2: 1 legal front/rear for a circular array queue, capacity 10, size 5
+(`vtcs2_circularArray_indexing`, key D front 9 rear 2; twin `u10q08_circulararrayqueue_b`),
+2 frontIndex 3, backIndex 1, capacity 5 (`vtcs2_circularArray_full`, key E five elements;
+twin `u10q09_circulararrayqueue_d`). Both array votes only work under the videos'
+ArrayQueue convention: `initialCapacity + 1` slots, `frontIndex` and `backIndex` both the
+slot of an entry (inclusive), empty `frontIndex == (backIndex + 1) % length`, full
+`(backIndex + 2) % length`, one entry `frontIndex == backIndex`. The 8.1 module's slide
+PDFs (`clientFilesCourse/slides/QueueIntro`, `LinkedQueuesEnqueue`, `LinkedQueueRemove`,
+`ArrayQueue{Intro,Remove,EnsureCapacity,WrapUp}`, `DequeIntro`, `DequeRemoveAndWrapUp`) are
+image-only: view the pages, do not `pdftotext` them. Week 8 homework "Week 8: Queues —
+Coding Practice": x700–x703 LinkedQueue (enqueue, dequeue, priority enqueue,
+almost-priority enqueue) and x704–x707 ArrayQueue (bad enqueue 1/2, manipulate 1/2), 10
+points each, best 4, due Fri Oct 16. CE 08 "Carrano Deque" is in no PL assessment
+(`questions/labs/lab08_deque` exists, unreferenced). Week 9: homework "Week 9: Lists &
+Generics" and CE 09 "Linked List Debug" Fri Oct 23, P2 D4 final build + writeup +
+presentation at the Week 9 lab, modules 10.1/10.2/10.3 Sun Oct 25; Test 2 Thu Oct 29
+(schedule; the MW day is not announced).
+
+
+Peer Instruction W09D1 / W09D2 (paste 2026-10-16). W09D1: 1 `addLast` on a list with
+`head`/`tail`, what goes in the empty branch (`vtcs2_linkedlists_add_2_202507`, key C
+"head = newNode; tail = newNode;" by tracing), 2 the steps to remove a designated element
+from a singly linked list with head and tail (`vtcs2_linkedlists_remove`, key B "not the
+first or last node … each a special case"; twin `dataStructures/lists/u11q05_sll_removenode_d`).
+W09D2: 1 removing `curr` from a doubly linked list without sentinels, five code options
+(`vtcs2_linkedlists_remove_2`, key E; twin `u11q06_dll_d`, whose option C differs; the
+Runestone text has quirks: `getPrevious`/`getPrev`, `list.getSize()`, `curr.getPrevious.`
+without parentheses), 2 cost of remove(givenPosition) at first/middle/last for a singly
+linked list with firstNode and lastNode (`vtcs2_linkedlists_efficiency_3`, key C
+O(1); O(n); O(n); twin `u11q07_list_lastnoderef_c`). Week 9 homework "Week 9: Lists &
+Generics — Coding Practice": x708–x711 LinkedList insertion sort (split in two, find node
+before, insert after node, the whole sort), 10 points each, best 2 of 4, due Fri Oct 23.
+CE 09 Linked List Debug Fri Oct 23. P2 D4 at the Week 9 lab; Project 3 "Queue + MVC"
+released in Week 9 with teams re-forming, D1 Scope at the Week 10 lab. Module slide PDFs:
+`ListIntro24`, `LinkedListAdd`, `LinkedListRemove`, `LinkedListMoreDetails`,
+`ArrayListImplementation24`, `ListEfficiency`, `MoreOnGenerics` (image-only).
+
+Test 2 (Canvas home page, 2026-10-16): in lecture, MW Wed Oct 28 and TR Thu Oct 29; Test 2
+Redo Wed/Thu Nov 4/5. The PL page 10.1 Assessment 3 Info: LockDown Browser, in class in
+your own lecture, student ID, 20–30 minutes, closed everything, laptop only, Canvas
+2-factor before starting, pen and paper allowed. SSD RegisterBlast deadlines (three
+business days): MW by Fri Oct 23, TR by Mon Oct 26. The Week 9 decks carry `02b-ssd` on
+both days and the Test 2 band on the Week 10 half of the clock. The Canvas home page also
+lists a "Lecture Slides" link and Week 10's CE 10 "DLL".
 Coding practice: PrairieLearn › Assessments › Coding Practice. W2 set = `x752` (ageMath)
 and `x754` (getOldest) walked, plus x753/x755/x804/x805/x798/x800 not walked; W3 = X789
 ArrayBag toString (W3D1 slide 10, duplicated on W3D2); W4 = "Week 4: Linked Chains —
@@ -584,6 +700,16 @@ Web-CAT pill. Ask before drawing one.
 Dropped from the course (never draw them): CodeWorkout, My Digital Hand, Lucidchart,
 trial quizzes as a graded thing, "lab and postlab", Web-CAT as project grader, the Fall
 2025 Bag/ArrayBag Project 1, percentage grading.
+
+Test 1 results (2026-09-25): `~/Downloads/Test1_items_for_study_guidance.csv` is the Canvas
+item analysis (50 items over 16 quiz positions, 348 students, percent correct and distractor
+counts per item, keys in `correct_answer`); the bank text is in
+`~/Projects/pl-vt-cs2114/canvas-banks/*.md` (no keys on the page). "Test #1 Practice"
+(`practiceExams/test1`, open to 2026-12-31, `multipleInstance`) mirrors the test one slot per
+position, in order, except that slots 15/16 (JUnit setUp / covering test) are swapped
+relative to test positions 16/15. Per-position percent correct, student-weighted: Q4 44.8 ·
+Q13 49.1 · Q2 49.2 · Q5 49.4 · Q1 51.1 · Q16 59.5 · Q8 64.9 · Q3 67.2 · the rest 72–92.
+W6D1 `02b` is the results chart (the practice map and the worked stand-ins were cut on review); its PLAN.md section has the full mapping and the per-variant spread.
 
 Sources (outside the repo, `~/Downloads/`): `cs2114-schedule-fall2026.html`,
 `cs2114-deadline-schedule.csv`, `CS2114_Projects_Fall2026(3).imscc` →
@@ -646,8 +772,28 @@ with the instructor's approval; the slide stays clean.
   hand.
 - Global: stay on task; simple, robust solutions; no feature creep; question rather than
   agree; `git add -u` (plus explicit new dirs), never `-A`.
+- Test results go on one chart that looks like a chart: average score on the axis, one row
+  per question with its number, the practice pointer on the row, no good/bad colouring and
+  no "do these first" — every student missed different questions (2026-09-25, W6D1 02b).
 - Documentation and replies in plain prose: no rhetorical asides, quoted-anecdote
-  flourishes or figurative phrasing (2026-09-20).
+  flourishes or figurative phrasing (2026-09-20). This covers slide captions, headings,
+  descs and notes too (2026-10-11, Week 8: "do a pass for mannered prose"): literal verbs
+  for code and data ("B's prev is set to null", not "B lets go of A"; "frontIndex is 4",
+  not "frontIndex walks to 4"), full sentences instead of colon fragments ("The trap: …"),
+  no dramatised scale ("at five entries or five thousand"), headings as statements of
+  fact rather than slogans.
+- Bridges (2026-10-11, Week 8: "I like bridges from last week and then between day 1 and
+  2"): every deck has a bridge slide right after the clock. Day 1 bridges from last
+  week's topic and names the structural link (Week 8: the call stack is LIFO, a queue is
+  FIFO; the LinkedStack chain gains `lastNode`), Day 2 bridges from Day 1 with Day 1's
+  drawing beside today's (the same ADT stored two ways), and Day 2 ends with a next-week
+  slide before the closing clock. A sentence in the notes is not a bridge.
+- Type floor (2026-10-11, Week 8: "some fonts are too small"): nothing on a slide under
+  `--t-micro` (28 px), and micro only for labels inside drawings (indices, `null`, pill
+  text, field names). Anything read as a sentence (captions, options, card hints, board
+  cells, tallies) is `--t-small` (36) or larger; code at `--t-code` (32) via `.code-mid`,
+  never denser. The `.tlabel` under the vote timers is the one exception. The tag size
+  (21) is for the measure harness and map labels only.
 
 ---
 

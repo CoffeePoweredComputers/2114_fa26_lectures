@@ -1,0 +1,150 @@
+<section class="slide slide--warmup" id="slide-04c" data-sid="04c-walk-lastnode:1">
+  <header class="slide__head" data-sid="04c-walk-lastnode:2">
+    <p class="slide__kicker" data-sid="04c-walk-lastnode:3">A LINKED QUEUE &middot; WHY lastNode</p>
+    <h2 data-sid="04c-walk-lastnode:4">Without lastNode, every enqueue visits every node</h2>
+  </header>
+  <p class="sr-only slide__desc" data-sid="04c-walk-lastnode:5">Two short pieces of code on the left. The first, without lastNode: Node curr equals firstNode; while curr dot getNext is not null, curr equals curr dot getNext; then curr dot setNext of newNode. The second, with lastNode: lastNode dot setNext of newNode; lastNode equals newNode. On the right, a queue of six nodes, A to F, with a firstNode pill pointing at A and a lastNode pill pointing at F, and under it two large counters of nodes visited: one in maroon for the code without lastNode, one in blue for the code with it. Step one: a blue ring labelled curr appears on A, and the maroon counter reads 1. Steps two and three: the ring moves to B, then C, and the counter reads 2, then 3. Step four: the ring moves to F and the counter reads 6. The loop stops because F's next is null. Step five: F's next part is washed orange. This is the one write, after six visits. Step six: the ring is removed. With lastNode, F is reached in one visit, its next part is written, and the blue counter reads 1. Step seven: lastNode equals newNode. Step eight: one extra reference makes enqueue O of 1.</p>
+
+  <!-- Why the class keeps lastNode, in W5D1 04's counting grammar: the
+       non-empty part of an enqueue WITHOUT lastNode (the deck's own code: the
+       module only says enqueue is O(1) "with use of lastNode reference"),
+       walked on six nodes with a curr ring that moves (translateX) and a maroon
+       counter of nodes visited (the roll is allowed: the tally counts), then
+       the two lines WITH lastNode and a blue counter that stops at 1. The new
+       node is not drawn: the write is an orange wash on F's next compartment.
+       step 1: curr = firstNode (1).  steps 2–4: the loop, held under the bar:
+       B (2), C (3), then D, E, F in one press (6).  step 5: the write.
+       step 6: with lastNode: one visit, the same write.  step 7: lastNode
+       moves.  step 8: the rule; no walkline, the bar fades. -->
+  <div class="slide__body grid grid--code code-mid ln" data-sid="04c-walk-lastnode:6">
+    <div class="stack ln__left" data-sid="04c-walk-lastnode:7">
+      <div class="editor ln__editor" data-sid="04c-walk-lastnode:8">
+        <p class="editor__bar" data-sid="04c-walk-lastnode:9">without lastNode: find the back</p>
+        <div class="editor__pc" data-sid="04c-walk-lastnode:10"></div>
+        <ol class="editor__code" data-sid="04c-walk-lastnode:11">
+          <li class="walkline frag" data-step="1" data-sid="04c-walk-lastnode:12">Node curr = firstNode;</li>
+          <li class="walkline frag" data-step="2" data-hold="4" data-sid="04c-walk-lastnode:13"><span class="tok-key" data-sid="04c-walk-lastnode:14">while</span> (curr.getNext() != <span class="tok-key" data-sid="04c-walk-lastnode:15">null</span>) {</li>
+          <li class="walkline frag" data-step="2" data-hold="4" data-sid="04c-walk-lastnode:16">    curr = curr.getNext();</li>
+          <li class="walkline frag" data-step="2" data-hold="4" data-sid="04c-walk-lastnode:17">}</li>
+          <li class="walkline frag" data-step="5" data-sid="04c-walk-lastnode:18">curr.setNext(newNode);</li>
+        </ol>
+      </div>
+      <div class="editor ln__editor" data-sid="04c-walk-lastnode:19">
+        <p class="editor__bar" data-sid="04c-walk-lastnode:20">with lastNode (04)</p>
+        <div class="editor__pc" data-sid="04c-walk-lastnode:21"></div>
+        <ol class="editor__code" data-sid="04c-walk-lastnode:22">
+          <li class="walkline frag" data-step="6" data-sid="04c-walk-lastnode:23">lastNode.setNext(newNode);</li>
+          <li class="walkline frag" data-step="7" data-sid="04c-walk-lastnode:24">lastNode = newNode;</li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="codewalk ln__right" data-sid="04c-walk-lastnode:25">
+      <svg class="ln__fig" viewBox="0 0 916 240" role="img" aria-label="A queue of six nodes, A to F, with firstNode pointing at A and lastNode at F, and a blue ring labelled curr that moves along the chain one node at a time" data-sid="04c-walk-lastnode:26">
+        <defs data-sid="04c-walk-lastnode:27">
+          <marker id="w8d1-04c-head" viewBox="0 0 12 12" refX="11" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto" data-sid="04c-walk-lastnode:28"><path d="M0 0 L12 6 L0 12 Z" style="fill: var(--accent-2)" data-sid="04c-walk-lastnode:29"/></marker>
+        </defs>
+        <g class="pill pill--first" data-sid="04c-walk-lastnode:30"><rect x="0" y="0" width="176" height="44" rx="8" data-sid="04c-walk-lastnode:31"/><text x="88" y="31" data-sid="04c-walk-lastnode:32">firstNode</text></g>
+        <g class="pill pill--last" data-sid="04c-walk-lastnode:33"><rect x="756" y="0" width="160" height="44" rx="8" data-sid="04c-walk-lastnode:34"/><text x="836" y="31" data-sid="04c-walk-lastnode:35">lastNode</text></g>
+        <path class="ref" d="M58 44 C 58 70, 58 86, 58 106" data-sid="04c-walk-lastnode:36"/>
+        <path class="ref" d="M845 44 C 845 70, 845 86, 845 106" data-sid="04c-walk-lastnode:37"/>
+
+        <g class="nd" data-sid="04c-walk-lastnode:38"><rect class="nd__box" x="0" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:39"/><path class="nd__div" d="M56 110v76" data-sid="04c-walk-lastnode:40"/><text class="nd__v" x="28" y="161" data-sid="04c-walk-lastnode:43">A</text></g>
+        <g class="nd" data-sid="04c-walk-lastnode:44"><rect class="nd__box" x="156" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:45"/><path class="nd__div" d="M212 110v76" data-sid="04c-walk-lastnode:46"/><text class="nd__v" x="184" y="161" data-sid="04c-walk-lastnode:49">B</text></g>
+        <g class="nd" data-sid="04c-walk-lastnode:50"><rect class="nd__box" x="312" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:51"/><path class="nd__div" d="M368 110v76" data-sid="04c-walk-lastnode:52"/><text class="nd__v" x="340" y="161" data-sid="04c-walk-lastnode:55">C</text></g>
+        <g class="nd" data-sid="04c-walk-lastnode:56"><rect class="nd__box" x="468" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:57"/><path class="nd__div" d="M524 110v76" data-sid="04c-walk-lastnode:58"/><text class="nd__v" x="496" y="161" data-sid="04c-walk-lastnode:61">D</text></g>
+        <g class="nd" data-sid="04c-walk-lastnode:62"><rect class="nd__box" x="624" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:63"/><path class="nd__div" d="M680 110v76" data-sid="04c-walk-lastnode:64"/><text class="nd__v" x="652" y="161" data-sid="04c-walk-lastnode:67">E</text></g>
+        <g class="nd nd--f" data-sid="04c-walk-lastnode:68"><rect class="nd__box" x="780" y="110" width="130" height="76" rx="8" data-sid="04c-walk-lastnode:69"/><rect class="nd__wash" x="839" y="113" width="68" height="70" rx="5" data-sid="04c-walk-lastnode:70"/><path class="nd__div" d="M836 110v76" data-sid="04c-walk-lastnode:71"/><text class="nd__v" x="808" y="161" data-sid="04c-walk-lastnode:74">F</text><text class="nd__nl" x="873" y="158" data-sid="04c-walk-lastnode:75">null</text></g>
+        <path class="lnk" d="M93 148 H 154" data-sid="04c-walk-lastnode:76"/>
+        <path class="lnk" d="M249 148 H 310" data-sid="04c-walk-lastnode:77"/>
+        <path class="lnk" d="M405 148 H 466" data-sid="04c-walk-lastnode:78"/>
+        <path class="lnk" d="M561 148 H 622" data-sid="04c-walk-lastnode:79"/>
+        <path class="lnk" d="M717 148 H 778" data-sid="04c-walk-lastnode:80"/>
+
+        <!-- curr: a ring that travels; the lastNode visit: a ring that does not -->
+        <g class="ring" data-sid="04c-walk-lastnode:81"><rect x="-6" y="100" width="142" height="96" rx="14" data-sid="04c-walk-lastnode:82"/><text x="65" y="226" data-sid="04c-walk-lastnode:83">curr</text></g>
+        <rect class="ring2" x="774" y="100" width="142" height="96" rx="14" data-sid="04c-walk-lastnode:84"/>
+      </svg>
+
+      <div class="ln__counts" data-sid="04c-walk-lastnode:85">
+        <div class="moves" data-sid="04c-walk-lastnode:86">
+          <p class="moves__label" data-sid="04c-walk-lastnode:87">nodes visited,<br data-sid="04c-walk-lastnode:88">without lastNode</p>
+          <div class="moves__stack" data-sid="04c-walk-lastnode:89">
+            <div class="heap-obj__field" data-sid="04c-walk-lastnode:90"><p class="heap-val heap-val--old frag" data-step="1" data-sid="04c-walk-lastnode:91">0</p><p class="heap-val frag" data-step="1" data-sid="04c-walk-lastnode:92">1</p></div>
+            <div class="heap-obj__field" data-sid="04c-walk-lastnode:93"><p class="heap-val heap-val--old frag" data-step="2" data-sid="04c-walk-lastnode:94">1</p><p class="heap-val frag" data-step="2" data-sid="04c-walk-lastnode:95">2</p></div>
+            <div class="heap-obj__field" data-sid="04c-walk-lastnode:96"><p class="heap-val heap-val--old frag" data-step="3" data-sid="04c-walk-lastnode:97">2</p><p class="heap-val frag" data-step="3" data-sid="04c-walk-lastnode:98">3</p></div>
+            <div class="heap-obj__field" data-sid="04c-walk-lastnode:99"><p class="heap-val heap-val--old frag" data-step="4" data-sid="04c-walk-lastnode:100">3</p><p class="heap-val frag" data-step="4" data-sid="04c-walk-lastnode:101">6</p></div>
+          </div>
+        </div>
+        <div class="moves moves--ok" data-sid="04c-walk-lastnode:102">
+          <p class="moves__label" data-sid="04c-walk-lastnode:103">nodes visited,<br data-sid="04c-walk-lastnode:104">with lastNode</p>
+          <div class="moves__stack" data-sid="04c-walk-lastnode:105">
+            <div class="heap-obj__field" data-sid="04c-walk-lastnode:106"><p class="heap-val heap-val--old frag" data-step="6" data-sid="04c-walk-lastnode:107">0</p><p class="heap-val frag" data-step="6" data-sid="04c-walk-lastnode:108">1</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="codewalk__caps" data-sid="04c-walk-lastnode:109">
+        <p class="walkcap cap--1 frag" data-step="1" data-sid="04c-walk-lastnode:110">Without lastNode, enqueue has to find the back node. curr starts at firstNode, so 1 node is visited.</p>
+        <p class="walkcap cap--2 frag" data-step="2" data-sid="04c-walk-lastnode:111">A&rsquo;s next is not null, so curr is set to B. 2 nodes visited.</p>
+        <p class="walkcap cap--3 frag" data-step="3" data-sid="04c-walk-lastnode:112">curr is set to C. 3 nodes visited.</p>
+        <p class="walkcap cap--4 frag" data-step="4" data-sid="04c-walk-lastnode:113">curr is set to D, then E, then F. 6 nodes visited. F&rsquo;s next is null, so the loop stops.</p>
+        <p class="walkcap cap--5 frag" data-step="5" data-sid="04c-walk-lastnode:114">curr.setNext(newNode) writes one link after six visits. With n nodes it takes n visits.</p>
+        <p class="walkcap cap--6 frag" data-step="6" data-sid="04c-walk-lastnode:115">With lastNode, the back node is one reference away. That is one visit and the same write.</p>
+        <p class="walkcap cap--7 frag" data-step="7" data-sid="04c-walk-lastnode:116">lastNode = newNode, so the next enqueue also takes one visit.</p>
+        <p class="walkcap walkcap--plant cap--8 frag" data-step="8" data-sid="04c-walk-lastnode:117">One extra reference makes enqueue O(1).</p>
+      </div>
+    </div>
+  </div>
+  <div class="slide__number" data-sid="04c-walk-lastnode:118"></div>
+  <aside class="notes" data-sid="04c-walk-lastnode:119">Why does the class keep lastNode? The video says enqueue is O(1) &ldquo;with use of lastNode reference&rdquo;. This slide shows the cost without it. The code on top is the non-empty part of an enqueue that has only firstNode. Step 1. curr starts at the front node, which is one node visited. Steps 2 and 3. The loop sets curr to the next node while there is one: B, then C. Step 4. curr is set to D, E and F, for six visits. F&rsquo;s next is null, so curr is the back node. Step 5. The one write that enqueue needs happens only now. With n nodes this is n visits on every call, which is O(n) in the Week 5 terms. Step 6. With lastNode the back node is already known. That is one visit and the same write. Step 7. lastNode is assigned the new node, so the next enqueue is also one visit. Step 8. One extra reference changes enqueue from O(n) to O(1). The deque in Part 2 uses the same idea. Next is Part 2.</aside>
+
+  <style data-sid="04c-walk-lastnode:120">
+    /* Slide-local: two editors stacked on the left at --t-code (700 px: the
+       while line is 32 characters, 32 × 19.2 + 70 = 684); on the right one
+       916 × 240 SVG at 1:1 (six nodes 130 × 76 on a 156 px pitch, value 56 |
+       next 74; no field labels here, because 04 and 04b name the parts and
+       a 28 px "data" does not fit a 56 px compartment), then the two counters side by side (deck.css
+       .moves: maroon for the walk, --ok blue for lastNode), then the
+       captions. The curr ring travels by translateX (a real move); the
+       lastNode visit is a second ring that fades in on F; the write is an
+       orange wash for its step; the lastNode pill takes an orange edge when it
+       is written. Used by this slide only, all values from tokens. */
+    #slide-04c .ln { grid-template-columns: 700px minmax(0, 1fr); column-gap: var(--s-5); align-items: start; }
+    #slide-04c .ln__editor { width: 700px; }
+    #slide-04c .ln__fig { display: block; width: 916px; height: 240px; overflow: visible; }
+    #slide-04c .ln__counts { display: flex; column-gap: var(--s-7); }
+    #slide-04c .moves__label { line-height: 1.25; }
+    #slide-04c .codewalk__caps { min-height: 100px; }
+    #slide-04c .walkcap--plant { font-family: var(--font-display); color: var(--accent-1); }
+
+    #slide-04c .pill rect { fill: var(--accent-2); stroke: transparent; stroke-width: 5; transition: stroke .3s ease; }
+    #slide-04c .pill text { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--bg-0); text-anchor: middle; }
+    #slide-04c .ref, #slide-04c .lnk { fill: none; stroke: var(--accent-2); stroke-width: 4; stroke-linecap: round; marker-end: url(#w8d1-04c-head); }
+    #slide-04c .nd__box { fill: var(--bg-1); stroke: var(--fg-1); stroke-width: 4; }
+    #slide-04c .nd__div { fill: none; stroke: var(--fg-1); stroke-width: 4; }
+    #slide-04c .nd__v { font-family: var(--font-mono); font-size: var(--t-small); fill: var(--fg-0); text-anchor: middle; }
+    #slide-04c .nd__nl { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--stone); text-anchor: middle; }
+    #slide-04c .nd__wash { fill: color-mix(in srgb, var(--accent-3) 22%, var(--bg-1)); opacity: 0; transition: opacity .3s ease; }
+
+    #slide-04c .ring rect, #slide-04c .ring2 { fill: none; stroke: var(--accent-2); stroke-width: 5; }
+    #slide-04c .ring text { font-family: var(--font-mono); font-size: var(--t-micro); fill: var(--accent-2); text-anchor: middle; }
+    #slide-04c .ring { opacity: 0; transition: transform .6s var(--ease-smooth), opacity .3s ease; }
+    #slide-04c .ring2 { opacity: 0; transition: opacity .3s ease; }
+
+    /* ---- states, in step order ---- */
+    #slide-04c .ln:has(.cap--1:not(.is-pending)) .ring { opacity: 1; }
+    #slide-04c .ln:has(.cap--2:not(.is-pending)) .ring { transform: translateX(156px); }
+    #slide-04c .ln:has(.cap--3:not(.is-pending)) .ring { transform: translateX(312px); }
+    #slide-04c .ln:has(.cap--4:not(.is-pending)) .ring { transform: translateX(780px); transition-duration: 1.1s, .3s; }
+    #slide-04c .ln:has(.cap--5.is-current) .nd--f .nd__wash { opacity: 1; }
+    #slide-04c .ln:has(.cap--6:not(.is-pending)) .ring { opacity: 0; }
+    #slide-04c .ln:has(.cap--6.is-current) .ring2 { opacity: 1; }
+    #slide-04c .ln:has(.cap--6.is-current) .nd--f .nd__wash { opacity: 1; }
+    #slide-04c .ln:has(.cap--7.is-current) .pill--last rect { stroke: var(--accent-3); }
+
+    @media (prefers-reduced-motion: reduce) {
+      #slide-04c .ring, #slide-04c .ring2, #slide-04c .nd__wash, #slide-04c .pill rect { transition-duration: 0s !important; transition-delay: 0s !important; }
+    }
+  </style>
+</section>
