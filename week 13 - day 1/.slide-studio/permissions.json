@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "domains": [
+    "*search*",
+    "plato.stanford.edu",
+    "www.heinz.cmu.edu"
+  ],
+  "dirs": [
+    "/home/anavarre/Projects/pl-vt-cs2114/clientFilesCourse/slides"
+  ]
+}
